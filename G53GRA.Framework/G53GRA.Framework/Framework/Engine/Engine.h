@@ -4,7 +4,7 @@
 #include <GL/glut.h>
 #include <Windows.h>
 #else
-#include <GLUT/glut.h>
+#include <GL/glut.h>
 #endif
 /**
   * Base Engine for the framework. Handles windowing and freeglut/OpenGL contexts.
