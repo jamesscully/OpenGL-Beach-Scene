@@ -6,8 +6,6 @@
 #include <GL/glu.h>
 #include <GL/glut.h>
 #else
-#include <OpenGL/OpenGL.h>
-#include <GLUT/glut.h>
 #pragma pack(1)
 #define WORD unsigned short
 #define DWORD unsigned int
@@ -36,6 +34,8 @@ typedef struct tagBITMAPINFOHEADER
 } BITMAPINFOHEADER;
 #endif
 
+#include <GL/gl.h>
+#include <GL/glut.h>
 #include <iostream>
 
 using namespace std;

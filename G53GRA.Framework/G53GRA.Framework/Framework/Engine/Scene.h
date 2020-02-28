@@ -106,15 +106,15 @@ protected:
 	*/
 	void AddObjectToScene(DisplayableObject *obj);
 
+/**
+* Scene camera. Contains viewing properties. Defaults to framework {@link Camera} class.
+* Overload {@link #Initialise()} to set a different {@link Camera}.
+*/
+static Camera camera;
 private:
-	/**
-	* Scene camera. Contains viewing properties. Defaults to framework {@link Camera} class.
-	* Overload {@link #Initialise()} to set a different {@link Camera}.
-	*/
-	static Camera camera;
-	/**
-	 * Texture manager for binding bitmap images as GL_TEXTURE2D IDs
-	 */
+    /**
+     * Texture manager for binding bitmap images as GL_TEXTURE2D IDs
+     */
 	static Texture texture;
 	/**
 	* Vector containing all {@link DisplayableObject}s in the scene.

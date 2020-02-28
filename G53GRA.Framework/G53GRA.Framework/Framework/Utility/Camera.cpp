@@ -2,16 +2,16 @@
 #include "VectorMath.h"
 #include "Scene.h"
 
-Camera::Camera() : wKey(0), sKey(0), aKey(0), dKey(0), currentButton(0), mouseX(0), mouseY(0)
+Camera::Camera() : wKey(0), sKey(0), aKey(0), dKey(0), currentButton(0), mouseX(0), mouseY(0), upKey(0), downKey(0)
 {
 	Reset();
 }
 
 void Camera::Reset(){
 	// set the camera position to start at (0,0,0)
-	eyePosition[0] = 0.0f;
-	eyePosition[1] = 0.0f;
-	eyePosition[2] = 0.5f * static_cast<float>(Scene::GetWindowHeight()) / static_cast<float>(tan(M_PI / 6.0));//0.0f;
+	eyePosition[0] = 120.0f;
+	eyePosition[1] = 120.0f;
+	eyePosition[2] = 300.0f; // 0.5f * static_cast<float>(Scene::GetWindowHeight()) / static_cast<float>(tan(M_PI / 6.0));//0.0f;
 
 	// set the view direction vector of the camera to be (0,0,-1)
 	vd[0] = 0.0f;
@@ -65,6 +65,14 @@ void Camera::Update(const double& deltaTime)
 	if (sKey)
 		sub(eyePosition, forward, speed);
 
+
+	// up and down
+	if(upKey)
+	    add(eyePosition, up, speed);
+
+	if(downKey)
+	    sub(eyePosition, up, speed);
+
 	SetupCamera();
 }
 
@@ -105,6 +113,7 @@ void Camera::GetUpVector(float &x, float &y, float &z) const
 
 void Camera::HandleKey(unsigned char key, int state, int x, int y)
 {
+
 	switch (key)
 	{
 		case 'A':
@@ -123,7 +132,20 @@ void Camera::HandleKey(unsigned char key, int state, int x, int y)
 		case 's':
 			sKey = state;
 			break;
-		case ' ':
+
+	    case 'E':
+        case 'e':
+        case ' ':
+	        upKey = state;
+            break;
+
+		case 'q':
+        case 'Q':
+            downKey = state;
+            break;
+
+        case 'C':
+        case 'c':
 			Reset();
 		default:
 			break;

@@ -10,7 +10,15 @@ public:
 	~MyScene() {};
 
 private:
+
+    int WIN_HEIGHT, WIN_WIDTH;
+
 	void Initialise();
 	void Projection();
+
+
+	void drawGridLines();
+	void drawAxisLines();
+
 
 };
