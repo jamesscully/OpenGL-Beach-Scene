@@ -1,16 +1,7 @@
 #include "MyScene.h"
-#include "Shape/Octahedron.h"
 
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:4996)
-
-
-// define our height and subdivide level
-int SUBDIVIDE_LEVEL = 4;
-float HEIGHT = 100;
-
-// define our octahedron here - this will generate all of the vertices for each face depending on sub-divide level
-Octahedron oct(HEIGHT, SUBDIVIDE_LEVEL);
 
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
@@ -31,7 +22,6 @@ void MyScene::Projection() {
     gluPerspective(60.0, aspect, 1.0, 1000.0);
     
     // calls draw functions for each face of the octahedron
-    oct.draw();
 
     drawAxisLines();
 }
