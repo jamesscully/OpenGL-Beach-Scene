@@ -34,7 +34,7 @@ source_group("Source Files" FILES ${Source_Files})
 set(ALL_FILES
     ${Header_Files}
     ${Source_Files}
-)
+        Code/Wall.cpp Code/Wall.h)
 
 set (CMAKE_CXX_FLAGS "-lGL -lGLU -lglut")
 

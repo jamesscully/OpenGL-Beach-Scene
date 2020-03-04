@@ -20,21 +20,14 @@ void MyScene::Initialise()
 void MyScene::Projection() {
     GLdouble aspect = static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight);
     gluPerspective(60.0, aspect, 1.0, 1000.0);
-    
-    // calls draw functions for each face of the octahedron
+
+
+
 
     drawAxisLines();
 }
 
-
-
-//
-//
 // Miscellaneous grid-drawing functions
-//
-//
-
-
 
 void MyScene::drawGridLines() {
 
