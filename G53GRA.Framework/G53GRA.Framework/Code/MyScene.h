@@ -17,8 +17,11 @@ private:
 	void Projection();
 
 
+
+    void drawDebugText();
 	void drawGridLines();
 	void drawAxisLines();
 
 
+    virtual void HandleKey(unsigned char key, int state, int x, int y);
 };

@@ -10,6 +10,7 @@ find_package(GLUT REQUIRED)
 ################################################################################
 set(Header_Files
     "Code/MyScene.h"
+    "Code/OnscreenText.h"
     "Framework/Engine/Engine.h"
     "Framework/Engine/Scene.h"
     "Framework/Interface/Animation.h"
@@ -24,6 +25,7 @@ source_group("Header Files" FILES ${Header_Files})
 set(Source_Files
     "Code/main.cpp"
     "Code/MyScene.cpp"
+    "Code/OnscreenText.cpp"
     "Framework/Engine/Engine.cpp"
     "Framework/Engine/Scene.cpp"
     "Framework/Utility/Camera.cpp"
