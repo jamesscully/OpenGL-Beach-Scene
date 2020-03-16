@@ -123,6 +123,33 @@ G53GRA.Framework/fast:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/build
 .PHONY : G53GRA.Framework/fast
 
+Code/Light.o: Code/Light.cpp.o
+
+.PHONY : Code/Light.o
+
+# target to build an object file
+Code/Light.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o
+.PHONY : Code/Light.cpp.o
+
+Code/Light.i: Code/Light.cpp.i
+
+.PHONY : Code/Light.i
+
+# target to preprocess a source file
+Code/Light.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.i
+.PHONY : Code/Light.cpp.i
+
+Code/Light.s: Code/Light.cpp.s
+
+.PHONY : Code/Light.s
+
+# target to generate assembly for a file
+Code/Light.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.s
+.PHONY : Code/Light.cpp.s
+
 Code/MyScene.o: Code/MyScene.cpp.o
 
 .PHONY : Code/MyScene.o
@@ -348,6 +375,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... G53GRA.Framework"
 	@echo "... edit_cache"
+	@echo "... Code/Light.o"
+	@echo "... Code/Light.i"
+	@echo "... Code/Light.s"
 	@echo "... Code/MyScene.o"
 	@echo "... Code/MyScene.i"
 	@echo "... Code/MyScene.s"

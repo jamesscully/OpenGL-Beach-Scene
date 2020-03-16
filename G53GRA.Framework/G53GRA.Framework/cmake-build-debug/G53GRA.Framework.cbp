@@ -98,6 +98,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.cpp">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.cpp">
 			<Option target="G53GRA.Framework"/>
 		</Unit>

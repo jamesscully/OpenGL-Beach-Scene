@@ -27,7 +27,6 @@ void Wall::Display() {
     float SUB_SCALE = 100.0f;
 
     float sample = 1.0f / SUB_SCALE;
-    float colour_scale = 0.4f;
 
     /*
      *  * - - - - - - - - - - *  (x + sample, y + sample)
@@ -43,6 +42,7 @@ void Wall::Display() {
         for(GLfloat y = -wallsize; y < wallsize; y += sample) {
             glBegin(GL_TRIANGLES);
 
+            float colour_scale = 0.4f;
             glColor3f(colour_scale, colour_scale, colour_scale);
 
             glVertex3f(x, y, 0);
@@ -52,6 +52,7 @@ void Wall::Display() {
             glVertex3f(x, y, 0);
             glVertex3f(x + sample, y + sample, 0);
             glVertex3f(x, y + sample, 0);
+
             glEnd();
 
         }

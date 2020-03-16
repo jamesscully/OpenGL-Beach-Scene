@@ -1,6 +1,7 @@
 #include "MyScene.h"
 #include "Wall.h"
 #include "OnscreenText.h"
+#include "Light.h"
 
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:4996)
@@ -21,39 +22,27 @@ void MyScene::Initialise()
     Wall *wall = new Wall();
     wall->size(50);
 
-    AddObjectToScene(wall);
-}
+    Light *light1 = new Light(GL_LIGHT0);
+    Light *light2 = new Light(GL_LIGHT1);
 
-float catt = 0;
-float latt = 0.025;
-float qatt = 0.00005;
+    light1->position(20, 0, 10);
+    light2->position(-20, 0, 10);
+
+    
+
+    AddObjectToScene(wall);
+
+    AddObjectToScene(light1);
+    AddObjectToScene(light2);
+}
 
 void MyScene::Projection() {
     GLdouble aspect = static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight);
     gluPerspective(60.0, aspect, 1.0, 1000.0);
 
-    float ambient[] = {0.2f, 0.2f, 0.2f, 1.0f};
-    float diffuse[] = {0.9f, 0.9f, 0.9f, 1.0f};
-    float specular[] = {1.0f, 1.0f, 1.0f, 1.0f};
-
-    float light_pos[] = {0.0f, 1.0f, -1.0f, 1.0f};
-
-    glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuse);
-    glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
-    glLightfv(GL_LIGHT0, GL_POSITION, light_pos);
-
-
-    glLightf(GL_LIGHT0, GL_CONSTANT_ATTENUATION, catt);
-    glLightf(GL_LIGHT0, GL_LINEAR_ATTENUATION, latt);
-    glLightf(GL_LIGHT0, GL_QUADRATIC_ATTENUATION, qatt);
-
-    glDisable(GL_LIGHTING);
 
     drawAxisLines();
     drawDebugText();
-    glEnable(GL_LIGHTING);
-
 }
 
 char lmsg[256]; char cmsg[256]; char qmsg[256];
@@ -77,28 +66,28 @@ void MyScene::drawDebugText() {
 
 
 void MyScene::HandleKey(unsigned char key, int state, int x, int y) {
-    switch (key) {
-        case 'j': latt -= 0.005; break;
-        case 'k': latt += 0.005; break;
-
-        case 'n': catt -= 0.005; break;
-        case 'm': catt += 0.005; break;
-
-        case 'h': qatt -= 0.0005; break;
-        case 'l': qatt += 0.0005; break;
-
-        case 'x':
-            catt = 0; latt = 0.025; qatt = 0.00005;
-            break;
-
-        // if we don't have a match, then pass to default Scene handlekey
-        default:
+//    switch (key) {
+//        case 'j': latt -= 0.005; break;
+//        case 'k': latt += 0.005; break;
+//
+//        case 'n': catt -= 0.005; break;
+//        case 'm': catt += 0.005; break;
+//
+//        case 'h': qatt -= 0.0005; break;
+//        case 'l': qatt += 0.0005; break;
+//
+//        case 'x':
+//            catt = 0; latt = 0.025; qatt = 0.00005;
+//            break;
+//
+//        // if we don't have a match, then pass to default Scene handlekey
+//        default:
             Scene::HandleKey(key, state, x, y);
-            break;
-    }
-    if (latt < 0) latt = 0.0005;
-    if (catt < 0) catt = 0.0005;
-    if (qatt < 0) qatt = 0.0005;
+//            break;
+//    }
+//    if (latt < 0) latt = 0.0005;
+//    if (catt < 0) catt = 0.0005;
+//    if (qatt < 0) qatt = 0.0005;
 }
 
 // Miscellaneous grid-drawing functions

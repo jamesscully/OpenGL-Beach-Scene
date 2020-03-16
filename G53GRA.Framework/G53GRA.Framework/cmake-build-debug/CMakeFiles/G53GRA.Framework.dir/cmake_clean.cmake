@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o"

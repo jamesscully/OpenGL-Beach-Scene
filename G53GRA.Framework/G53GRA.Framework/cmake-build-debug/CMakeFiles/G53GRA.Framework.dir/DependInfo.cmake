@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.cpp" "/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o"
   "/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.cpp" "/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o"
   "/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.cpp" "/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o"
   "/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Wall.cpp" "/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o"

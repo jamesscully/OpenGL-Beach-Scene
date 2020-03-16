@@ -44,6 +44,10 @@ vector
 Scene.h
 ../Framework/Interface/Scene.h
 
+/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h
+Interface/DisplayableObject.h
+-
+
 /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.cpp
 MyScene.h
 /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.h
@@ -51,6 +55,8 @@ Wall.h
 /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Wall.h
 OnscreenText.h
 /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
+Light.h
+/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h
 
 /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.h
 ../Framework/Engine/Scene.h
