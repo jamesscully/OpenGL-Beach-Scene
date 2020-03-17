@@ -13,11 +13,6 @@ class Light : public DisplayableObject {
 public:
     Light(int light_id);
 
-    // void setAmbient (float amb[]);
-    // void setDiffuse (float dif[]);
-    // void setSpecular(float spec[]);
-    // void setPosition(float pos[]);
-
     int light_id = 0;
 
     float ambient [4] = {0.2f, 0.2f, 0.2f, 1.0f};
@@ -31,6 +26,10 @@ public:
     ~Light() override;
 
     void Display() override;
+
+
+    void setColor(float r, float g, float b);
+    void HandleKey(unsigned char key, int state, int x, int y);
 };
 
 

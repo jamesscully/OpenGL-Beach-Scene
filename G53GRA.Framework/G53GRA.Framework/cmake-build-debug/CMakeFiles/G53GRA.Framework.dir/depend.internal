@@ -12,6 +12,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o
  ../Framework/Utility/Texture.h
  /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.cpp
  /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h
+ /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h

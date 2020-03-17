@@ -6,6 +6,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:4996)
 
+Light *light1, *light2;
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
 	: Scene(argc, argv, title, windowWidth, windowHeight)
@@ -22,13 +23,14 @@ void MyScene::Initialise()
     Wall *wall = new Wall();
     wall->size(50);
 
-    Light *light1 = new Light(GL_LIGHT0);
-    Light *light2 = new Light(GL_LIGHT1);
+    light1 = new Light(GL_LIGHT0);
+    light2 = new Light(GL_LIGHT1);
 
     light1->position(20, 0, 10);
     light2->position(-20, 0, 10);
 
-    
+    light1->setColor(2, 0, 0);
+    light2->setColor(0, 0, 2);
 
     AddObjectToScene(wall);
 
@@ -45,49 +47,18 @@ void MyScene::Projection() {
     drawDebugText();
 }
 
-char lmsg[256]; char cmsg[256]; char qmsg[256];
-
 int x_off = 20;
 
 OnscreenText hlpText(x_off, 50, "[linear att: j/k] [constant att: n/m] [quad att: h/l]   reset = x");
-//linText(x_off, 200, lmsg),
-//conText(x_off, 150, cmsg),
-//quaText(x_off, 100, qmsg),
 
 void MyScene::drawDebugText() {
-
-//    sprintf(lmsg, "Linear Att: %f", latt);
-//    sprintf(cmsg, "Constant Att: %f", catt);
-//    sprintf(qmsg, "Quadratic Att: %f", qatt);
-
-//    linText.render(); conText.render(); quaText.render();
     hlpText.render();
 }
 
 
 void MyScene::HandleKey(unsigned char key, int state, int x, int y) {
-//    switch (key) {
-//        case 'j': latt -= 0.005; break;
-//        case 'k': latt += 0.005; break;
-//
-//        case 'n': catt -= 0.005; break;
-//        case 'm': catt += 0.005; break;
-//
-//        case 'h': qatt -= 0.0005; break;
-//        case 'l': qatt += 0.0005; break;
-//
-//        case 'x':
-//            catt = 0; latt = 0.025; qatt = 0.00005;
-//            break;
-//
-//        // if we don't have a match, then pass to default Scene handlekey
-//        default:
-            Scene::HandleKey(key, state, x, y);
-//            break;
-//    }
-//    if (latt < 0) latt = 0.0005;
-//    if (catt < 0) catt = 0.0005;
-//    if (qatt < 0) qatt = 0.0005;
+    light1->HandleKey(key, state, x, y);
+    light2->HandleKey(key, state, x, y);
 }
 
 // Miscellaneous grid-drawing functions

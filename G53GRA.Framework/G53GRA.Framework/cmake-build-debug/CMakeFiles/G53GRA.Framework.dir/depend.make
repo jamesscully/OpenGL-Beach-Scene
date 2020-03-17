@@ -11,6 +11,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o: ../Framework/Utility/Camera.h
 CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o: ../Framework/Utility/Texture.h
 CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o: ../Code/Light.cpp
 CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o: ../Code/Light.h
+CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o: ../Code/OnscreenText.h
 
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../../freeglut/include/GL/freeglut_std.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../../freeglut/include/GL/glut.h
