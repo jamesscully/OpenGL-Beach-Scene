@@ -48,10 +48,10 @@ RM = /opt/clion/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework
+CMAKE_SOURCE_DIR = /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug
+CMAKE_BINARY_DIR = /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,33 @@ G53GRA.Framework/fast:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/build
 .PHONY : G53GRA.Framework/fast
 
+Code/Island/Island.o: Code/Island/Island.cpp.o
+
+.PHONY : Code/Island/Island.o
+
+# target to build an object file
+Code/Island/Island.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.o
+.PHONY : Code/Island/Island.cpp.o
+
+Code/Island/Island.i: Code/Island/Island.cpp.i
+
+.PHONY : Code/Island/Island.i
+
+# target to preprocess a source file
+Code/Island/Island.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.i
+.PHONY : Code/Island/Island.cpp.i
+
+Code/Island/Island.s: Code/Island/Island.cpp.s
+
+.PHONY : Code/Island/Island.s
+
+# target to generate assembly for a file
+Code/Island/Island.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.s
+.PHONY : Code/Island/Island.cpp.s
+
 Code/Light.o: Code/Light.cpp.o
 
 .PHONY : Code/Light.o
@@ -149,6 +176,33 @@ Code/Light.s: Code/Light.cpp.s
 Code/Light.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.s
 .PHONY : Code/Light.cpp.s
+
+Code/Logs/LogA.o: Code/Logs/LogA.cpp.o
+
+.PHONY : Code/Logs/LogA.o
+
+# target to build an object file
+Code/Logs/LogA.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.o
+.PHONY : Code/Logs/LogA.cpp.o
+
+Code/Logs/LogA.i: Code/Logs/LogA.cpp.i
+
+.PHONY : Code/Logs/LogA.i
+
+# target to preprocess a source file
+Code/Logs/LogA.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.i
+.PHONY : Code/Logs/LogA.cpp.i
+
+Code/Logs/LogA.s: Code/Logs/LogA.cpp.s
+
+.PHONY : Code/Logs/LogA.s
+
+# target to generate assembly for a file
+Code/Logs/LogA.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.s
+.PHONY : Code/Logs/LogA.cpp.s
 
 Code/MyScene.o: Code/MyScene.cpp.o
 
@@ -203,6 +257,33 @@ Code/OnscreenText.s: Code/OnscreenText.cpp.s
 Code/OnscreenText.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.s
 .PHONY : Code/OnscreenText.cpp.s
+
+Code/Skybox/Skybox.o: Code/Skybox/Skybox.cpp.o
+
+.PHONY : Code/Skybox/Skybox.o
+
+# target to build an object file
+Code/Skybox/Skybox.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o
+.PHONY : Code/Skybox/Skybox.cpp.o
+
+Code/Skybox/Skybox.i: Code/Skybox/Skybox.cpp.i
+
+.PHONY : Code/Skybox/Skybox.i
+
+# target to preprocess a source file
+Code/Skybox/Skybox.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.i
+.PHONY : Code/Skybox/Skybox.cpp.i
+
+Code/Skybox/Skybox.s: Code/Skybox/Skybox.cpp.s
+
+.PHONY : Code/Skybox/Skybox.s
+
+# target to generate assembly for a file
+Code/Skybox/Skybox.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.s
+.PHONY : Code/Skybox/Skybox.cpp.s
 
 Code/Wall.o: Code/Wall.cpp.o
 
@@ -375,15 +456,24 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... G53GRA.Framework"
 	@echo "... edit_cache"
+	@echo "... Code/Island/Island.o"
+	@echo "... Code/Island/Island.i"
+	@echo "... Code/Island/Island.s"
 	@echo "... Code/Light.o"
 	@echo "... Code/Light.i"
 	@echo "... Code/Light.s"
+	@echo "... Code/Logs/LogA.o"
+	@echo "... Code/Logs/LogA.i"
+	@echo "... Code/Logs/LogA.s"
 	@echo "... Code/MyScene.o"
 	@echo "... Code/MyScene.i"
 	@echo "... Code/MyScene.s"
 	@echo "... Code/OnscreenText.o"
 	@echo "... Code/OnscreenText.i"
 	@echo "... Code/OnscreenText.s"
+	@echo "... Code/Skybox/Skybox.o"
+	@echo "... Code/Skybox/Skybox.i"
+	@echo "... Code/Skybox/Skybox.s"
 	@echo "... Code/Wall.o"
 	@echo "... Code/Wall.i"
 	@echo "... Code/Wall.s"

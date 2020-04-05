@@ -4,7 +4,11 @@
 
 #include "Wall.h"
 
-Wall::Wall() = default;
+Wall::Wall() {
+    txtSubinst = new OnscreenText(1100, 150, "<q e> to subdivide wall");
+    txtSubdivs = new OnscreenText(1100, 125, "Subdivides:", &SUB_SCALE);
+}
+
 Wall::~Wall() = default;
 
 void Wall::Display() {
@@ -24,9 +28,7 @@ void Wall::Display() {
     float wallsize = 2.0f;
 
     // how many times we want to sub-divide
-    float SUB_SCALE = 100.0f;
-
-    float sample = 1.0f / SUB_SCALE;
+    float sample = 1.0f / this->SUB_SCALE;
 
     /*
      *  * - - - - - - - - - - *  (x + sample, y + sample)
@@ -35,7 +37,6 @@ void Wall::Display() {
      *  |                     |
      *  * - - - - - - - - - - *
      *  (x,y)                (x + sample, y)
-     *
      */
 
     for(GLfloat x = -wallsize; x < wallsize; x += sample) {
@@ -60,4 +61,8 @@ void Wall::Display() {
 
     glPopAttrib();
     glPopMatrix();
+
+    // draw our UI text for this wall
+    txtSubdivs->render();
+    txtSubinst->render();
 }

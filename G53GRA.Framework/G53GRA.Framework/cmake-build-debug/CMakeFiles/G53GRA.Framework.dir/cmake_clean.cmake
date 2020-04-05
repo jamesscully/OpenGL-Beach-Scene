@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o"
+  "CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o"
+  "CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/main.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Framework/Engine/Engine.cpp.o"

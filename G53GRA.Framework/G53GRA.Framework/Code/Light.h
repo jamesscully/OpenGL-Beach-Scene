@@ -7,6 +7,7 @@
 
 
 #include <Interface/DisplayableObject.h>
+#include "OnscreenText.h"
 
 class Light : public DisplayableObject {
 
@@ -27,6 +28,7 @@ public:
 
     void Display() override;
 
+    OnscreenText * txtCon, * txtLin, * txtQua;
 
     void setColor(float r, float g, float b);
     void HandleKey(unsigned char key, int state, int x, int y);

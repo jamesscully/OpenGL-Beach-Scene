@@ -1,3 +1,6 @@
+#include <Island/Island.h>
+#include <Logs/LogA.h>
+#include <Skybox/Skybox.h>
 #include "MyScene.h"
 #include "Wall.h"
 #include "OnscreenText.h"
@@ -6,7 +9,11 @@
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:4996)
 
-Light *light1, *light2;
+// we'll declare pointers here, so that we can access them from different functions (helps not hiding everything in header)
+Light * light1, *light2;
+Wall  * wall;
+
+Island * island;
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
 	: Scene(argc, argv, title, windowWidth, windowHeight)
@@ -15,12 +22,17 @@ MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidt
     WIN_WIDTH  = windowWidth;
 }
 
+
+LogA* logA;
+
+Skybox* skybox;
 void MyScene::Initialise()
 {
-    float colorScale = 0.0f;
+    // any likely changes to background will be a 'shade' rather than specific colour
+    float colorScale = 1.0f;
 	glClearColor(colorScale, colorScale, colorScale, 1.0f);
 
-    Wall *wall = new Wall();
+    wall = new Wall();
     wall->size(50);
 
     light1 = new Light(GL_LIGHT0);
@@ -29,39 +41,83 @@ void MyScene::Initialise()
     light1->position(20, 0, 10);
     light2->position(-20, 0, 10);
 
+
     light1->setColor(2, 0, 0);
     light2->setColor(0, 0, 2);
 
-    AddObjectToScene(wall);
+//    island = new Island();
+//    island->position(0, 0, 0);
+//    island->size(50);
+//    logA = new LogA();
+//    AddObjectToScene(logA);
 
-    AddObjectToScene(light1);
-    AddObjectToScene(light2);
+//    AddObjectToScene(island);
+
+//    AddObjectToScene(wall);
+
+
+
+    skybox = new Skybox();
+    skybox->size(500);
+
+    AddObjectToScene(skybox);
+
+//    AddObjectToScene(light1);
+//    AddObjectToScene(light2);
+}
+
+int x_off = 20;
+OnscreenText hlpText(x_off, 50, "[linear att: <j  k>] [constant att: <n m>] [quad att: <h l>]   reset = x");
+
+void MyScene::drawDebugText() {
+    hlpText.render();
 }
 
 void MyScene::Projection() {
     GLdouble aspect = static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight);
     gluPerspective(60.0, aspect, 1.0, 1000.0);
 
+//    glBegin(GL_POLYGON);
+//    glColor3f(1, 0, 0);
+//    glVertex3f(0,0,0);
+//    glVertex3f(50,-0.5,0);
+//    glVertex3f(0,-0.5,50);
+//    glEnd();
 
-    drawAxisLines();
     drawDebugText();
+    drawAxisLines();
 }
-
-int x_off = 20;
-
-OnscreenText hlpText(x_off, 50, "[linear att: j/k] [constant att: n/m] [quad att: h/l]   reset = x");
-
-void MyScene::drawDebugText() {
-    hlpText.render();
-}
-
 
 void MyScene::HandleKey(unsigned char key, int state, int x, int y) {
-    light1->HandleKey(key, state, x, y);
-    light2->HandleKey(key, state, x, y);
+
+//    switch (key) {
+//        case 'q':
+//            if(wall->SUB_SCALE > 1)
+//                wall->SUB_SCALE -= 1;
+//            break;
+//
+//        case 'e':
+//            wall->SUB_SCALE += 1;
+//            break;
+//    }
+//
+//    // pass key events to lights, so they can deal with atten. changes
+//    light1->HandleKey(key, state, x, y);
+//    light2->HandleKey(key, state, x, y);
+
+
+
+    Scene::HandleKey(key, state, x, y);
 }
 
+
+//
+//
 // Miscellaneous grid-drawing functions
+//
+//
+
+
 
 void MyScene::drawGridLines() {
 
@@ -91,30 +147,24 @@ void MyScene::drawAxisLines() {
 
     int MAX_X = 2000;
     int MAX_Z = 2000;
-    glBegin(GL_LINES);
-        // draw our main X axis
-        glColor3f(2,0,0);
-        glVertex3d(MAX_X, 0, 0);
-        glVertex3d(-MAX_X, 0, 0);
 
-        // draw our main Z axis
-        glColor3f(0,2,0);
-        glVertex3d(0, 0, MAX_Z);
-        glVertex3d(0, 0, -MAX_Z);
+    glBegin(GL_LINES);
+    // draw our main X axis
+    glColor3f(2,0,0);
+    glVertex3d(MAX_X, 0, 0);
+    glVertex3d(-MAX_X, 0, 0);
+
+    // draw our main Z axis
+    glColor3f(0,2,0);
+    glVertex3d(0, 0, MAX_Z);
+    glVertex3d(0, 0, -MAX_Z);
     glEnd();
     glFlush();
 
     // draw center dot
     glPushMatrix();
-        glColor3f(0, 0, 255);
-        glutSolidSphere(1, 25, 25);
-        glTranslated(0, 0, 0);
+    glColor3f(0, 0, 255);
+    glutSolidSphere(1, 25, 25);
+    glTranslated(0, 0, 0);
     glPopMatrix();
-
 }
-
-
-
-
-
-

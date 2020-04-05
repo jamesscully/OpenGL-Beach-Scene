@@ -6,18 +6,18 @@ class OnscreenText
 {
     public:
         OnscreenText(int nX, int nY, std::string text);
-        OnscreenText(std::string text);
+        OnscreenText(int nX, int nY, std::string text, float* value);
         virtual ~OnscreenText();
 
-        void* font;
         std::string str;
 
         int x, y;
 
+        float *value;
 
-        void setPos(int x, int y);
-        void setText(std::string s);
-        void setFont(void* fnt);
+        // indicates whether we need to add the above value to string
+        bool has_value;
+
         void render();
 
     protected:

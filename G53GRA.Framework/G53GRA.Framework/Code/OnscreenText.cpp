@@ -8,49 +8,46 @@ OnscreenText::OnscreenText(int nX, int nY, string text)
     x = nX;
     y = nY;
     str = text;
+    has_value = false;
 }
 
-OnscreenText::~OnscreenText()
-{
-    //dtor
+OnscreenText::OnscreenText(int nX, int nY, std::string text, float* value) {
+    x = nX; y = nY;
+    str = text;
+
+    has_value = true;
+    this->value = value;
 }
 
-void OnscreenText::setPos(int nX, int nY)
-{
-    x = nX;
-    y = nY;
-}
-
-void OnscreenText::setText(std::string s)
-{
-    str = s;
-}
-
-void OnscreenText::setFont(void* fnt)
-{
-    font = fnt;
-}
+OnscreenText::~OnscreenText() = default;
 
 void OnscreenText::render()
 {
-    int len = str.length();
-
     glDisable(GL_LIGHTING);
     glMatrixMode( GL_PROJECTION );
     glColor3f(255, 0, 0);
 
     glPushMatrix();
     glLoadIdentity();
-    gluOrtho2D( 0, 1280, 0, 1024 );
+    gluOrtho2D( 0, 1366, 0, 786 );
 
     glMatrixMode( GL_MODELVIEW );
     glPushMatrix();
     glLoadIdentity();
     glRasterPos2i(x, y);  // move in 10 pixels from the left and bottom edges
 
-    for ( int i = 0; i < len; ++i ) {
-        glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24, str[i]);
+    // we'll want to display str in the case we don't have a value
+    string out = str;
+
+    // if we have a value, append it.
+    if(has_value)
+        out = out + " " + std::to_string(*value);
+
+    int len = out.length();
+    for (int i = 0; i < len; i++) {
+        glutBitmapCharacter(GLUT_BITMAP_HELVETICA_18, out[i]);
     }
+
     glPopMatrix();
 
     glMatrixMode( GL_PROJECTION );
@@ -58,6 +55,8 @@ void OnscreenText::render()
     glMatrixMode( GL_MODELVIEW );
     glEnable(GL_LIGHTING);
 }
+
+
 
 
 

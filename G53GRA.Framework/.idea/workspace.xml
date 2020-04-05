@@ -12,26 +12,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="776d2edb-a6db-4c86-a47d-e6482a04efd4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/G53GRA.Framework/Code/Light.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/G53GRA.Framework/Code/Light.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/Code/Light.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/Code/Light.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/Code/Light.h" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/Code/Light.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G53GRA.Framework/Code/MyScene.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/Code/MyScene.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/Code/OnscreenText.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/Code/OnscreenText.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/Code/OnscreenText.h" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/Code/OnscreenText.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G53GRA.Framework/Code/Wall.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/Code/Wall.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/Code/Wall.h" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/Code/Wall.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/depend.internal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/G53GRA.Framework.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/G53GRA.Framework.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/G53GRA.Framework/cmake-build-debug/Makefile" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +32,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -59,6 +48,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -102,6 +92,7 @@
       <workItem from="1584107130642" duration="403000" />
       <workItem from="1584212533883" duration="2387000" />
       <workItem from="1584359788209" duration="9872000" />
+      <workItem from="1585813736129" duration="5000" />
     </task>
     <servers />
   </component>

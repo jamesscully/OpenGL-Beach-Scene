@@ -70,17 +70,11 @@ map
 string
 -
 
-/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.cpp
-Light.h
-/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h
-OnscreenText.h
-/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Skybox/Skybox.cpp
+Skybox.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Skybox/Skybox.h
 
-/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Skybox/Skybox.h
 Interface/DisplayableObject.h
--
-
-/home/yames/coursework/y3/gra/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
-string
 -
 
