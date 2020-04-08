@@ -1,8 +1,10 @@
 #include <Island/Island.h>
 #include <Logs/LogA.h>
 #include <Skybox/Skybox.h>
+#include <Ocean/Ocean.h>
+#include <Oct/Octahedron.h>
+#include <OBJLoader/Model.h>
 #include "MyScene.h"
-#include "Wall.h"
 #include "OnscreenText.h"
 #include "Light.h"
 
@@ -11,7 +13,6 @@
 
 // we'll declare pointers here, so that we can access them from different functions (helps not hiding everything in header)
 Light * light1, *light2;
-Wall  * wall;
 
 Island * island;
 
@@ -25,45 +26,40 @@ MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidt
 
 LogA* logA;
 
-Skybox* skybox;
-void MyScene::Initialise()
-{
+Skybox* skybox; Ocean* ocean;
+Octahedron* octahedron;
+
+Model * model;
+void MyScene::Initialise() {
+
+    octahedron = new Octahedron(100, 1);
+
     // any likely changes to background will be a 'shade' rather than specific colour
     float colorScale = 1.0f;
 	glClearColor(colorScale, colorScale, colorScale, 1.0f);
 
-    wall = new Wall();
-    wall->size(50);
-
     light1 = new Light(GL_LIGHT0);
-    light2 = new Light(GL_LIGHT1);
-
-    light1->position(20, 0, 10);
-    light2->position(-20, 0, 10);
-
-
+    light1->position(20, 50, 10);
     light1->setColor(2, 0, 0);
-    light2->setColor(0, 0, 2);
 
-//    island = new Island();
-//    island->position(0, 0, 0);
-//    island->size(50);
-//    logA = new LogA();
-//    AddObjectToScene(logA);
-
-//    AddObjectToScene(island);
-
-//    AddObjectToScene(wall);
+    //logA = new LogA();
+    //AddObjectToScene(logA);
 
 
 
-    skybox = new Skybox();
-    skybox->size(500);
+    model = new Model("/mnt/data/home/untitled.obj");
 
-    AddObjectToScene(skybox);
-
+//    skybox = new Skybox();
+//    skybox->size(10000);
+//
+//    ocean = new Ocean();
+//    ocean->size(10000);
+//
+//    AddObjectToScene(skybox);
+//    AddObjectToScene(ocean);
+//
 //    AddObjectToScene(light1);
-//    AddObjectToScene(light2);
+
 }
 
 int x_off = 20;
@@ -73,19 +69,19 @@ void MyScene::drawDebugText() {
     hlpText.render();
 }
 
+
+int SUBDIVIDE_LEVEL = 5;
+float HEIGHT = 300;
+Octahedron oct(HEIGHT, SUBDIVIDE_LEVEL);
+
 void MyScene::Projection() {
     GLdouble aspect = static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight);
-    gluPerspective(60.0, aspect, 1.0, 1000.0);
+    gluPerspective(60.0, aspect, 1.0, 10000.0);
 
-//    glBegin(GL_POLYGON);
-//    glColor3f(1, 0, 0);
-//    glVertex3f(0,0,0);
-//    glVertex3f(50,-0.5,0);
-//    glVertex3f(0,-0.5,50);
-//    glEnd();
-
-    drawDebugText();
+    //drawDebugText();
     drawAxisLines();
+    model->draw();
+    // oct.draw();
 }
 
 void MyScene::HandleKey(unsigned char key, int state, int x, int y) {
@@ -164,7 +160,7 @@ void MyScene::drawAxisLines() {
     // draw center dot
     glPushMatrix();
     glColor3f(0, 0, 255);
-    glutSolidSphere(1, 25, 25);
+    // glutSolidSphere(1, 25, 25);
     glTranslated(0, 0, 0);
     glPopMatrix();
 }

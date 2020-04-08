@@ -40,6 +40,12 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o
  ../../freeglut/include/GL/glut.h
  ../Code/Island/Island.h
  ../Code/Logs/LogA.h
+ ../Code/OBJLoader/Face.h
+ ../Code/OBJLoader/Model.h
+ ../Code/OBJLoader/Utils.h
+ ../Code/Ocean/Ocean.h
+ ../Code/Oct/OctFace.h
+ ../Code/Oct/Octahedron.h
  ../Code/Skybox/Skybox.h
  ../Framework/Engine/Scene.h
  ../Framework/Interface/DisplayableObject.h
@@ -47,12 +53,43 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Wall.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Framework/Engine/Engine.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Framework/Engine/Scene.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Framework/Interface/Input.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Framework/Utility/Camera.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Framework/Utility/Texture.h
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.cpp
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Utils.h
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.cpp
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Utils.h
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o
+ ../../freeglut/include/GL/freeglut_std.h
+ ../../freeglut/include/GL/glut.h
+ ../Framework/Engine/Engine.h
+ ../Framework/Engine/Scene.h
+ ../Framework/Interface/DisplayableObject.h
+ ../Framework/Interface/Input.h
+ ../Framework/Utility/Camera.h
+ ../Framework/Utility/Texture.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Ocean/Ocean.cpp
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Ocean/Ocean.h
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o
+ ../../freeglut/include/GL/freeglut.h
+ ../../freeglut/include/GL/freeglut_ext.h
+ ../../freeglut/include/GL/freeglut_std.h
+ ../../freeglut/include/GL/glut.h
+ ../Framework/Utility/VectorMath.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/OctFace.cpp
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/OctFace.h
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/OctFace.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/Octahedron.cpp
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/Octahedron.h
 CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
@@ -69,18 +106,6 @@ CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o
  ../Framework/Utility/Texture.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Skybox/Skybox.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Skybox/Skybox.h
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o
- ../../freeglut/include/GL/freeglut_std.h
- ../../freeglut/include/GL/glut.h
- ../Framework/Engine/Engine.h
- ../Framework/Engine/Scene.h
- ../Framework/Interface/DisplayableObject.h
- ../Framework/Interface/Input.h
- ../Framework/Utility/Camera.h
- ../Framework/Utility/Texture.h
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Wall.cpp
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Wall.h
 CMakeFiles/G53GRA.Framework.dir/Code/main.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h

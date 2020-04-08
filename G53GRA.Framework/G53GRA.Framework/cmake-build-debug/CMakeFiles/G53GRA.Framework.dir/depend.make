@@ -39,6 +39,12 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../../freeglut/include/GL/fr
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../../freeglut/include/GL/glut.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Island/Island.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Logs/LogA.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/OBJLoader/Face.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/OBJLoader/Model.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/OBJLoader/Utils.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Ocean/Ocean.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Oct/OctFace.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Oct/Octahedron.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Skybox/Skybox.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Engine/Scene.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/DisplayableObject.h
@@ -46,12 +52,43 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Light.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/MyScene.cpp
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/MyScene.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/OnscreenText.h
-CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Wall.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Engine/Engine.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Engine/Scene.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/Input.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Utility/Camera.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Utility/Texture.h
+
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o: ../Code/OBJLoader/Face.cpp
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o: ../Code/OBJLoader/Face.h
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o: ../Code/OBJLoader/Utils.h
+
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Code/OBJLoader/Face.h
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Code/OBJLoader/Model.cpp
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Code/OBJLoader/Model.h
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Code/OBJLoader/Utils.h
+
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../../freeglut/include/GL/freeglut_std.h
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../../freeglut/include/GL/glut.h
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../Framework/Engine/Engine.h
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../Framework/Engine/Scene.h
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../Framework/Interface/DisplayableObject.h
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../Framework/Interface/Input.h
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../Framework/Utility/Camera.h
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../Framework/Utility/Texture.h
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../Code/Ocean/Ocean.cpp
+CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../Code/Ocean/Ocean.h
+
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o: ../../freeglut/include/GL/freeglut.h
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o: ../../freeglut/include/GL/freeglut_ext.h
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o: ../../freeglut/include/GL/freeglut_std.h
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o: ../../freeglut/include/GL/glut.h
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o: ../Framework/Utility/VectorMath.h
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o: ../Code/Oct/OctFace.cpp
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o: ../Code/Oct/OctFace.h
+
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o: ../Code/Oct/OctFace.h
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o: ../Code/Oct/Octahedron.cpp
+CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o: ../Code/Oct/Octahedron.h
 
 CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o: ../../freeglut/include/GL/freeglut_std.h
 CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o: ../../freeglut/include/GL/glut.h
@@ -68,18 +105,6 @@ CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Framework/Utility/C
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Framework/Utility/Texture.h
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Code/Skybox/Skybox.cpp
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Code/Skybox/Skybox.h
-
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../../freeglut/include/GL/freeglut_std.h
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../../freeglut/include/GL/glut.h
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../Framework/Engine/Engine.h
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../Framework/Engine/Scene.h
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../Framework/Interface/DisplayableObject.h
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../Framework/Interface/Input.h
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../Framework/Utility/Camera.h
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../Framework/Utility/Texture.h
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../Code/OnscreenText.h
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../Code/Wall.cpp
-CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o: ../Code/Wall.h
 
 CMakeFiles/G53GRA.Framework.dir/Code/main.cpp.o: ../../freeglut/include/GL/freeglut_std.h
 CMakeFiles/G53GRA.Framework.dir/Code/main.cpp.o: ../../freeglut/include/GL/glut.h

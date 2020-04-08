@@ -231,6 +231,141 @@ Code/MyScene.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.s
 .PHONY : Code/MyScene.cpp.s
 
+Code/OBJLoader/Face.o: Code/OBJLoader/Face.cpp.o
+
+.PHONY : Code/OBJLoader/Face.o
+
+# target to build an object file
+Code/OBJLoader/Face.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o
+.PHONY : Code/OBJLoader/Face.cpp.o
+
+Code/OBJLoader/Face.i: Code/OBJLoader/Face.cpp.i
+
+.PHONY : Code/OBJLoader/Face.i
+
+# target to preprocess a source file
+Code/OBJLoader/Face.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.i
+.PHONY : Code/OBJLoader/Face.cpp.i
+
+Code/OBJLoader/Face.s: Code/OBJLoader/Face.cpp.s
+
+.PHONY : Code/OBJLoader/Face.s
+
+# target to generate assembly for a file
+Code/OBJLoader/Face.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.s
+.PHONY : Code/OBJLoader/Face.cpp.s
+
+Code/OBJLoader/Model.o: Code/OBJLoader/Model.cpp.o
+
+.PHONY : Code/OBJLoader/Model.o
+
+# target to build an object file
+Code/OBJLoader/Model.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o
+.PHONY : Code/OBJLoader/Model.cpp.o
+
+Code/OBJLoader/Model.i: Code/OBJLoader/Model.cpp.i
+
+.PHONY : Code/OBJLoader/Model.i
+
+# target to preprocess a source file
+Code/OBJLoader/Model.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.i
+.PHONY : Code/OBJLoader/Model.cpp.i
+
+Code/OBJLoader/Model.s: Code/OBJLoader/Model.cpp.s
+
+.PHONY : Code/OBJLoader/Model.s
+
+# target to generate assembly for a file
+Code/OBJLoader/Model.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.s
+.PHONY : Code/OBJLoader/Model.cpp.s
+
+Code/Ocean/Ocean.o: Code/Ocean/Ocean.cpp.o
+
+.PHONY : Code/Ocean/Ocean.o
+
+# target to build an object file
+Code/Ocean/Ocean.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o
+.PHONY : Code/Ocean/Ocean.cpp.o
+
+Code/Ocean/Ocean.i: Code/Ocean/Ocean.cpp.i
+
+.PHONY : Code/Ocean/Ocean.i
+
+# target to preprocess a source file
+Code/Ocean/Ocean.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.i
+.PHONY : Code/Ocean/Ocean.cpp.i
+
+Code/Ocean/Ocean.s: Code/Ocean/Ocean.cpp.s
+
+.PHONY : Code/Ocean/Ocean.s
+
+# target to generate assembly for a file
+Code/Ocean/Ocean.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.s
+.PHONY : Code/Ocean/Ocean.cpp.s
+
+Code/Oct/OctFace.o: Code/Oct/OctFace.cpp.o
+
+.PHONY : Code/Oct/OctFace.o
+
+# target to build an object file
+Code/Oct/OctFace.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o
+.PHONY : Code/Oct/OctFace.cpp.o
+
+Code/Oct/OctFace.i: Code/Oct/OctFace.cpp.i
+
+.PHONY : Code/Oct/OctFace.i
+
+# target to preprocess a source file
+Code/Oct/OctFace.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.i
+.PHONY : Code/Oct/OctFace.cpp.i
+
+Code/Oct/OctFace.s: Code/Oct/OctFace.cpp.s
+
+.PHONY : Code/Oct/OctFace.s
+
+# target to generate assembly for a file
+Code/Oct/OctFace.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.s
+.PHONY : Code/Oct/OctFace.cpp.s
+
+Code/Oct/Octahedron.o: Code/Oct/Octahedron.cpp.o
+
+.PHONY : Code/Oct/Octahedron.o
+
+# target to build an object file
+Code/Oct/Octahedron.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o
+.PHONY : Code/Oct/Octahedron.cpp.o
+
+Code/Oct/Octahedron.i: Code/Oct/Octahedron.cpp.i
+
+.PHONY : Code/Oct/Octahedron.i
+
+# target to preprocess a source file
+Code/Oct/Octahedron.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.i
+.PHONY : Code/Oct/Octahedron.cpp.i
+
+Code/Oct/Octahedron.s: Code/Oct/Octahedron.cpp.s
+
+.PHONY : Code/Oct/Octahedron.s
+
+# target to generate assembly for a file
+Code/Oct/Octahedron.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.s
+.PHONY : Code/Oct/Octahedron.cpp.s
+
 Code/OnscreenText.o: Code/OnscreenText.cpp.o
 
 .PHONY : Code/OnscreenText.o
@@ -284,33 +419,6 @@ Code/Skybox/Skybox.s: Code/Skybox/Skybox.cpp.s
 Code/Skybox/Skybox.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.s
 .PHONY : Code/Skybox/Skybox.cpp.s
-
-Code/Wall.o: Code/Wall.cpp.o
-
-.PHONY : Code/Wall.o
-
-# target to build an object file
-Code/Wall.cpp.o:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.o
-.PHONY : Code/Wall.cpp.o
-
-Code/Wall.i: Code/Wall.cpp.i
-
-.PHONY : Code/Wall.i
-
-# target to preprocess a source file
-Code/Wall.cpp.i:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.i
-.PHONY : Code/Wall.cpp.i
-
-Code/Wall.s: Code/Wall.cpp.s
-
-.PHONY : Code/Wall.s
-
-# target to generate assembly for a file
-Code/Wall.cpp.s:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Wall.cpp.s
-.PHONY : Code/Wall.cpp.s
 
 Code/main.o: Code/main.cpp.o
 
@@ -468,15 +576,27 @@ help:
 	@echo "... Code/MyScene.o"
 	@echo "... Code/MyScene.i"
 	@echo "... Code/MyScene.s"
+	@echo "... Code/OBJLoader/Face.o"
+	@echo "... Code/OBJLoader/Face.i"
+	@echo "... Code/OBJLoader/Face.s"
+	@echo "... Code/OBJLoader/Model.o"
+	@echo "... Code/OBJLoader/Model.i"
+	@echo "... Code/OBJLoader/Model.s"
+	@echo "... Code/Ocean/Ocean.o"
+	@echo "... Code/Ocean/Ocean.i"
+	@echo "... Code/Ocean/Ocean.s"
+	@echo "... Code/Oct/OctFace.o"
+	@echo "... Code/Oct/OctFace.i"
+	@echo "... Code/Oct/OctFace.s"
+	@echo "... Code/Oct/Octahedron.o"
+	@echo "... Code/Oct/Octahedron.i"
+	@echo "... Code/Oct/Octahedron.s"
 	@echo "... Code/OnscreenText.o"
 	@echo "... Code/OnscreenText.i"
 	@echo "... Code/OnscreenText.s"
 	@echo "... Code/Skybox/Skybox.o"
 	@echo "... Code/Skybox/Skybox.i"
 	@echo "... Code/Skybox/Skybox.s"
-	@echo "... Code/Wall.o"
-	@echo "... Code/Wall.i"
-	@echo "... Code/Wall.s"
 	@echo "... Code/main.o"
 	@echo "... Code/main.i"
 	@echo "... Code/main.s"
