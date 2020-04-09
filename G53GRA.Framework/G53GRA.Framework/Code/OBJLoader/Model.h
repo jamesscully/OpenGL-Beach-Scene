@@ -8,23 +8,22 @@
 
 #include <string>
 #include <vector>
+
 #include "Utils.h"
 #include "Face.h"
 
+#include "DisplayableObject.h"
 
-class Model {
-
-
+class Model : public DisplayableObject {
 
 public:
-    Model(const char *file_name);
+    Model(const char *file_name, const char * uv_map);
     ~Model() = default;
 
+    void Display() override;
 
-    void draw();
 
 private:
-    void parseFile(std::ifstream f);
 
     void extractVertex(std::string line);
     void extractUV(std::string line);
@@ -32,10 +31,12 @@ private:
 
     void extractFace(std::string line);
 
+    GLuint texture;
+
     std::vector<vertex>   vertices;
     std::vector<uv_coord> uvs;
     std::vector<vertex>   normals;
-    std::vector<Face>   faces;
+    std::vector<Face>     faces;
 
 };
 

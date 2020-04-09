@@ -45,18 +45,19 @@ void MyScene::Initialise() {
     //logA = new LogA();
     //AddObjectToScene(logA);
 
+    model = new Model("/mnt/data/home/LogA/log_A.obj", "/mnt/data/home/LogA/log_A.bmp");
+    model->size(50);
+    model->position(50, 50, 0);
+    AddObjectToScene(model);
 
+    skybox = new Skybox();
+    skybox->size(10000);
 
-    model = new Model("/mnt/data/home/untitled.obj");
+    ocean = new Ocean();
+    ocean->size(10000);
 
-//    skybox = new Skybox();
-//    skybox->size(10000);
-//
-//    ocean = new Ocean();
-//    ocean->size(10000);
-//
-//    AddObjectToScene(skybox);
-//    AddObjectToScene(ocean);
+    AddObjectToScene(skybox);
+    AddObjectToScene(ocean);
 //
 //    AddObjectToScene(light1);
 
@@ -80,7 +81,6 @@ void MyScene::Projection() {
 
     //drawDebugText();
     drawAxisLines();
-    model->draw();
     // oct.draw();
 }
 

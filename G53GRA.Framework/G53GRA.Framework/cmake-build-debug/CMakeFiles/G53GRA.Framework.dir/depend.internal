@@ -63,6 +63,14 @@ CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Utils.h
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o
+ ../../freeglut/include/GL/freeglut_std.h
+ ../../freeglut/include/GL/glut.h
+ ../Framework/Engine/Engine.h
+ ../Framework/Engine/Scene.h
+ ../Framework/Interface/DisplayableObject.h
+ ../Framework/Interface/Input.h
+ ../Framework/Utility/Camera.h
+ ../Framework/Utility/Texture.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.h

@@ -8,14 +8,17 @@
 
 
 struct vertex {
-    float x;
-    float y;
-    float z;
+    float x, y, z;
 };
 
 struct uv_coord {
-    float x;
-    float y;
+    float x, y;
+};
+
+struct face {
+    vertex   v1,  v2,  v3;
+    uv_coord vt1, vt2, vt3;
+    vertex   vn1, vn2, vn3;
 };
 
 #endif //G53GRA_FRAMEWORK_UTILS_H
