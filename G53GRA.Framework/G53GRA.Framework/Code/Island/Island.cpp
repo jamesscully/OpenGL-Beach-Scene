@@ -22,9 +22,6 @@ void drawIslandQ() {
     glVertex3f(0, 0, 20);
 
     glColor3f(0, 0, 1);
-
-
-
     glEnd();
 
 }

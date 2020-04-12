@@ -36,7 +36,7 @@ source_group("Source Files" FILES ${Source_Files})
 set(ALL_FILES
     ${Header_Files}
     ${Source_Files}
-        Code/Light.cpp Code/Light.h Code/Island/Island.cpp Code/Island/Island.h Code/Logs/LogA.cpp Code/Logs/LogA.h Code/Skybox/Skybox.cpp Code/Skybox/Skybox.h Code/Ocean/Ocean.cpp Code/Ocean/Ocean.h Code/Oct/Octahedron.cpp Code/Oct/Octahedron.h Code/Oct/OctFace.cpp Code/Oct/OctFace.h Code/OBJLoader/Model.cpp Code/OBJLoader/Model.h Code/OBJLoader/Utils.h Code/OBJLoader/Face.cpp Code/OBJLoader/Face.h)
+        Code/Light.cpp Code/Light.h Code/Island/Island.cpp Code/Island/Island.h Code/Skybox/Skybox.cpp Code/Skybox/Skybox.h Code/Ocean/Ocean.cpp Code/Ocean/Ocean.h Code/Oct/Octahedron.cpp Code/Oct/Octahedron.h Code/Oct/OctFace.cpp Code/Oct/OctFace.h Code/OBJLoader/Model.cpp Code/OBJLoader/Model.h Code/OBJLoader/Utils.h Code/OBJLoader/Face.cpp Code/OBJLoader/Face.h Code/OBJLoader/Material.cpp Code/OBJLoader/Material.h Code/PalmTree/PalmTree.cpp Code/PalmTree/PalmTree.h)
 
 set (CMAKE_CXX_FLAGS "-lGL -lGLU -lglut")
 

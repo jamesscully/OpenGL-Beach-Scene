@@ -177,33 +177,6 @@ Code/Light.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.s
 .PHONY : Code/Light.cpp.s
 
-Code/Logs/LogA.o: Code/Logs/LogA.cpp.o
-
-.PHONY : Code/Logs/LogA.o
-
-# target to build an object file
-Code/Logs/LogA.cpp.o:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.o
-.PHONY : Code/Logs/LogA.cpp.o
-
-Code/Logs/LogA.i: Code/Logs/LogA.cpp.i
-
-.PHONY : Code/Logs/LogA.i
-
-# target to preprocess a source file
-Code/Logs/LogA.cpp.i:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.i
-.PHONY : Code/Logs/LogA.cpp.i
-
-Code/Logs/LogA.s: Code/Logs/LogA.cpp.s
-
-.PHONY : Code/Logs/LogA.s
-
-# target to generate assembly for a file
-Code/Logs/LogA.cpp.s:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.s
-.PHONY : Code/Logs/LogA.cpp.s
-
 Code/MyScene.o: Code/MyScene.cpp.o
 
 .PHONY : Code/MyScene.o
@@ -257,6 +230,33 @@ Code/OBJLoader/Face.s: Code/OBJLoader/Face.cpp.s
 Code/OBJLoader/Face.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.s
 .PHONY : Code/OBJLoader/Face.cpp.s
+
+Code/OBJLoader/Material.o: Code/OBJLoader/Material.cpp.o
+
+.PHONY : Code/OBJLoader/Material.o
+
+# target to build an object file
+Code/OBJLoader/Material.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.o
+.PHONY : Code/OBJLoader/Material.cpp.o
+
+Code/OBJLoader/Material.i: Code/OBJLoader/Material.cpp.i
+
+.PHONY : Code/OBJLoader/Material.i
+
+# target to preprocess a source file
+Code/OBJLoader/Material.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.i
+.PHONY : Code/OBJLoader/Material.cpp.i
+
+Code/OBJLoader/Material.s: Code/OBJLoader/Material.cpp.s
+
+.PHONY : Code/OBJLoader/Material.s
+
+# target to generate assembly for a file
+Code/OBJLoader/Material.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.s
+.PHONY : Code/OBJLoader/Material.cpp.s
 
 Code/OBJLoader/Model.o: Code/OBJLoader/Model.cpp.o
 
@@ -392,6 +392,33 @@ Code/OnscreenText.s: Code/OnscreenText.cpp.s
 Code/OnscreenText.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.s
 .PHONY : Code/OnscreenText.cpp.s
+
+Code/PalmTree/PalmTree.o: Code/PalmTree/PalmTree.cpp.o
+
+.PHONY : Code/PalmTree/PalmTree.o
+
+# target to build an object file
+Code/PalmTree/PalmTree.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o
+.PHONY : Code/PalmTree/PalmTree.cpp.o
+
+Code/PalmTree/PalmTree.i: Code/PalmTree/PalmTree.cpp.i
+
+.PHONY : Code/PalmTree/PalmTree.i
+
+# target to preprocess a source file
+Code/PalmTree/PalmTree.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.i
+.PHONY : Code/PalmTree/PalmTree.cpp.i
+
+Code/PalmTree/PalmTree.s: Code/PalmTree/PalmTree.cpp.s
+
+.PHONY : Code/PalmTree/PalmTree.s
+
+# target to generate assembly for a file
+Code/PalmTree/PalmTree.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.s
+.PHONY : Code/PalmTree/PalmTree.cpp.s
 
 Code/Skybox/Skybox.o: Code/Skybox/Skybox.cpp.o
 
@@ -570,15 +597,15 @@ help:
 	@echo "... Code/Light.o"
 	@echo "... Code/Light.i"
 	@echo "... Code/Light.s"
-	@echo "... Code/Logs/LogA.o"
-	@echo "... Code/Logs/LogA.i"
-	@echo "... Code/Logs/LogA.s"
 	@echo "... Code/MyScene.o"
 	@echo "... Code/MyScene.i"
 	@echo "... Code/MyScene.s"
 	@echo "... Code/OBJLoader/Face.o"
 	@echo "... Code/OBJLoader/Face.i"
 	@echo "... Code/OBJLoader/Face.s"
+	@echo "... Code/OBJLoader/Material.o"
+	@echo "... Code/OBJLoader/Material.i"
+	@echo "... Code/OBJLoader/Material.s"
 	@echo "... Code/OBJLoader/Model.o"
 	@echo "... Code/OBJLoader/Model.i"
 	@echo "... Code/OBJLoader/Model.s"
@@ -594,6 +621,9 @@ help:
 	@echo "... Code/OnscreenText.o"
 	@echo "... Code/OnscreenText.i"
 	@echo "... Code/OnscreenText.s"
+	@echo "... Code/PalmTree/PalmTree.o"
+	@echo "... Code/PalmTree/PalmTree.i"
+	@echo "... Code/PalmTree/PalmTree.s"
 	@echo "... Code/Skybox/Skybox.o"
 	@echo "... Code/Skybox/Skybox.i"
 	@echo "... Code/Skybox/Skybox.s"

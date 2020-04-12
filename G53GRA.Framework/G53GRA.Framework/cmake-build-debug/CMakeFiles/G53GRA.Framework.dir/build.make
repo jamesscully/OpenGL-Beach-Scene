@@ -174,22 +174,9 @@ CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Island/Island.cpp -o CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.s
 
-CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
-CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.o: ../Code/Logs/LogA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Logs/LogA.cpp
-
-CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Logs/LogA.cpp > CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.i
-
-CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Logs/LogA.cpp -o CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.s
-
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Code/Skybox/Skybox.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Skybox/Skybox.cpp
 
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.i: cmake_force
@@ -202,7 +189,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.s: cmake_force
 
 CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
 CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o: ../Code/Ocean/Ocean.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Ocean/Ocean.cpp
 
 CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.i: cmake_force
@@ -215,7 +202,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.s: cmake_force
 
 CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
 CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o: ../Code/Oct/Octahedron.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/Octahedron.cpp
 
 CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.i: cmake_force
@@ -228,7 +215,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.s: cmake_force
 
 CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
 CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o: ../Code/Oct/OctFace.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/OctFace.cpp
 
 CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.i: cmake_force
@@ -241,7 +228,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.s: cmake_force
 
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Code/OBJLoader/Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.cpp
 
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.i: cmake_force
@@ -254,7 +241,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.s: cmake_force
 
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o: ../Code/OBJLoader/Face.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.cpp
 
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.i: cmake_force
@@ -264,6 +251,32 @@ CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.i: cmake_force
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.cpp -o CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.s
+
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.o: ../Code/OBJLoader/Material.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.cpp
+
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.cpp > CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.i
+
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.cpp -o CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.s
+
+CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
+CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Code/PalmTree/PalmTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.cpp
+
+CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.cpp > CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.i
+
+CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.cpp -o CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.s
 
 # Object files for target G53GRA.Framework
 G53GRA_Framework_OBJECTS = \
@@ -276,13 +289,14 @@ G53GRA_Framework_OBJECTS = \
 "CMakeFiles/G53GRA.Framework.dir/Framework/Utility/Texture.cpp.o" \
 "CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o" \
 "CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.o" \
-"CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.o" \
 "CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o" \
 "CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o" \
 "CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o" \
 "CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o" \
 "CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o" \
-"CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o"
+"CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o" \
+"CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.o" \
+"CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o"
 
 # External object files for target G53GRA.Framework
 G53GRA_Framework_EXTERNAL_OBJECTS =
@@ -296,19 +310,20 @@ G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Framework/Utility/Camera.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Framework/Utility/Texture.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.o
-G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o
+G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.o
+G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/build.make
 G53GRA.Framework: /usr/lib/libglut.so
 G53GRA.Framework: /usr/lib/libXmu.so
 G53GRA.Framework: /usr/lib/libXi.so
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable G53GRA.Framework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable G53GRA.Framework"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/G53GRA.Framework.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -1,5 +1,4 @@
 #include <Island/Island.h>
-#include <Logs/LogA.h>
 #include <Skybox/Skybox.h>
 #include <Ocean/Ocean.h>
 #include <Oct/Octahedron.h>
@@ -24,8 +23,6 @@ MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidt
 }
 
 
-LogA* logA;
-
 Skybox* skybox; Ocean* ocean;
 Octahedron* octahedron;
 
@@ -46,8 +43,8 @@ void MyScene::Initialise() {
     //AddObjectToScene(logA);
 
     model = new Model("/mnt/data/home/LogA/log_A.obj", "/mnt/data/home/LogA/log_A.bmp");
-    model->size(50);
-    model->position(50, 50, 0);
+    model->size(10);
+    model->position(0, 0, 0);
     AddObjectToScene(model);
 
     skybox = new Skybox();

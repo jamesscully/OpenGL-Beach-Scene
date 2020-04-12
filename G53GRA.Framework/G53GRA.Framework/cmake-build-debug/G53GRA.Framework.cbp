@@ -110,12 +110,6 @@
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
-		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Logs/LogA.cpp">
-			<Option target="G53GRA.Framework"/>
-		</Unit>
-		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Logs/LogA.h">
-			<Option target="G53GRA.Framework"/>
-		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.cpp">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
@@ -126,6 +120,12 @@
 			<Option target="G53GRA.Framework"/>
 		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.cpp">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.h">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.cpp">
@@ -159,6 +159,12 @@
 			<Option target="G53GRA.Framework"/>
 		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.cpp">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.h">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Skybox/Skybox.cpp">

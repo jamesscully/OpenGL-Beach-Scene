@@ -24,22 +24,10 @@ CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
-CMakeFiles/G53GRA.Framework.dir/Code/Logs/LogA.cpp.o
- ../../freeglut/include/GL/freeglut_std.h
- ../../freeglut/include/GL/glut.h
- ../Framework/Engine/Engine.h
- ../Framework/Engine/Scene.h
- ../Framework/Interface/DisplayableObject.h
- ../Framework/Interface/Input.h
- ../Framework/Utility/Camera.h
- ../Framework/Utility/Texture.h
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Logs/LogA.cpp
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Logs/LogA.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
  ../Code/Island/Island.h
- ../Code/Logs/LogA.h
  ../Code/OBJLoader/Face.h
  ../Code/OBJLoader/Model.h
  ../Code/OBJLoader/Utils.h
@@ -62,6 +50,9 @@ CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Utils.h
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.o
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.cpp
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.h
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
@@ -103,6 +94,17 @@ CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o
  ../../freeglut/include/GL/glut.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
+CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o
+ ../../freeglut/include/GL/freeglut_std.h
+ ../../freeglut/include/GL/glut.h
+ ../Framework/Engine/Engine.h
+ ../Framework/Engine/Scene.h
+ ../Framework/Interface/DisplayableObject.h
+ ../Framework/Interface/Input.h
+ ../Framework/Utility/Camera.h
+ ../Framework/Utility/Texture.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.cpp
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.h
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
