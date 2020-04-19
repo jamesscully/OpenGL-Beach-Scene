@@ -23,6 +23,11 @@ public:
     void Display() override;
 
 
+    // xyz offsets
+    float* offset;
+
+    void setOffset(float x, float y, float z);
+
 private:
 
     std::string model_dir = "/mnt/data/home/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Models/";

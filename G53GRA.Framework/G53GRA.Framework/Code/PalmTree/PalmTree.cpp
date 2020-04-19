@@ -7,10 +7,12 @@
 #include <OBJLoader/Model.h>
 
 std::vector<Model*> logs;
+std::vector<Model*> leaves;
 
 PalmTree::PalmTree() {
     float logcount = 6;
     float log_offset = 18;
+
 
     for(int i = 0; i < logcount; i++) {
         Model* temp;
@@ -23,11 +25,8 @@ PalmTree::PalmTree() {
 
         // as we add more logs, we want i * offset so that they "stack"
         float ypos = i * log_offset;
-
         temp->position(0, ypos , 0);
-
         temp->size(10);
-
         logs.push_back(temp);
     }
 }
@@ -46,26 +45,24 @@ void PalmTree::Update(const double &deltaTime) {
     static double elapsed = 0;
     elapsed += deltaTime;
 
-    // how many seconds should the anim reset/reverse?
-    double end_time = 5;
+    // how far we want it to move in one direction
+    float delta = 7.5;
+    float base_speed = 1;
 
-    // this will create a more life-like look
-    // dampening = further up, more swing
-    float dampening_decrement = -0.2;
-    float dampening = 0.2;
+    float speed = base_speed;
 
-    time_t currentTime = time(0);
+    float dampening = 0.1;
 
+    // from 1 - end not 0 - 1; getting life-like movement is weird
+    for(auto it = ++logs.begin(); it != logs.end(); ++it) {
+        Model* x = *it;
 
-    for(auto x : logs) {
-        float* lpos = x->position();
+        float movement = sin(elapsed * speed) * delta;
+        x->setOffset(movement, 0, movement);
 
-        float movement = sin(elapsed) * 2;
-
-        printf("%f\n", movement);
-
-        x->position(lpos[0] += movement, lpos[1], lpos[2]);
+        speed += dampening;
     }
+
 
 
 }

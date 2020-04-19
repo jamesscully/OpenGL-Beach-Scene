@@ -19,7 +19,8 @@ Model::Model(const char *obj_path, const char *uv_path, bool absolute_paths = fa
 
     std::ifstream file;
 
-
+    offset = new float[3];
+    offset[0] = 0; offset[1] = 0; offset[2] = 0;
 
     if(absolute_paths) {
         printf("Loading Model with paths: \n\t%s\n\t%s\n", obj_path, uv_path);
@@ -111,8 +112,19 @@ void Model::extractFace(std::string line) {
 
 void Model::Display() {
     for(Face f : faces) {
-        f.draw(pos, rotation, scale);
+
+        float p[3] = {pos[0] + offset[0],
+                      pos[1] + offset[1],
+                      pos[2] + offset[2]};
+
+        f.draw(p, rotation, scale);
     }
+}
+
+void Model::setOffset(float x, float y, float z) {
+    offset[0] = x;
+    offset[1] = y;
+    offset[2] = z;
 }
 
 
