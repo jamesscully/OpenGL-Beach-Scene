@@ -54,18 +54,19 @@ void PalmTree::Update(const double &deltaTime) {
     float dampening_decrement = -0.2;
     float dampening = 0.2;
 
+    time_t currentTime = time(0);
+
+
     for(auto x : logs) {
         float* lpos = x->position();
 
-        float movement = sin((deltaTime * dampening));
+        float movement = sin(elapsed) * 2;
+
+        printf("%f\n", movement);
 
         x->position(lpos[0] += movement, lpos[1], lpos[2]);
-        dampening -= dampening_decrement;
     }
 
-    printf("%f\n", elapsed);
-    if(elapsed >= end_time)
-        elapsed = -5;
 
 }
 
