@@ -13,7 +13,6 @@ PalmTree::PalmTree() {
     float logcount = 6;
     float log_offset = 18;
 
-
     for(int i = 0; i < logcount; i++) {
         Model* temp;
 
@@ -29,6 +28,22 @@ PalmTree::PalmTree() {
         temp->size(10);
         logs.push_back(temp);
     }
+
+    int leaf_count = 4;
+
+    Model* parentLog = logs[logs.size() - 1];
+    for(int i = 0; i < leaf_count; i++) {
+
+        Model* temp;
+        temp = new Model("palm_leaf.obj", "palm_leaf.bmp", false);
+
+
+
+        temp->parented = parentLog;
+        temp->size(10);
+        leaves.push_back(temp);
+    }
+
 }
 
 PalmTree::~PalmTree() {
@@ -37,6 +52,10 @@ PalmTree::~PalmTree() {
 
 void PalmTree::Display() {
     for(auto x : logs) {
+        x->Display();
+    }
+
+    for(auto x : leaves) {
         x->Display();
     }
 }

@@ -63,6 +63,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Framework/Interfa
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Framework/Interface/Input.h
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Framework/Utility/Camera.h
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Framework/Utility/Texture.h
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Framework/Utility/VectorMath.h
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Code/OBJLoader/Face.h
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Code/OBJLoader/Model.cpp
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o: ../Code/OBJLoader/Model.h

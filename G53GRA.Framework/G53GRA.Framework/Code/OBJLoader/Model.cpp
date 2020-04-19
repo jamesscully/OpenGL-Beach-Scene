@@ -9,6 +9,7 @@
 #include <Engine/Scene.h>
 #include "Model.h"
 #include "Face.h"
+#include "VectorMath.h"
 
 using std::string;
 using std::cout;
@@ -112,11 +113,25 @@ void Model::extractFace(std::string line) {
 
 void Model::Display() {
     for(Face f : faces) {
+        float p[3];
 
-        float p[3] = {pos[0] + offset[0],
-                      pos[1] + offset[1],
-                      pos[2] + offset[2]};
+        if(parented == nullptr) {
+            p[0] = pos[0] + offset[0];
+            p[1] = pos[1] + offset[1];
+            p[2] = pos[2] + offset[2];
+        } else {
 
+//            float* p_off = parented->position();
+//            add(p_off, parented->offset, 1.0f);
+
+            float* parentPos = parented->position();
+
+            printf("ParentPos: %f %f %f\n", parentPos[0], parentPos[1], parentPos[2]);
+
+            p[0] = parentPos[0] + offset[0];
+            p[1] = parentPos[1] + offset[1];
+            p[2] = parentPos[2] + offset[2];
+        }
         f.draw(p, rotation, scale);
     }
 }
@@ -126,6 +141,20 @@ void Model::setOffset(float x, float y, float z) {
     offset[1] = y;
     offset[2] = z;
 }
+
+float *Model::position() {
+    float* ret = new float[3];
+
+    ret[0] = pos[0]; ret[1] = pos[1]; ret[2] = pos[2];
+
+    add(ret, offset, 1.0f);
+    return ret;
+}
+
+void Model::position(float x, float y, float z) {
+    DisplayableObject::position(x, y, z);
+}
+
 
 
 

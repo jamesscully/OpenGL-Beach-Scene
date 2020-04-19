@@ -64,6 +64,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o
  ../Framework/Interface/Input.h
  ../Framework/Utility/Camera.h
  ../Framework/Utility/Texture.h
+ ../Framework/Utility/VectorMath.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.h

@@ -26,7 +26,8 @@ public:
 	* Must be overloaded by your DisplayableObject subclass. Contains all rendering commands.
 	*/
 	virtual void Display() = 0;
-	/** set World Space position */
+
+    virtual /** set World Space position */
 	void position(float x, float y, float z){
 		pos[0] = x;
 		pos[1] = y;
@@ -56,7 +57,8 @@ public:
 	float* orientation(){
 		return rotation;
 	}
-/** Get World Space position */
+
+    virtual /** Get World Space position */
 	float* position(){
 		return pos;
 	}

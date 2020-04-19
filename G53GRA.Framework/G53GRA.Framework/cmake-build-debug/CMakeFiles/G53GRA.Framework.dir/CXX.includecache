@@ -30,24 +30,6 @@ stdlib.h
 freeglut_std.h
 ../../freeglut/include/GL/freeglut_std.h
 
-../Code/OBJLoader/Face.h
-Utils.h
-../Code/OBJLoader/Utils.h
-
-../Code/OBJLoader/Model.h
-string
--
-vector
--
-Utils.h
-../Code/OBJLoader/Utils.h
-Face.h
-../Code/OBJLoader/Face.h
-DisplayableObject.h
-../Code/OBJLoader/DisplayableObject.h
-
-../Code/OBJLoader/Utils.h
-
 ../Framework/Engine/Engine.h
 GL/glut.h
 -
@@ -65,8 +47,6 @@ Engine.h
 ../Framework/Utility/Camera.h
 vector
 -
-
-../Framework/Interface/Animation.h
 
 ../Framework/Interface/DisplayableObject.h
 Scene.h
@@ -90,17 +70,43 @@ map
 string
 -
 
-/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.cpp
-PalmTree.h
-/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.h
+../Framework/Utility/VectorMath.h
 cmath
 -
-OBJLoader/Model.h
--
 
-/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.h
-Interface/DisplayableObject.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
+Utils.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Utils.h
+
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.cpp
+cstring
 -
-Interface/Animation.h
+fstream
 -
+strstream
+-
+iostream
+-
+Engine/Scene.h
+-
+Model.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.h
+Face.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
+VectorMath.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/VectorMath.h
+
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Model.h
+string
+-
+vector
+-
+Utils.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Utils.h
+Face.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
+DisplayableObject.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/DisplayableObject.h
+
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Utils.h
 

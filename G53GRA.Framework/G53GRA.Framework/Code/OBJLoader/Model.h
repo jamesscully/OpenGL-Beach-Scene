@@ -22,11 +22,23 @@ public:
 
     void Display() override;
 
-
     // xyz offsets
     float* offset;
 
+
+
+    // this indicates that this model must follow where the parent is
+    // ex: the palm tree leaves should always match the last log in the tree
+    Model* parented = nullptr;
+
+    // should we adhere to the parent's attributes?
+    bool p_pos = false, p_rot = false, p_scl = false;
+
     void setOffset(float x, float y, float z);
+
+    float *position() override;
+
+    void position(float x, float y, float z) override;
 
 private:
 
