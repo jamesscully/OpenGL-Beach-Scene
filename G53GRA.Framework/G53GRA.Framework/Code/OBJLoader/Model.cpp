@@ -15,16 +15,33 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-Model::Model(const char *file_name, const char * uv_map) {
+Model::Model(const char *obj_path, const char *uv_path, bool absolute_paths = false) {
 
     std::ifstream file;
-    file.open(file_name);
 
-    texture = Scene::GetTexture(uv_map);
+
+
+    if(absolute_paths) {
+        printf("Loading Model with paths: \n\t%s\n\t%s\n", obj_path, uv_path);
+        file.open(obj_path);
+        texture = Scene::GetTexture(uv_path);
+    }
+    else {
+        printf("Loading Model with paths: \n\t%s\n\t%s\n", (model_dir + obj_path).c_str(), (model_dir + uv_path).c_str());
+        file.open(model_dir + obj_path);
+        texture = Scene::GetTexture(model_dir + uv_path);
+    }
+
+    if(!file.good())
+        printf("Error: error loading model file\n");
+    else
+        printf("\tSuccessfuly loaded the model file\n");
 
     // add cerr output
 
     string line;
+
+    printf("\tExtracting data\n");
     while(!file.eof()) {
         string first;
         getline(file, line);
@@ -45,6 +62,7 @@ Model::Model(const char *file_name, const char * uv_map) {
         else if (first == "vt")
             extractUV(line);
     }
+    printf("Finished extracting data\n");
 }
 
 void Model::extractVertex(std::string line) {
@@ -84,9 +102,9 @@ void Model::extractFace(std::string line) {
     face.vt1 = uvs.at(vt1 - 1); face.vt2 = uvs.at(vt2 - 1); face.vt3 = uvs.at(vt3 - 1);
     face.vn1 = normals.at(vn1 - 1); face.vn2 = normals.at(vn2 - 1); face.vn3 = normals.at(vn3 - 1);
 
-    printf("Adding face: %f %f %f\n", face.v1.x,  face.v1.y,  face.v1.z);
-    printf("Adding face: %f %f %f\n", face.v2.x,  face.v2.y,  face.v2.z);
-    printf("Adding face: %f %f %f\n", face.v3.x,  face.v3.y,  face.v3.z);
+//    printf("Adding face: %f %f %f\n", face.v1.x,  face.v1.y,  face.v1.z);
+//    printf("Adding face: %f %f %f\n", face.v2.x,  face.v2.y,  face.v2.z);
+//    printf("Adding face: %f %f %f\n", face.v3.x,  face.v3.y,  face.v3.z);
 
     faces.push_back(face);
 }

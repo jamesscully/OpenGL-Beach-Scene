@@ -2,26 +2,40 @@
 // Created by yames on 4/4/20.
 //
 
-#include <stdio.h>
 #include <GL/gl.h>
+#include <OBJLoader/Model.h>
 #include "Skybox.h"
 
 
 GLuint side;
 GLuint top;
 
+
+Model* sbox;
+
 Skybox::Skybox() {
+
+    sbox = new Model("skydome.obj", "skybox_side.bmp", false);
+
+
+
     side = Scene::GetTexture("/mnt/data/home/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Textures/skybox_side.bmp");
     top  = Scene::GetTexture("/mnt/data/home/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Textures/skybox_top.bmp");
 }
 
+
 void Skybox::Display() {
-    drawFace(0);
-    drawFace(90);
-    drawFace(180);
-    drawFace(270);
-    drawFace(SKYBOX_FLOOR);
-    drawFace(SKYBOX_CEILING);
+
+    sbox->position(pos[0],pos[1],pos[2]);
+    sbox->size(scale[0],scale[1],scale[2]);
+    sbox->Display();
+
+//    drawFace(0);
+//    drawFace(90);
+//    drawFace(180);
+//    drawFace(270);
+//    drawFace(SKYBOX_FLOOR);
+//    drawFace(SKYBOX_CEILING);
 }
 
 

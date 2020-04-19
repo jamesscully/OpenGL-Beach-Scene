@@ -34,8 +34,10 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o
  ../Code/Ocean/Ocean.h
  ../Code/Oct/OctFace.h
  ../Code/Oct/Octahedron.h
+ ../Code/PalmTree/PalmTree.h
  ../Code/Skybox/Skybox.h
  ../Framework/Engine/Scene.h
+ ../Framework/Interface/Animation.h
  ../Framework/Interface/DisplayableObject.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.cpp
@@ -97,8 +99,12 @@ CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o
 CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
+ ../Code/OBJLoader/Face.h
+ ../Code/OBJLoader/Model.h
+ ../Code/OBJLoader/Utils.h
  ../Framework/Engine/Engine.h
  ../Framework/Engine/Scene.h
+ ../Framework/Interface/Animation.h
  ../Framework/Interface/DisplayableObject.h
  ../Framework/Interface/Input.h
  ../Framework/Utility/Camera.h
@@ -108,6 +114,9 @@ CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
+ ../Code/OBJLoader/Face.h
+ ../Code/OBJLoader/Model.h
+ ../Code/OBJLoader/Utils.h
  ../Framework/Engine/Engine.h
  ../Framework/Engine/Scene.h
  ../Framework/Interface/DisplayableObject.h

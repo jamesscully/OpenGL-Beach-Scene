@@ -17,7 +17,7 @@
 class Model : public DisplayableObject {
 
 public:
-    Model(const char *file_name, const char * uv_map);
+    Model(const char *obj_path, const char *uv_path, bool absolute_paths);
     ~Model() = default;
 
     void Display() override;
@@ -25,6 +25,7 @@ public:
 
 private:
 
+    std::string model_dir = "/mnt/data/home/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Models/";
     void extractVertex(std::string line);
     void extractUV(std::string line);
     void extractNormal(std::string line);

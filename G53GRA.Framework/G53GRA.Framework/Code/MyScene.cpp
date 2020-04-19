@@ -3,6 +3,7 @@
 #include <Ocean/Ocean.h>
 #include <Oct/Octahedron.h>
 #include <OBJLoader/Model.h>
+#include <PalmTree/PalmTree.h>
 #include "MyScene.h"
 #include "OnscreenText.h"
 #include "Light.h"
@@ -27,6 +28,7 @@ Skybox* skybox; Ocean* ocean;
 Octahedron* octahedron;
 
 Model * model;
+PalmTree* ptree;
 void MyScene::Initialise() {
 
     octahedron = new Octahedron(100, 1);
@@ -42,13 +44,18 @@ void MyScene::Initialise() {
     //logA = new LogA();
     //AddObjectToScene(logA);
 
-    model = new Model("/mnt/data/home/LogA/log_A.obj", "/mnt/data/home/LogA/log_A.bmp");
-    model->size(10);
-    model->position(0, 0, 0);
-    AddObjectToScene(model);
+//    model = new Model("log_A.obj", "log_A.bmp", false);
+//    model->size(10);
+//    model->position(0, 0, 0);
+    //AddObjectToScene(model);
 
     skybox = new Skybox();
-    skybox->size(10000);
+    skybox->size(1000);
+    skybox->position(0, -10, 0);
+
+    ptree = new PalmTree();
+    ptree->position(0, 0, 0);
+    AddObjectToScene(ptree);
 
     ocean = new Ocean();
     ocean->size(10000);

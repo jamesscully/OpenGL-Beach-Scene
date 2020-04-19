@@ -33,8 +33,10 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/OBJLoader/Utils.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Ocean/Ocean.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Oct/OctFace.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Oct/Octahedron.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/PalmTree/PalmTree.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Skybox/Skybox.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Engine/Scene.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/Animation.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/DisplayableObject.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Light.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/MyScene.cpp
@@ -96,8 +98,12 @@ CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o: ../Code/OnscreenText.h
 
 CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../../freeglut/include/GL/freeglut_std.h
 CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../../freeglut/include/GL/glut.h
+CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Code/OBJLoader/Face.h
+CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Code/OBJLoader/Model.h
+CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Code/OBJLoader/Utils.h
 CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Framework/Engine/Engine.h
 CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Framework/Engine/Scene.h
+CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Framework/Interface/Animation.h
 CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Framework/Interface/DisplayableObject.h
 CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Framework/Interface/Input.h
 CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Framework/Utility/Camera.h
@@ -107,6 +113,9 @@ CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o: ../Code/PalmTree/P
 
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../../freeglut/include/GL/freeglut_std.h
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../../freeglut/include/GL/glut.h
+CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Code/OBJLoader/Face.h
+CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Code/OBJLoader/Model.h
+CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Code/OBJLoader/Utils.h
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Framework/Engine/Engine.h
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Framework/Engine/Scene.h
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../Framework/Interface/DisplayableObject.h

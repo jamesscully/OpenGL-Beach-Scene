@@ -7,14 +7,17 @@
 
 
 #include <Interface/DisplayableObject.h>
+#include <Interface/Animation.h>
 
-class PalmTree : public DisplayableObject {
+class PalmTree : public DisplayableObject, public Animation {
 
 public:
     PalmTree();
     ~PalmTree() override;
 
     void Display() override;
+
+    void Update(const double &deltaTime) override;
 };
 
 
