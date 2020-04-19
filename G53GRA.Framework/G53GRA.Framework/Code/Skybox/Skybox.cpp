@@ -14,10 +14,7 @@ GLuint top;
 Model* sbox;
 
 Skybox::Skybox() {
-
     sbox = new Model("skydome.obj", "skybox_side.bmp", false);
-
-
 
     side = Scene::GetTexture("/mnt/data/home/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Textures/skybox_side.bmp");
     top  = Scene::GetTexture("/mnt/data/home/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Textures/skybox_top.bmp");

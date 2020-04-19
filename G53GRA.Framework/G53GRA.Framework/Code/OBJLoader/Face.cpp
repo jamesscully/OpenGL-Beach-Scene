@@ -9,7 +9,7 @@ Face::Face(GLuint *uv) {
     texture = uv;
 }
 
-void Face::draw(float* pos, float* rot, float* scale) {
+void Face::draw(float* pos, float* rot, float ang, float* scale) {
 
     glEnable(GL_TEXTURE_2D);
     glEnable(GL_COLOR_MATERIAL);
@@ -19,7 +19,8 @@ void Face::draw(float* pos, float* rot, float* scale) {
     glPushMatrix();
     glTranslatef(pos[0], pos[1], pos[2]);
     glScalef(scale[0], scale[1], scale[2]);
-//    glRotatef(rot[0], rot[1], rot[2]);
+    glRotatef(ang, rot[0], rot[1], rot[2]);
+
     glBegin(GL_TRIANGLES);
         // if we're using a texture, we'll want the base colour to be white
         glColor3f(255, 255, 255);

@@ -22,7 +22,7 @@ PalmTree::PalmTree() {
         else
             temp = new Model("log_B.obj", "log_A.bmp", false);
 
-        // as we add more logs, we want i * offset so that they "stack"
+        // as we add more logs, we want i * off_pos so that they "stack"
         float ypos = i * log_offset;
         temp->position(0, ypos , 0);
         temp->size(10);
@@ -31,16 +31,17 @@ PalmTree::PalmTree() {
 
     int leaf_count = 4;
 
+    // the last log in the vector will be at the top
     Model* parentLog = logs[logs.size() - 1];
-    for(int i = 0; i < leaf_count; i++) {
 
+    for(int i = 0; i < leaf_count; i++) {
         Model* temp;
         temp = new Model("palm_leaf.obj", "palm_leaf.bmp", false);
 
+        // we want the leaves to be positioned with the top of the tree; parent them
+        temp->parent = parentLog;
+        temp->size(20);
 
-
-        temp->parented = parentLog;
-        temp->size(10);
         leaves.push_back(temp);
     }
 
@@ -67,9 +68,7 @@ void PalmTree::Update(const double &deltaTime) {
     // how far we want it to move in one direction
     float delta = 7.5;
     float base_speed = 1;
-
     float speed = base_speed;
-
     float dampening = 0.1;
 
     // from 1 - end not 0 - 1; getting life-like movement is weird
@@ -77,9 +76,18 @@ void PalmTree::Update(const double &deltaTime) {
         Model* x = *it;
 
         float movement = sin(elapsed * speed) * delta;
-        x->setOffset(movement, 0, movement);
+        x->setOffsetPos(movement, 0, movement);
 
         speed += dampening;
+    }
+
+
+
+    for(auto leaf : leaves) {
+        float newrot = sin(elapsed * speed) * delta;
+        float* leafpos = leaf->position();
+        leaf->setOffsetPos(0, 15, 0);
+        leaf->setOffsetRot(newrot, 1, 0, 0);
     }
 
 

@@ -25,7 +25,7 @@ public:
     uv_coord vt1, vt2, vt3;
     vertex vn1, vn2, vn3;
 
-    void draw(float* pos, float* rot, float* scale);
+    void draw(float* pos, float* rot, float ang, float* scale);
 };
 
 
