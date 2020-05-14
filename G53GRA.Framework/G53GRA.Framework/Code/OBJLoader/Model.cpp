@@ -16,7 +16,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-Model::Model(const char *obj_path, const char *uv_path, bool absolute_paths = false) {
+Model::Model(const char *obj_path, const char *uv_path, bool absolute_paths = false, Model* parent) {
 
     std::ifstream file;
 
@@ -41,8 +41,17 @@ Model::Model(const char *obj_path, const char *uv_path, bool absolute_paths = fa
 
     if(!file.good())
         printf("Error: error loading model file\n");
-    else
+    else {
         printf("\tSuccessfuly loaded the model file\n");
+        printf("\tPos: %f %f %f\n\tRot: %f %f %f\n\tScale: %f %f %f\n",
+                pos[0], pos[1], pos[2],
+                rotation[0], rotation[1], rotation[2],
+                scale[0], scale[1], scale[2]
+                );
+    }
+
+
+
 
     // add cerr output
 
@@ -89,30 +98,33 @@ void Model::extractNormal(std::string line) {
 void Model::extractUV(std::string line) {
     float x = 0, y = 0;
     sscanf(line.c_str(), "%f %f", &x, &y);
-    uv_coord add {x, y};
+    vertex2d add {x, y};
     uvs.push_back(add);
 }
 
 void Model::extractFace(std::string line) {
     Face face(&texture);
 
-    // given that we would have already extracted v, vn and vts, these are the indices from our vectors vertices/uv/normals
+    // given that we would have already extracted v, vn and vts, pull them and merge to make a face obj
     int v1,  v2,  v3;
     int vt1, vt2, vt3;
     int vn1, vn2, vn3;
 
-    // example line : v1/vt1/vn1 v2/vt2/vn2 v3/vt3/vn3 ..
+    // example obj line : v1/vt1/vn1 v2/vt2/vn2 v3/vt3/vn3 ..
     sscanf(line.c_str(), "%d/%d/%d %d/%d/%d %d/%d/%d", &v1, &vt1, &vn1, &v2, &vt2, &vn2, &v3, &vt3, &vn3);
 
     // get the vertices from the id
-    face.v1 = vertices.at(v1 - 1); face.v2 = vertices.at(v2 - 1); face.v3 = vertices.at(v3 - 1);
-    face.vt1 = uvs.at(vt1 - 1); face.vt2 = uvs.at(vt2 - 1); face.vt3 = uvs.at(vt3 - 1);
+    face.v1 = vertices.at(v1 - 1);  face.v2 = vertices.at(v2 - 1); face.v3 = vertices.at(v3 - 1);
+    face.vt1 = uvs.at(vt1 - 1);     face.vt2 = uvs.at(vt2 - 1); face.vt3 = uvs.at(vt3 - 1);
     face.vn1 = normals.at(vn1 - 1); face.vn2 = normals.at(vn2 - 1); face.vn3 = normals.at(vn3 - 1);
 
     faces.push_back(face);
 }
 
 void Model::Display() {
+
+    printf("Model Orientation: %f, %f, %f\n", rotation[0], rotation[1], rotation[2]);
+
     for(Face f : faces) {
         float p[3];
 
@@ -127,7 +139,14 @@ void Model::Display() {
             p[2] = parentPos[2] + off_pos[2];
         }
 
-        f.draw(p, off_rot, off_angle, scale);
+        float r[3];
+
+        r[0] = 0, r[1] = 0, r[2] = 0;
+
+        add(r, rotation, 1.0f);
+        add(r, off_rot, 1.0f);
+
+        f.draw(p, nullptr, r, off_angle, scale);
     }
 }
 
@@ -141,7 +160,9 @@ void Model::setOffsetRot(float angle, float x, float y, float z) {
     off_rot[0] = x;
     off_rot[1] = y;
     off_rot[2] = z;
+
     off_angle = angle;
+    // printf("\n\tOffRot: %fdeg, %f %f %f\n", angle, x, y, z);
 }
 
 float *Model::position() {

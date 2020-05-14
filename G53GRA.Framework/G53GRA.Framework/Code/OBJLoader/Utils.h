@@ -11,13 +11,13 @@ struct vertex {
     float x, y, z;
 };
 
-struct uv_coord {
+struct vertex2d {
     float x, y;
 };
 
 struct face {
     vertex   v1,  v2,  v3;
-    uv_coord vt1, vt2, vt3;
+    vertex2d vt1, vt2, vt3;
     vertex   vn1, vn2, vn3;
 };
 

@@ -55,6 +55,7 @@ void MyScene::Initialise() {
 
     ptree = new PalmTree();
     ptree->position(0, 0, 0);
+    ptree->orientation(50, 50 , 50);
     AddObjectToScene(ptree);
 
     ocean = new Ocean();
@@ -116,8 +117,6 @@ void MyScene::HandleKey(unsigned char key, int state, int x, int y) {
 // Miscellaneous grid-drawing functions
 //
 //
-
-
 
 void MyScene::drawGridLines() {
 

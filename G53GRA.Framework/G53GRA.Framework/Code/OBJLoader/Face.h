@@ -22,10 +22,10 @@ public:
     // we'll triangulate faces when exporting from blender
     // example format: f v1/vt1/vn1 v2/vt2/vn2 v3/vt3/vn3 ..
     vertex v1, v2,  v3;
-    uv_coord vt1, vt2, vt3;
+    vertex2d vt1, vt2, vt3;
     vertex vn1, vn2, vn3;
 
-    void draw(float* pos, float* rot, float ang, float* scale);
+    void draw(float *pos, float *rot, float *off_rot, float ang, float *scale);
 };
 
 

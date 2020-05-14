@@ -17,7 +17,7 @@
 class Model : public DisplayableObject {
 
 public:
-    Model(const char *obj_path, const char *uv_path, bool absolute_paths);
+    Model(const char *obj_path, const char *uv_path, bool absolute_paths, Model* parent = nullptr);
     ~Model() = default;
 
     void Display() override;
@@ -56,7 +56,7 @@ private:
     GLuint texture;
 
     std::vector<vertex>   vertices;
-    std::vector<uv_coord> uvs;
+    std::vector<vertex2d> uvs;
     std::vector<vertex>   normals;
     std::vector<Face>     faces;
 };
