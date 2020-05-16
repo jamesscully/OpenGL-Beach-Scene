@@ -27,31 +27,31 @@ Model::Model(const char *obj_path, const char *uv_path, bool absolute_paths = fa
     off_rot = new float[3];
     off_rot[0] = 0; off_rot[1] = 0; off_rot[2] = 0;
 
+    uv_offset = new float [2];
+    uv_offset[0] = 0; uv_offset[1] = 0;
+
 
     if(absolute_paths) {
         printf("Loading Model with paths: \n\t%s\n\t%s\n", obj_path, uv_path);
         file.open(obj_path);
-        texture = Scene::GetTexture(uv_path);
+
+        if(uv_path != nullptr)
+            texture = Scene::GetTexture(uv_path);
     }
     else {
-        printf("Loading Model with paths: \n\t%s\n\t%s\n", (model_dir + obj_path).c_str(), (model_dir + uv_path).c_str());
+        printf("Loading Model with paths: \n\tObj: %s\n\tTex: %s\n", (model_dir + obj_path).c_str(), (model_dir + uv_path).c_str());
+
         file.open(model_dir + obj_path);
-        texture = Scene::GetTexture(model_dir + uv_path);
+
+        if(uv_path != nullptr)
+            texture = Scene::GetTexture(model_dir + uv_path);
     }
 
     if(!file.good())
         printf("Error: error loading model file\n");
     else {
         printf("\tSuccessfuly loaded the model file\n");
-        printf("\tPos: %f %f %f\n\tRot: %f %f %f\n\tScale: %f %f %f\n",
-                pos[0], pos[1], pos[2],
-                rotation[0], rotation[1], rotation[2],
-                scale[0], scale[1], scale[2]
-                );
     }
-
-
-
 
     // add cerr output
 
@@ -77,9 +77,29 @@ Model::Model(const char *obj_path, const char *uv_path, bool absolute_paths = fa
             extractFace(line);
         else if (first == "vt")
             extractUV(line);
+        else if (first == "usemtl")
+            extractMtl(line);
+
     }
     printf("Finished extracting data\n");
 }
+
+void Model::extractMtl(std::string line) {
+    char mat_name[16];
+
+    // read our mat name from line
+    sscanf(line.c_str(), "%s", mat_name);
+
+    // if we have no material, return
+    if(strcmp(mat_name, "None") == 0)
+        return;
+
+    // log it
+    printf("\tFound Material: %s\n\t", mat_name);
+
+    material = new Material(model_dir + "test" + ".mtl");
+}
+
 
 void Model::extractVertex(std::string line) {
     float x = 0, y = 0, z = 0;
@@ -121,48 +141,41 @@ void Model::extractFace(std::string line) {
     faces.push_back(face);
 }
 
+void Model::setLighting(bool b) {
+    lighting = b;
+}
+
 void Model::Display() {
-
-    printf("Model Orientation: %f, %f, %f\n", rotation[0], rotation[1], rotation[2]);
-
     for(Face f : faces) {
         float p[3];
 
+        // if we're not parented, then use the base pos[] + offset arrays
         if(parent == nullptr) {
             p[0] = pos[0] + off_pos[0];
             p[1] = pos[1] + off_pos[1];
             p[2] = pos[2] + off_pos[2];
-        } else {
+        }
+        // if we are parented, use the parent position and our offset
+        else {
             float* parentPos = parent->position();
             p[0] = parentPos[0] + off_pos[0];
             p[1] = parentPos[1] + off_pos[1];
             p[2] = parentPos[2] + off_pos[2];
         }
-
-        float r[3];
-
-        r[0] = 0, r[1] = 0, r[2] = 0;
-
-        add(r, rotation, 1.0f);
-        add(r, off_rot, 1.0f);
-
-        f.draw(p, nullptr, r, off_angle, scale);
+        f.draw(p, rotation, scale, uv_offset, true);
     }
 }
 
+// when we want to offset the position
 void Model::setOffsetPos(float x, float y, float z) {
     off_pos[0] = x;
     off_pos[1] = y;
     off_pos[2] = z;
 }
 
-void Model::setOffsetRot(float angle, float x, float y, float z) {
-    off_rot[0] = x;
-    off_rot[1] = y;
-    off_rot[2] = z;
-
-    off_angle = angle;
-    // printf("\n\tOffRot: %fdeg, %f %f %f\n", angle, x, y, z);
+// set offset for UV, so we can animate this model
+void Model::setOffsetUV(float x, float y) {
+    uv_offset[0] = (uv_offset[0] >= 1) ? 0 : x; uv_offset[1] = (uv_offset[1] >= 1) ? 0 : y;
 }
 
 float *Model::position() {
@@ -180,6 +193,11 @@ float *Model::position() {
 void Model::position(float x, float y, float z) {
     DisplayableObject::position(x, y, z);
 }
+
+void Model::Update(const double &deltaTime) {
+
+}
+
 
 
 

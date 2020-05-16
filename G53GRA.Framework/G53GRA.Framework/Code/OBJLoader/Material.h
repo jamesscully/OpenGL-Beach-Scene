@@ -10,23 +10,38 @@
 
 class Material {
 public:
-    Material(const char* path);
+    Material(std::string path);
     ~Material();
 
 
     std::string name;
 
-    // Ka, Kd, Ks respectively
-    float ambient[3], diffuse[3], specular[3];
+    float ambient[4]  = {1.0f, 1.0f, 1.0f, 1.0f};
+    float diffuse[4]  = {1.0f, 1.0f, 1.0f, 1.0f};
 
-    // used to weight specular colour
-    float specular_exponent = -1;
+    float specular[4] = {1.0f, 1.0f, 1.0f, 1.0f};
 
-    // d or 'Tr' in .mtl file
-    float transparency;
+    // we want it to be shiny
+    float shiny[1] = {0.0f};
 
-    // applies the gl commands
-    void apply();
+//    // Ka, Kd, Ks respectively
+//    float ambient[3], diffuse[3], specular[3];
+//
+//    // used to weight specular colour
+//    float specular_exponent = -1;
+//
+//    // d or 'Tr' in .mtl file
+//    float transparency;
+//
+//    // applies the gl commands
+//    void apply();
+
+private:
+    void extractAmbient(std::string line);
+    void extractDiffuse(std::string line);
+    void extractSpecular(std::string line);
+    void extractTransparency(std::string line, bool invert);
+
 };
 
 

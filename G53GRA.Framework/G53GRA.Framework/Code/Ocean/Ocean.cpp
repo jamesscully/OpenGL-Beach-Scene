@@ -14,7 +14,6 @@ Ocean::~Ocean() = default;
 void Ocean::Display() {
     // must implement waves!
 
-
     float size = scale[0];
 
     glBegin(GL_QUADS);

@@ -8,13 +8,15 @@
 
 #include <string>
 #include <vector>
+#include <Interface/Animation.h>
 
 #include "Utils.h"
 #include "Face.h"
 
 #include "DisplayableObject.h"
+#include "Material.h"
 
-class Model : public DisplayableObject {
+class Model : public DisplayableObject, Animation {
 
 public:
     Model(const char *obj_path, const char *uv_path, bool absolute_paths, Model* parent = nullptr);
@@ -28,6 +30,23 @@ public:
     float  off_angle;
     float* off_scl;
 
+    bool lighting;
+
+
+    float ambient[4] = {0.5f, 0.5f, 0.5f, 1.0f};
+    float diffuse[4] = {1.0f, 1.0f, 1.0f, 1.0f};
+
+    float SPEC_SHADE = 0.5f;
+    float specular[4] = { SPEC_SHADE, SPEC_SHADE, SPEC_SHADE, 1.0f};
+
+    // we want it to be shiny
+    float shiny[1] = {0.0f};
+
+    Material* material;
+
+
+    float* uv_offset;
+
 
 
     // this indicates that this model must follow where the parent is
@@ -39,6 +58,7 @@ public:
 
     void setOffsetPos(float x, float y, float z);
     void setOffsetRot(float angle, float x, float y, float z);
+    void setOffsetUV(float x, float y);
 
     float *position() override;
 
@@ -53,12 +73,19 @@ private:
 
     void extractFace(std::string line);
 
+    void extractMtl(std::string line);
+
     GLuint texture;
 
     std::vector<vertex>   vertices;
     std::vector<vertex2d> uvs;
     std::vector<vertex>   normals;
     std::vector<Face>     faces;
+
+    void Update(const double &deltaTime) override;
+
+
+    void setLighting(bool b);
 };
 
 

@@ -29,6 +29,8 @@ PalmTree::PalmTree() {
 
         temp->position(0, ypos , 0);
 
+        temp->lighting = true;
+
         temp->size(10);
         logs.push_back(temp);
     }
@@ -41,13 +43,15 @@ PalmTree::PalmTree() {
     float rotY = 0;
     float rotOff = 45;
 
+    float smallY = 0;
+
     for(int i = 0; i < leaf_count; i++) {
         Model* temp;
         temp = new Model("palm_leaf.obj", "palm_leaf.bmp", false);
 
         // we want the leaves to be positioned with the top of the tree; parent them
         temp->parent = parentLog;
-        temp->setOffsetPos(0, 15, 0);
+        temp->setOffsetPos(0, 15 + smallY, 0);
         temp->size(20);
 
         rotY += rotOff;
@@ -55,6 +59,7 @@ PalmTree::PalmTree() {
         temp->orientation(0, rotY, 0);
 
         leaves.push_back(temp);
+        smallY += 0.25;
     }
 
 }
@@ -95,14 +100,16 @@ void PalmTree::Update(const double &deltaTime) {
     }
 
 
-    float offy = 0;
-    float offx = 0;
     for(auto leaf : leaves) {
-        float newrot = sin(elapsed * speed) * delta;
 
-        float * oldrot = leaf->orientation();
+        // leaves will want to update only around the X coordinate; makes them move up and down
 
-         leaf->orientation(newrot, oldrot[1], oldrot[2]);
+        float r = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
+
+        float change = sin(elapsed * speed) * delta;
+        float * rot = leaf->orientation();
+
+         leaf->orientation(change, rot[1], rot[2]);
     }
 }
 

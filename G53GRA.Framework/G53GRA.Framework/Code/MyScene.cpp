@@ -29,29 +29,27 @@ Octahedron* octahedron;
 
 Model * model;
 PalmTree* ptree;
+
+Model* tex_model;
 void MyScene::Initialise() {
 
     octahedron = new Octahedron(100, 1);
 
     // any likely changes to background will be a 'shade' rather than specific colour
-    float colorScale = 1.0f;
+    float colorScale = 0.0f;
 	glClearColor(colorScale, colorScale, colorScale, 1.0f);
-
-    light1 = new Light(GL_LIGHT0);
-    light1->position(20, 50, 10);
-    light1->setColor(2, 0, 0);
-
-    //logA = new LogA();
-    //AddObjectToScene(logA);
-
-//    model = new Model("log_A.obj", "log_A.bmp", false);
-//    model->size(10);
-//    model->position(0, 0, 0);
-    //AddObjectToScene(model);
 
     skybox = new Skybox();
     skybox->size(1000);
     skybox->position(0, -10, 0);
+    AddObjectToScene(skybox);
+
+    light1 = new Light(GL_LIGHT1);
+    light1->position(0, 10, 0);
+    light1->setColor(2, 0, 0);
+//    AddObjectToScene(light1);
+
+
 
     ptree = new PalmTree();
     ptree->position(0, 0, 0);
@@ -61,24 +59,15 @@ void MyScene::Initialise() {
     ocean = new Ocean();
     ocean->size(10000);
 
-    AddObjectToScene(skybox);
     AddObjectToScene(ocean);
-//
-//    AddObjectToScene(light1);
+
+    tex_model = new Model("test.obj", "", false);
+    tex_model->position(0, 0, 0);
+    tex_model->size(10);
+    AddObjectToScene(tex_model);
+
 
 }
-
-int x_off = 20;
-OnscreenText hlpText(x_off, 50, "[linear att: <j  k>] [constant att: <n m>] [quad att: <h l>]   reset = x");
-
-void MyScene::drawDebugText() {
-    hlpText.render();
-}
-
-
-int SUBDIVIDE_LEVEL = 5;
-float HEIGHT = 300;
-Octahedron oct(HEIGHT, SUBDIVIDE_LEVEL);
 
 void MyScene::Projection() {
     GLdouble aspect = static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight);
@@ -86,38 +75,15 @@ void MyScene::Projection() {
 
     //drawDebugText();
     drawAxisLines();
-    // oct.draw();
 }
 
 void MyScene::HandleKey(unsigned char key, int state, int x, int y) {
-
-//    switch (key) {
-//        case 'q':
-//            if(wall->SUB_SCALE > 1)
-//                wall->SUB_SCALE -= 1;
-//            break;
-//
-//        case 'e':
-//            wall->SUB_SCALE += 1;
-//            break;
-//    }
-//
-//    // pass key events to lights, so they can deal with atten. changes
-//    light1->HandleKey(key, state, x, y);
-//    light2->HandleKey(key, state, x, y);
-
-
-
     Scene::HandleKey(key, state, x, y);
 }
 
-
-//
 //
 // Miscellaneous grid-drawing functions
 //
-//
-
 void MyScene::drawGridLines() {
 
     int MAX_X = 2000;

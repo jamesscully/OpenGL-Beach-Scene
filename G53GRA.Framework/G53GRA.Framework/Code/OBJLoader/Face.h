@@ -25,7 +25,7 @@ public:
     vertex2d vt1, vt2, vt3;
     vertex vn1, vn2, vn3;
 
-    void draw(float *pos, float *rot, float *off_rot, float ang, float *scale);
+    void draw(float *pos, float *rot, float *scale, float *uv_offsets, bool lighting);
 };
 
 
