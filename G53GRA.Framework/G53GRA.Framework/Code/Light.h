@@ -16,9 +16,9 @@ public:
 
     int light_id = 0;
 
-    float ambient [4] = {0.2f, 0.2f, 0.2f, 1.0f};
-    float diffuse [4] = {0.9f, 0.9f, 0.9f, 1.0f};
-    float specular[4] = {1.0f, 1.0f, 1.0f, 1.0f};
+    float ambient [4] = {1.0f, 0.0f, 0.0f, 1.0f};
+    float diffuse [4] = {0.0f, 0.0f, 0.0f, 1.0f};
+    float specular[4] = {0.0f, 0.0f, 0.0f, 1.0f};
 
     float conAtten = 0.005f;
     float linAtten = 0.005f;

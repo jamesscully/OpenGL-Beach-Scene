@@ -16,14 +16,13 @@ void Ocean::Display() {
 
     float size = scale[0];
 
+    glEnable(GL_LIGHTING);
     glBegin(GL_QUADS);
-
-    glColor4f(0.52f, 0.81f, 0.98, 0.5);
-
-    glVertex3d(-size, 0, size);
-    glVertex3d(size, 0, size);
-    glVertex3d(size, 0, -size);
-    glVertex3d(-size, 0, -size);
-
+        glColor4f(0.52f, 0.81f, 0.98, 0.5);
+        glVertex3d(-size, 0, size);
+        glVertex3d(size, 0, size);
+        glVertex3d(size, 0, -size);
+        glVertex3d(-size, 0, -size);
     glEnd();
+    glDisable(GL_LIGHTING);
 }

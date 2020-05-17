@@ -36,16 +36,12 @@ void Light::Display() {
     glLightf(light_id, GL_QUADRATIC_ATTENUATION, quaAtten);
 
     glEnable(light_id);
-    
-    glDisable(GL_LIGHTING);
-
 
     // draw sphere to illustrate where spot of light is in screenshots
     glPushMatrix();
     {
         glTranslatef(pos[0], pos[1], pos[2]);
-        glColor3f(1, 1, 1);
-        glutSolidSphere(1, 16, 16 );
+        glutSolidSphere(5, 16, 16 );
     }
     glPopMatrix();
     glFlush();

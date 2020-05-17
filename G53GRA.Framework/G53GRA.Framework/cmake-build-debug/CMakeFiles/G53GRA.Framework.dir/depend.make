@@ -51,6 +51,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Utility/Texture
 
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o: ../Code/OBJLoader/Face.cpp
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o: ../Code/OBJLoader/Face.h
+CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o: ../Code/OBJLoader/Material.h
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o: ../Code/OBJLoader/Utils.h
 
 CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Material.cpp.o: ../Code/OBJLoader/Material.cpp

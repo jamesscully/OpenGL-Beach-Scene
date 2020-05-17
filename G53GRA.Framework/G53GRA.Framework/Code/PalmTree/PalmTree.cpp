@@ -10,7 +10,7 @@ std::vector<Model*> logs;
 std::vector<Model*> leaves;
 
 PalmTree::PalmTree() {
-    float logcount = 6;
+    float logcount = 8;
     float log_offset = 18;
 
     for(int i = 0; i < logcount; i++) {
@@ -18,9 +18,9 @@ PalmTree::PalmTree() {
 
         // get some variety
         if(i % 2)
-             temp = new Model("log_A.obj", "log_A.bmp", false);
+             temp = new Model("log_A", "log_A", false);
         else
-            temp = new Model("log_B.obj", "log_A.bmp", false);
+            temp = new Model("log_B", "log_A", false);
 
         // as we add more logs, we want i * off_pos so that they "stack"
 
@@ -28,8 +28,6 @@ PalmTree::PalmTree() {
         float ypos = i * log_offset;
 
         temp->position(0, ypos , 0);
-
-        temp->lighting = true;
 
         temp->size(10);
         logs.push_back(temp);
@@ -47,7 +45,7 @@ PalmTree::PalmTree() {
 
     for(int i = 0; i < leaf_count; i++) {
         Model* temp;
-        temp = new Model("palm_leaf.obj", "palm_leaf.bmp", false);
+        temp = new Model("palm_leaf", "palm_leaf", false);
 
         // we want the leaves to be positioned with the top of the tree; parent them
         temp->parent = parentLog;

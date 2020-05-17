@@ -19,7 +19,7 @@
 class Model : public DisplayableObject, Animation {
 
 public:
-    Model(const char *obj_path, const char *uv_path, bool absolute_paths, Model* parent = nullptr);
+    Model(const char *obj_name, const char *uv_path, bool absolute_paths, Model* parent = nullptr);
     ~Model() = default;
 
     void Display() override;
@@ -30,31 +30,16 @@ public:
     float  off_angle;
     float* off_scl;
 
-    bool lighting;
-
-
-    float ambient[4] = {0.5f, 0.5f, 0.5f, 1.0f};
-    float diffuse[4] = {1.0f, 1.0f, 1.0f, 1.0f};
-
-    float SPEC_SHADE = 0.5f;
-    float specular[4] = { SPEC_SHADE, SPEC_SHADE, SPEC_SHADE, 1.0f};
-
     // we want it to be shiny
-    float shiny[1] = {0.0f};
-
-    Material* material;
-
 
     float* uv_offset;
 
 
+    Material* material = new Material();
 
     // this indicates that this model must follow where the parent is
     // ex: the palm tree leaves should always match the last log in the tree
     Model* parent = nullptr;
-
-    // should we adhere to the parent's attributes?
-    bool p_pos = false, p_rot = false, p_scl = false;
 
     void setOffsetPos(float x, float y, float z);
     void setOffsetRot(float angle, float x, float y, float z);
@@ -64,9 +49,18 @@ public:
 
     void position(float x, float y, float z) override;
 
+    void setLighting(bool b);
+
+
 private:
 
+    std::string model_name = "default";
+
     std::string model_dir = "/mnt/data/home/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Models/";
+    std::string model_suffix = ".obj";
+
+    std::string uv_dir = "/mnt/data/home/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Models/UV/";
+    std::string uv_suffix = ".bmp";
     void extractVertex(std::string line);
     void extractUV(std::string line);
     void extractNormal(std::string line);
@@ -75,7 +69,7 @@ private:
 
     void extractMtl(std::string line);
 
-    GLuint texture;
+    GLuint texture = 0;
 
     std::vector<vertex>   vertices;
     std::vector<vertex2d> uvs;
@@ -85,7 +79,8 @@ private:
     void Update(const double &deltaTime) override;
 
 
-    void setLighting(bool b);
+    bool lighting = true;
+
 };
 
 

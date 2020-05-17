@@ -16,7 +16,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-Model::Model(const char *obj_path, const char *uv_path, bool absolute_paths = false, Model* parent) {
+Model::Model(const char *obj_name, const char *uv_name, bool absolute_paths = false, Model* parent) {
 
     std::ifstream file;
 
@@ -32,19 +32,21 @@ Model::Model(const char *obj_path, const char *uv_path, bool absolute_paths = fa
 
 
     if(absolute_paths) {
-        printf("Loading Model with paths: \n\t%s\n\t%s\n", obj_path, uv_path);
-        file.open(obj_path);
+        printf("Loading Model with paths: \n\t%s\n\t%s\n", obj_name, uv_name);
+        file.open(obj_name);
 
-        if(uv_path != nullptr)
-            texture = Scene::GetTexture(uv_path);
+        if(uv_name != "")
+            texture = Scene::GetTexture(uv_name);
     }
     else {
-        printf("Loading Model with paths: \n\tObj: %s\n\tTex: %s\n", (model_dir + obj_path).c_str(), (model_dir + uv_path).c_str());
+        printf("Loading Model with paths: \n\tObj: %s\n\tTex: %s\n", (model_dir + obj_name).c_str(), (model_dir + uv_name).c_str());
 
-        file.open(model_dir + obj_path);
+        file.open(model_dir + obj_name + model_suffix);
 
-        if(uv_path != nullptr)
-            texture = Scene::GetTexture(model_dir + uv_path);
+        if(uv_name != "")
+            texture = Scene::GetTexture(uv_dir + uv_name + uv_suffix);
+
+        model_name = obj_name;
     }
 
     if(!file.good())
@@ -79,7 +81,6 @@ Model::Model(const char *obj_path, const char *uv_path, bool absolute_paths = fa
             extractUV(line);
         else if (first == "usemtl")
             extractMtl(line);
-
     }
     printf("Finished extracting data\n");
 }
@@ -93,11 +94,11 @@ void Model::extractMtl(std::string line) {
     // if we have no material, return
     if(strcmp(mat_name, "None") == 0)
         return;
-
+    
     // log it
     printf("\tFound Material: %s\n\t", mat_name);
 
-    material = new Material(model_dir + "test" + ".mtl");
+    this->material = new Material(model_dir + model_name + ".mtl");
 }
 
 
@@ -162,7 +163,8 @@ void Model::Display() {
             p[1] = parentPos[1] + off_pos[1];
             p[2] = parentPos[2] + off_pos[2];
         }
-        f.draw(p, rotation, scale, uv_offset, true);
+
+        f.draw(p, rotation, scale, uv_offset, lighting, this->material);
     }
 }
 

@@ -12,7 +12,7 @@
 #pragma warning(disable:4996)
 
 // we'll declare pointers here, so that we can access them from different functions (helps not hiding everything in header)
-Light * light1, *light2;
+Light * light1;
 
 Island * island;
 
@@ -45,11 +45,9 @@ void MyScene::Initialise() {
     AddObjectToScene(skybox);
 
     light1 = new Light(GL_LIGHT1);
-    light1->position(0, 10, 0);
-    light1->setColor(2, 0, 0);
-//    AddObjectToScene(light1);
-
-
+    light1->position(0, 300, 0);
+    light1->setColor(1, 0.2, 0);
+    AddObjectToScene(light1);
 
     ptree = new PalmTree();
     ptree->position(0, 0, 0);
@@ -58,10 +56,9 @@ void MyScene::Initialise() {
 
     ocean = new Ocean();
     ocean->size(10000);
+//    AddObjectToScene(ocean);
 
-    AddObjectToScene(ocean);
-
-    tex_model = new Model("test.obj", "", false);
+    tex_model = new Model("test", "", false);
     tex_model->position(0, 0, 0);
     tex_model->size(10);
     AddObjectToScene(tex_model);
@@ -70,14 +67,29 @@ void MyScene::Initialise() {
 }
 
 void MyScene::Projection() {
+
+    glDisable(GL_LIGHT0);
+
     GLdouble aspect = static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight);
     gluPerspective(60.0, aspect, 1.0, 10000.0);
 
     //drawDebugText();
-    drawAxisLines();
+//    drawAxisLines();
+
+    glColorMaterial(GL_FRONT_AND_BACK, GL_DIFFUSE);
+    glEnable(GL_COLOR_MATERIAL);
+    glBegin(GL_TRIANGLES);
+        glColor3f(0.2, 0.5, 0.8);
+        glVertex3f(1.0, 0.0, 0.0);
+        glColor3f(0.3, 0.5, 0.6);
+        glVertex3f(0.0, 0.0, 0.0);
+        glColor3f(0.4, 0.2, 0.2);
+        glVertex3f(1.0, 1.0, 0.0);
+    glEnd();
 }
 
 void MyScene::HandleKey(unsigned char key, int state, int x, int y) {
+    light1->HandleKey(key, state, x, y);
     Scene::HandleKey(key, state, x, y);
 }
 

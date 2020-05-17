@@ -10,37 +10,40 @@
 
 class Material {
 public:
+    Material();
     Material(std::string path);
     ~Material();
 
 
-    std::string name;
+    std::string name = "default";
 
-    float ambient[4]  = {1.0f, 1.0f, 1.0f, 1.0f};
-    float diffuse[4]  = {1.0f, 1.0f, 1.0f, 1.0f};
+    // default material values; white non shiny
+    float ambient[4]  = {1.0f, 1.0f, 1.0f, 1.0f}; // Ka
+    float diffuse[4]  = {1.0f, 1.0f, 1.0f, 1.0f}; // Kd
+    float specular[4] = {1.0f, 1.0f, 1.0f, 1.0f}; // Ks
 
-    float specular[4] = {1.0f, 1.0f, 1.0f, 1.0f};
+    float shiny[1] = {1.0f};
 
-    // we want it to be shiny
-    float shiny[1] = {0.0f};
+    float transparency = 1.0f; // d or Tr
 
-//    // Ka, Kd, Ks respectively
-//    float ambient[3], diffuse[3], specular[3];
-//
-//    // used to weight specular colour
-//    float specular_exponent = -1;
-//
-//    // d or 'Tr' in .mtl file
-//    float transparency;
-//
-//    // applies the gl commands
-//    void apply();
+    float emission[4] = {0, 0, 0, 1.0f};
+
+    void print() {
+        printf("Material %s properties: \n", name.c_str());
+        printf("Ambient : %f %f %f\n", ambient[0], ambient[1], ambient[2]);
+        printf("Diffuse : %f %f %f\n", diffuse[0], diffuse[1], diffuse[2]);
+        printf("Specular: %f %f %f\n", specular[0], specular[1], specular[2]);
+        printf("Shiny   : %f\n", shiny[0]);
+        printf("Transparency: %f\n", transparency);
+    }
 
 private:
     void extractAmbient(std::string line);
     void extractDiffuse(std::string line);
     void extractSpecular(std::string line);
     void extractTransparency(std::string line, bool invert);
+    void extractEmission(std::string line);
+    void extractShininess(std::string line);
 
 };
 

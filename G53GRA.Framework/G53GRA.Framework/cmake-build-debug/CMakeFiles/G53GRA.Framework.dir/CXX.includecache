@@ -6,13 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.cpp
-fstream
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.cpp
+GL/gl.h
 -
+Face.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
+Material.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.h
+
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Face.h
+Utils.h
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Utils.h
 Material.h
 /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.h
 
 /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Material.h
 string
 -
+
+/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OBJLoader/Utils.h
 

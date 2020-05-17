@@ -7,6 +7,11 @@
 
 using std::string;
 
+Material::Material() {
+
+}
+Material::~Material() = default;
+
 Material::Material(std::string path) {
     printf("\tExtracting Material: %s\n", path.c_str());
     std::ifstream file;
@@ -31,8 +36,14 @@ Material::Material(std::string path) {
             extractDiffuse(line);
         else if (first == "Ks")
             extractSpecular(line);
+        else if (first == "Ns")
+            extractShininess(line);
+        else if (first == "Ke")
+            extractEmission(line);
         else if (first == "d" || first == "Tr") {
             extractTransparency(line, first == "Tr");
+        } else if (first == "newmtl") {
+            name = line;
         }
     }
 
@@ -40,19 +51,54 @@ Material::Material(std::string path) {
 }
 
 void Material::extractAmbient(std::string line) {
-    printf("\t\tFound Ambient: %s\n", line.c_str());
+    float a, b, c;
+    sscanf(line.c_str(), "%f %f %f", &a, &b, &c);
+    ambient[0] = a, ambient[1] = b, ambient[2] = c;
+    printf("\t\tExtracted Ambient: %f %f %f\n", a, b, c);
 }
 
 void Material::extractDiffuse(std::string line) {
-    printf("\t\tFound Diffuse: %s\n", line.c_str());
+    float a, b, c;
+    sscanf(line.c_str(), "%f %f %f", &a, &b, &c);
+    diffuse[0] = a, diffuse[1] = b, diffuse[2] = c;
+    printf("\t\tExtracted Diffuse: %f %f %f\n", a, b, c);
 }
 
 void Material::extractSpecular(std::string line) {
-    printf("\t\tFound Specular: %s\n", line.c_str());
+    float a, b, c;
+    sscanf(line.c_str(), "%f %f %f", &a, &b, &c);
+    specular[0] = a, specular[1] = b, specular[2] = c;
+    printf("\t\tExtracted Specular: %f %f %f\n", a, b, c);
 }
 
 void Material::extractTransparency(std::string line, bool invert) {
-    printf("\t\tFound Transparency: %s\n", line.c_str());
+    sscanf(line.c_str(), "%f", &transparency);
+
+    // OBJ Tr = inverted | d = normal
+    if(invert)
+        transparency = 1 - transparency;
+
+    diffuse[3] = transparency;
+    ambient[3] = transparency;
+    specular[3] = transparency;
+
+    printf("\t\tExtracted Transparency: %f\n", transparency);
 }
 
-Material::~Material() = default;
+void Material::extractShininess(std::string line) {
+    float s = 0;
+    sscanf(line.c_str(), "%f", &s);
+
+    // .obj file format is from 0 - 255, thus 128 / 255 = 0.5
+    shiny[0] = s / 255;
+    printf("\t\tExtracted Shininess Org: %f Rev: %f\n", s, shiny[0]);
+}
+
+void Material::extractEmission(std::string line) {
+    float a, b, c;
+    sscanf(line.c_str(), "%f %f %f", &a, &b, &c);
+    emission[0] = a, emission[1] = b, emission[2] = c;
+    printf("\t\tExtracted Emission: %f %f %f\n", emission[0], emission[1], emission[2]);
+}
+
+
