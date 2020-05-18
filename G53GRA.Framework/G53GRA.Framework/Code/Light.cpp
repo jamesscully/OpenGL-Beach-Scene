@@ -22,29 +22,8 @@ Light::Light(int light_id) : DisplayableObject() {
 }
 
 void Light::Display() {
-    glEnable(GL_LIGHTING);
 
-    // set our relavent emission parameters
-    glLightfv(light_id, GL_AMBIENT, ambient);
-    glLightfv(light_id, GL_DIFFUSE, diffuse);
-    glLightfv(light_id, GL_SPECULAR, specular);
-    glLightfv(light_id, GL_POSITION, pos);
 
-    // light falloff parameters
-    glLightf(light_id, GL_CONSTANT_ATTENUATION, conAtten);
-    glLightf(light_id, GL_LINEAR_ATTENUATION, linAtten);
-    glLightf(light_id, GL_QUADRATIC_ATTENUATION, quaAtten);
-
-    glEnable(light_id);
-
-    // draw sphere to illustrate where spot of light is in screenshots
-    glPushMatrix();
-    {
-        glTranslatef(pos[0], pos[1], pos[2]);
-        glutSolidSphere(5, 16, 16 );
-    }
-    glPopMatrix();
-    glFlush();
 
     // render UI text
     txtLin->render();

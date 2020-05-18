@@ -89,8 +89,7 @@ void Material::extractShininess(std::string line) {
     float s = 0;
     sscanf(line.c_str(), "%f", &s);
 
-    // .obj file format is from 0 - 255, thus 128 / 255 = 0.5
-    shiny[0] = s / 255;
+    shiny[0] = s / 2;
     printf("\t\tExtracted Shininess Org: %f Rev: %f\n", s, shiny[0]);
 }
 

@@ -123,6 +123,33 @@ G53GRA.Framework/fast:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/build
 .PHONY : G53GRA.Framework/fast
 
+Code/DayNight/Sun.o: Code/DayNight/Sun.cpp.o
+
+.PHONY : Code/DayNight/Sun.o
+
+# target to build an object file
+Code/DayNight/Sun.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Sun.cpp.o
+.PHONY : Code/DayNight/Sun.cpp.o
+
+Code/DayNight/Sun.i: Code/DayNight/Sun.cpp.i
+
+.PHONY : Code/DayNight/Sun.i
+
+# target to preprocess a source file
+Code/DayNight/Sun.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Sun.cpp.i
+.PHONY : Code/DayNight/Sun.cpp.i
+
+Code/DayNight/Sun.s: Code/DayNight/Sun.cpp.s
+
+.PHONY : Code/DayNight/Sun.s
+
+# target to generate assembly for a file
+Code/DayNight/Sun.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Sun.cpp.s
+.PHONY : Code/DayNight/Sun.cpp.s
+
 Code/Island/Island.o: Code/Island/Island.cpp.o
 
 .PHONY : Code/Island/Island.o
@@ -591,6 +618,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... G53GRA.Framework"
 	@echo "... edit_cache"
+	@echo "... Code/DayNight/Sun.o"
+	@echo "... Code/DayNight/Sun.i"
+	@echo "... Code/DayNight/Sun.s"
 	@echo "... Code/Island/Island.o"
 	@echo "... Code/Island/Island.i"
 	@echo "... Code/Island/Island.s"

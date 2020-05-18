@@ -27,7 +27,7 @@ PalmTree::PalmTree() {
 
         float ypos = i * log_offset;
 
-        temp->position(0, ypos , 0);
+        temp->position(0, ypos + pos[1] , 0);
 
         temp->size(10);
         logs.push_back(temp);

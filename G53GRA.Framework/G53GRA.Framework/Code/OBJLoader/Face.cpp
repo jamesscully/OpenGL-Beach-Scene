@@ -21,15 +21,15 @@ void Face::draw(float *pos, float *rot, float *scale, float *uv_offsets, bool li
 
     glEnable(GL_TEXTURE_2D);
 
-    if(texture == 0)
-        printf("Not drawing texture");
-
     glBindTexture(GL_TEXTURE_2D, *texture);
 
     // we'll only want these properties on if we're using lighting - else we'll disable
     if(mat != nullptr && lighting) {
         glEnable(GL_LIGHTING);
-        glShadeModel(GL_SMOOTH);
+//        glShadeModel(GL_SMOOTH);
+        glEnable(GL_COLOR_MATERIAL);
+
+
         glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, mat->ambient);
         glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat->specular);
         glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, mat->diffuse);
@@ -38,7 +38,6 @@ void Face::draw(float *pos, float *rot, float *scale, float *uv_offsets, bool li
     } else {
         glDisable(GL_LIGHTING);
     }
-    glEnable(GL_COLOR_MATERIAL);
 
     glTranslatef(pos[0], pos[1], pos[2]);
     glScalef(scale[0], scale[1], scale[2]);
@@ -69,8 +68,7 @@ void Face::draw(float *pos, float *rot, float *scale, float *uv_offsets, bool li
     glBindTexture(GL_TEXTURE_2D, 0);
     glDisable(GL_TEXTURE_2D);
     glDisable(GL_COLOR_MATERIAL);
+
     glPopMatrix();
     glPopAttrib();
-
-
 }

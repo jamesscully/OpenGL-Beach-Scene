@@ -4,6 +4,7 @@
 #include <Oct/Octahedron.h>
 #include <OBJLoader/Model.h>
 #include <PalmTree/PalmTree.h>
+#include <DayNight/Sun.h>
 #include "MyScene.h"
 #include "OnscreenText.h"
 #include "Light.h"
@@ -11,10 +12,6 @@
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:4996)
 
-// we'll declare pointers here, so that we can access them from different functions (helps not hiding everything in header)
-Light * light1;
-
-Island * island;
 
 MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidth, const int& windowHeight)
 	: Scene(argc, argv, title, windowWidth, windowHeight)
@@ -23,10 +20,13 @@ MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidt
     WIN_WIDTH  = windowWidth;
 }
 
+// we'll declare pointers here, so that we can access them from different functions (helps not hiding everything in header)
 
-Skybox* skybox; Ocean* ocean;
+Sun * sun;
+Model * island;
+Skybox* skybox;
+Ocean* ocean;
 Octahedron* octahedron;
-
 Model * model;
 PalmTree* ptree;
 
@@ -44,19 +44,24 @@ void MyScene::Initialise() {
     skybox->position(0, -10, 0);
     AddObjectToScene(skybox);
 
-    light1 = new Light(GL_LIGHT1);
-    light1->position(0, 300, 0);
-    light1->setColor(1, 0.2, 0);
-    AddObjectToScene(light1);
+    sun = new Sun(GL_LIGHT1);
+//    sun->position(0, 990, 0);
+    sun->position(0, 300, 0);
+    AddObjectToScene(sun);
+
+    island = new Model("island", "", false);
+    island->position(0, 20, 0);
+    island->size(10);
+    island->setLighting(true);
+    AddObjectToScene(island);
 
     ptree = new PalmTree();
-    ptree->position(0, 0, 0);
-    ptree->orientation(50, 50 , 50);
+    ptree->position(0, 10000, 0);
     AddObjectToScene(ptree);
 
     ocean = new Ocean();
     ocean->size(10000);
-//    AddObjectToScene(ocean);
+    AddObjectToScene(ocean);
 
     tex_model = new Model("test", "", false);
     tex_model->position(0, 0, 0);
@@ -76,20 +81,13 @@ void MyScene::Projection() {
     //drawDebugText();
 //    drawAxisLines();
 
-    glColorMaterial(GL_FRONT_AND_BACK, GL_DIFFUSE);
-    glEnable(GL_COLOR_MATERIAL);
-    glBegin(GL_TRIANGLES);
-        glColor3f(0.2, 0.5, 0.8);
-        glVertex3f(1.0, 0.0, 0.0);
-        glColor3f(0.3, 0.5, 0.6);
-        glVertex3f(0.0, 0.0, 0.0);
-        glColor3f(0.4, 0.2, 0.2);
-        glVertex3f(1.0, 1.0, 0.0);
-    glEnd();
+    glColorMaterial(GL_FRONT, GL_SPECULAR);
+    glColorMaterial(GL_FRONT, GL_DIFFUSE);
+
 }
 
 void MyScene::HandleKey(unsigned char key, int state, int x, int y) {
-    light1->HandleKey(key, state, x, y);
+    sun->HandleKey(key, state, x, y);
     Scene::HandleKey(key, state, x, y);
 }
 
