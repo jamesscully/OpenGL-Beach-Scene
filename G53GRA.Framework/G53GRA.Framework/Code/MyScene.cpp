@@ -5,6 +5,7 @@
 #include <OBJLoader/Model.h>
 #include <PalmTree/PalmTree.h>
 #include <DayNight/Sun.h>
+#include <DayNight/Moon.h>
 #include "MyScene.h"
 #include "OnscreenText.h"
 #include "Light.h"
@@ -22,18 +23,32 @@ MyScene::MyScene(int argc, char** argv, const char *title, const int& windowWidt
 
 // we'll declare pointers here, so that we can access them from different functions (helps not hiding everything in header)
 
-Sun * sun;
-Model * island;
+Sun * sun; Moon * moon;
+
 Skybox* skybox;
 Ocean* ocean;
-Octahedron* octahedron;
-Model * model;
+Model * island;
 PalmTree* ptree;
 
-Model* tex_model;
+Model* dock_base, *dock_planks;
 void MyScene::Initialise() {
 
-    octahedron = new Octahedron(100, 1);
+    island = new Model("island", "", false);
+    island->position(0, 60, 0);
+//    island->setLighting(true);
+    AddObjectToScene(island);
+
+    dock_base = new Model("dock_base", "", false);
+    dock_base->position(0, 50, 0);
+    AddObjectToScene(dock_base);
+
+    dock_planks = new Model("dock_planks", "", false);
+    dock_planks->position(0, 50, -20);
+    AddObjectToScene(dock_planks);
+
+    ocean = new Ocean();
+    ocean->size(10000);
+    AddObjectToScene(ocean);
 
     // any likely changes to background will be a 'shade' rather than specific colour
     float colorScale = 0.0f;
@@ -44,31 +59,24 @@ void MyScene::Initialise() {
     skybox->position(0, -10, 0);
     AddObjectToScene(skybox);
 
+    float cyclespeed = 0.2;
+
     sun = new Sun(GL_LIGHT1);
-//    sun->position(0, 990, 0);
-    sun->position(0, 300, 0);
+    sun->position(0, 0, 0);
+    sun->radius = 600;
+    sun->speed = cyclespeed;
     AddObjectToScene(sun);
 
-    island = new Model("island", "", false);
-    island->position(0, 20, 0);
-    island->size(10);
-    island->setLighting(true);
-    AddObjectToScene(island);
+    moon = new Moon(GL_LIGHT2);
+    moon->position(0, 0, 0);
+    moon->radius = 600;
+    moon->speed = cyclespeed;
+    moon->inverted = true;
+    AddObjectToScene(moon);
 
     ptree = new PalmTree();
-    ptree->position(0, 10000, 0);
+    ptree->position(0, 50, 0);
     AddObjectToScene(ptree);
-
-    ocean = new Ocean();
-    ocean->size(10000);
-    AddObjectToScene(ocean);
-
-    tex_model = new Model("test", "", false);
-    tex_model->position(0, 0, 0);
-    tex_model->size(10);
-    AddObjectToScene(tex_model);
-
-
 }
 
 void MyScene::Projection() {

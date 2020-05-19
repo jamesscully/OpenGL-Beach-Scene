@@ -30,6 +30,7 @@ Model::Model(const char *obj_name, const char *uv_name, bool absolute_paths = fa
     uv_offset = new float [2];
     uv_offset[0] = 0; uv_offset[1] = 0;
 
+    string test = uv_name;
 
     if(absolute_paths) {
         printf("Loading Model with paths: \n\t%s\n\t%s\n", obj_name, uv_name);
@@ -79,7 +80,7 @@ Model::Model(const char *obj_name, const char *uv_name, bool absolute_paths = fa
             extractFace(line);
         else if (first == "vt")
             extractUV(line);
-        else if (first == "usemtl")
+        else if (first == "usemtl" || first == "mtllib")
             extractMtl(line);
     }
     printf("Finished extracting data\n");
@@ -94,6 +95,8 @@ void Model::extractMtl(std::string line) {
     // if we have no material, return
     if(strcmp(mat_name, "None") == 0)
         return;
+
+    line = line.substr(0, line.find("."));
     
     // log it
     printf("\tFound Material: %s\n\t", mat_name);

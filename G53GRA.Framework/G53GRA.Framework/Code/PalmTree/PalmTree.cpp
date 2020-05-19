@@ -10,6 +10,15 @@ std::vector<Model*> logs;
 std::vector<Model*> leaves;
 
 PalmTree::PalmTree() {
+    generateTree();
+}
+
+PalmTree::~PalmTree() {
+
+}
+
+// generates the tree's objects, so position(..) works normally
+void PalmTree::generateTree() {
     float logcount = 8;
     float log_offset = 18;
 
@@ -18,18 +27,16 @@ PalmTree::PalmTree() {
 
         // get some variety
         if(i % 2)
-             temp = new Model("log_A", "log_A", false);
+            temp = new Model("log_A", "log_A", false);
         else
             temp = new Model("log_B", "log_A", false);
 
         // as we add more logs, we want i * off_pos so that they "stack"
-
-
         float ypos = i * log_offset;
 
         temp->position(0, ypos + pos[1] , 0);
-
         temp->size(10);
+
         logs.push_back(temp);
     }
 
@@ -38,10 +45,10 @@ PalmTree::PalmTree() {
     // the last log in the vector will be at the top
     Model* parentLog = logs[logs.size() - 1];
 
-    float rotY = 0;
-    float rotOff = 45;
-
-    float smallY = 0;
+    // rotY = degrees around the origin, so they spread out
+    // rotOff = rot offset, i.e. how many degs each leave should be apart
+    // smallY = aesthetic, makes the leaves 'stack' ontop of eachother
+    float rotY = 0, rotOff = 45, smallY = 0;
 
     for(int i = 0; i < leaf_count; i++) {
         Model* temp;
@@ -49,6 +56,8 @@ PalmTree::PalmTree() {
 
         // we want the leaves to be positioned with the top of the tree; parent them
         temp->parent = parentLog;
+
+        // how much we want them to be set off the tree
         temp->setOffsetPos(0, 15 + smallY, 0);
         temp->size(20);
 
@@ -59,11 +68,15 @@ PalmTree::PalmTree() {
         leaves.push_back(temp);
         smallY += 0.25;
     }
-
 }
 
-PalmTree::~PalmTree() {
+void PalmTree::position(float x, float y, float z) {
+    // remove our existing objects
+    logs.clear(); leaves.clear();
 
+    pos[0] = x; pos[1] = y; pos[2] = z;
+
+    generateTree();
 }
 
 void PalmTree::Display() {

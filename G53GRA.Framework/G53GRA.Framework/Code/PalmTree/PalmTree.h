@@ -18,6 +18,11 @@ public:
     void Display() override;
 
     void Update(const double &deltaTime) override;
+
+    void position(float x, float y, float z) override;
+
+private:
+    void generateTree();
 };
 
 

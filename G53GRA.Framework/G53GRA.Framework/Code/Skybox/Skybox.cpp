@@ -21,19 +21,17 @@ void Skybox::Display() {
 }
 
 void Skybox::Update(const double &deltaTime) {
-
     static float deltaY = 0;
 
-    // so we can offset the 'time' e.g. day time start
-    float static offsetY = 0.7;
+    float y_offset = -1;
 
     // if we've hit max, loop around
-    if(deltaY >= 1)
+    if(deltaY + y_offset >= 1)
         deltaY = 0;
 
     // function has same built-in loop
-    sbox->setOffsetUV(0, deltaY + offsetY);
+    sbox->setOffsetUV(0, deltaY + y_offset);
 
     // increment static variable
-    deltaY += 0.0005;
+    deltaY += 0.0004;
 }

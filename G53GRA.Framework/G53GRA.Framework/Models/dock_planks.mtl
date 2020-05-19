@@ -1,0 +1,12 @@
+# Blender MTL File: 'island.blend'
+# Material Count: 1
+
+newmtl Plank
+Ns 0.0
+Ka 0.147000 0.132000 0.068000
+Kd 0.147000 0.132000 0.068000
+Ks 0.147000 0.132000 0.068000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2

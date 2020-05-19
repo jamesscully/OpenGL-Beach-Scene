@@ -2,9 +2,9 @@
 // Created by yames on 5/17/20.
 //
 
-#include "Sun.h"
+#include "Moon.h"
 
-Sun::Sun(int light_id) {
+Moon::Moon(int light_id) {
     this->light_id = light_id;
 
     int yRoot = 50;
@@ -12,9 +12,19 @@ Sun::Sun(int light_id) {
     txtLin = new OnscreenText(20, yRoot + 25, "Linear Atten: ", &linAtten);
     txtCon = new OnscreenText(20, yRoot + 50, "Constant Atten: ", &conAtten);
     txtQua = new OnscreenText(20, yRoot + 75, "Quadratic Atten: ", &quaAtten);
+
+    model = new Model("moon", "", false);
+
+    model->size(15);
+    model->setLighting(false);
+
+    model->orientation(90, 0, 0);
+
+    printf("Start Pos [%f,%f]\n", pos[0], pos[1]);
+
 }
 
-void Sun::Display() {
+void Moon::Display() {
     glEnable(GL_LIGHTING);
 
     // set our relavent emission parameters
@@ -33,21 +43,12 @@ void Sun::Display() {
     glLightf(light_id, GL_LINEAR_ATTENUATION, linAtten);
     glLightf(light_id, GL_QUADRATIC_ATTENUATION, quaAtten);
 
-    // draw sphere to illustrate where spot of light is in screenshots
-    glDisable(GL_LIGHTING);
-    glPushMatrix();
-    {
-        glColor3f(0.9, 0.5, 0.1);
-        glTranslatef(pos[0], pos[1], pos[2]);
-        glutSolidSphere(10, 16, 16 );
-    }
-    glPopMatrix();
-    glEnable(GL_LIGHTING);
-
-
-    glFlush();
-
     glEnable(light_id);
+
+
+    model->Display();
+    model->position(pos[0], pos[1], pos[2]);
+
 
     txtLin->render();
     txtQua->render();
@@ -55,7 +56,7 @@ void Sun::Display() {
 }
 
 #include <cmath>
-void Sun::Update(const double &deltaTime) {
+void Moon::Update(const double &deltaTime) {
 
     static float elapsed = -2.5;
 
@@ -72,7 +73,7 @@ void Sun::Update(const double &deltaTime) {
     this->position(x_movement, y_movement, 0);
 }
 
-void Sun::HandleKey(unsigned char key, int state, int x, int y) {
+void Moon::HandleKey(unsigned char key, int state, int x, int y) {
     switch (key) {
         case 'j': linAtten -= 0.05; break;
         case 'k': linAtten += 0.05; break;

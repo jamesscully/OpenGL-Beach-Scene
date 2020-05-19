@@ -18,13 +18,15 @@ void Ocean::Display() {
 
     glEnable(GL_LIGHTING);
 
+    glEnable(GL_COLOR_MATERIAL);
     glBegin(GL_QUADS);
-        glColor4f(0.52f, 0.81f, 0.98, 1);
+        glColor4f(0.52f, 0.81f, 0.98, 0.5);
         glVertex3d(-size, 0, size);
         glVertex3d(size, 0, size);
         glVertex3d(size, 0, -size);
         glVertex3d(-size, 0, -size);
     glEnd();
+
     glDisable(GL_LIGHTING);
 
 }

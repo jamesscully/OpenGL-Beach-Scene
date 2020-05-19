@@ -12,6 +12,7 @@ Face::Face(GLuint *uv) {
 
 void Face::draw(float *pos, float *rot, float *scale, float *uv_offsets, bool lighting, Material* mat) {
 
+    // vt positions will need to be moved if we're offsetting in animation
     vt1.x += uv_offsets[0]; vt1.y += uv_offsets[1];
     vt2.x += uv_offsets[0]; vt2.y += uv_offsets[1];
     vt3.x += uv_offsets[0]; vt3.y += uv_offsets[1];
@@ -20,12 +21,11 @@ void Face::draw(float *pos, float *rot, float *scale, float *uv_offsets, bool li
     glPushMatrix();
 
     glEnable(GL_TEXTURE_2D);
-
     glBindTexture(GL_TEXTURE_2D, *texture);
 
     // we'll only want these properties on if we're using lighting - else we'll disable
     if(mat != nullptr && lighting) {
-        glEnable(GL_LIGHTING);
+//        glEnable(GL_LIGHTING);
 //        glShadeModel(GL_SMOOTH);
         glEnable(GL_COLOR_MATERIAL);
 
@@ -37,6 +37,7 @@ void Face::draw(float *pos, float *rot, float *scale, float *uv_offsets, bool li
         glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, mat->emission);
     } else {
         glDisable(GL_LIGHTING);
+
     }
 
     glTranslatef(pos[0], pos[1], pos[2]);
@@ -48,6 +49,7 @@ void Face::draw(float *pos, float *rot, float *scale, float *uv_offsets, bool li
     glRotatef(rot[2], 0,  0, rot[2]);
 
     glBegin(GL_TRIANGLES);
+
         // if we're using a texture, we'll want the base colour to be white
         glColor4f(255, 255, 255, mat->transparency);
 
@@ -68,6 +70,8 @@ void Face::draw(float *pos, float *rot, float *scale, float *uv_offsets, bool li
     glBindTexture(GL_TEXTURE_2D, 0);
     glDisable(GL_TEXTURE_2D);
     glDisable(GL_COLOR_MATERIAL);
+
+    glDisable(GL_LIGHTING);
 
     glPopMatrix();
     glPopAttrib();

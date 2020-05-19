@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Moon.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Sun.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o"
