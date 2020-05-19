@@ -16,6 +16,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Moon.cpp.o
  ../Framework/Interface/Input.h
  ../Framework/Utility/Camera.h
  ../Framework/Utility/Texture.h
+ ../Framework/Utility/VectorMath.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/DayNight/Moon.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/DayNight/Moon.h
 CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Sun.cpp.o
@@ -31,17 +32,6 @@ CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Sun.cpp.o
  ../Framework/Utility/Texture.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/DayNight/Sun.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/DayNight/Sun.h
-CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.o
- ../../freeglut/include/GL/freeglut_std.h
- ../../freeglut/include/GL/glut.h
- ../Framework/Engine/Engine.h
- ../Framework/Engine/Scene.h
- ../Framework/Interface/DisplayableObject.h
- ../Framework/Interface/Input.h
- ../Framework/Utility/Camera.h
- ../Framework/Utility/Texture.h
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Island/Island.cpp
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Island/Island.h
 CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
@@ -54,20 +44,33 @@ CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/PalmTree.cpp.o
+ ../../freeglut/include/GL/freeglut_std.h
+ ../../freeglut/include/GL/glut.h
+ ../Code/OBJLoader/Face.h
+ ../Code/OBJLoader/Material.h
+ ../Code/OBJLoader/Model.h
+ ../Code/OBJLoader/Utils.h
+ ../Framework/Engine/Engine.h
+ ../Framework/Engine/Scene.h
+ ../Framework/Interface/Animation.h
+ ../Framework/Interface/DisplayableObject.h
+ ../Framework/Interface/Input.h
+ ../Framework/Utility/Camera.h
+ ../Framework/Utility/Texture.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/PalmTree/PalmTree.cpp
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/PalmTree/PalmTree.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
  ../Code/DayNight/Moon.h
  ../Code/DayNight/Sun.h
- ../Code/Island/Island.h
+ ../Code/ModelGroups/PalmTree/PalmTree.h
  ../Code/OBJLoader/Face.h
  ../Code/OBJLoader/Material.h
  ../Code/OBJLoader/Model.h
  ../Code/OBJLoader/Utils.h
  ../Code/Ocean/Ocean.h
- ../Code/Oct/OctFace.h
- ../Code/Oct/Octahedron.h
- ../Code/PalmTree/PalmTree.h
  ../Code/Skybox/Skybox.h
  ../Framework/Engine/Scene.h
  ../Framework/Interface/Animation.h
@@ -116,39 +119,11 @@ CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o
  ../Framework/Utility/Texture.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Ocean/Ocean.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Ocean/Ocean.h
-CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o
- ../../freeglut/include/GL/freeglut.h
- ../../freeglut/include/GL/freeglut_ext.h
- ../../freeglut/include/GL/freeglut_std.h
- ../../freeglut/include/GL/glut.h
- ../Framework/Utility/VectorMath.h
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/OctFace.cpp
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/OctFace.h
-CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/OctFace.h
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/Octahedron.cpp
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/Octahedron.h
 CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
-CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o
- ../../freeglut/include/GL/freeglut_std.h
- ../../freeglut/include/GL/glut.h
- ../Code/OBJLoader/Face.h
- ../Code/OBJLoader/Material.h
- ../Code/OBJLoader/Model.h
- ../Code/OBJLoader/Utils.h
- ../Framework/Engine/Engine.h
- ../Framework/Engine/Scene.h
- ../Framework/Interface/Animation.h
- ../Framework/Interface/DisplayableObject.h
- ../Framework/Interface/Input.h
- ../Framework/Utility/Camera.h
- ../Framework/Utility/Texture.h
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.cpp
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.h
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h

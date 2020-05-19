@@ -4,6 +4,8 @@
 
 #include "Moon.h"
 
+#include "VectorMath.h"
+
 Moon::Moon(int light_id) {
     this->light_id = light_id;
 
@@ -17,8 +19,6 @@ Moon::Moon(int light_id) {
 
     model->size(15);
     model->setLighting(false);
-
-    model->orientation(90, 0, 0);
 
     printf("Start Pos [%f,%f]\n", pos[0], pos[1]);
 
@@ -46,8 +46,9 @@ void Moon::Display() {
     glEnable(light_id);
 
 
-    model->Display();
     model->position(pos[0], pos[1], pos[2]);
+    model->orientation(rotation[0], rotation[1], rotation[2]);
+    model->Display();
 
 
     txtLin->render();
@@ -71,6 +72,17 @@ void Moon::Update(const double &deltaTime) {
     }
 
     this->position(x_movement, y_movement, 0);
+
+
+    float new_rot[3] = {0, 0, 0};
+
+    float radians = atan2(pos[1], pos[0]);
+    float degrees = radians * (180 / M_PI);
+
+    printf("ATAN2 of (%f,%f) is: %f radians or %f degrees\n", pos[1], pos[0], radians, degrees);
+
+
+    orientation(0, 0, degrees);
 }
 
 void Moon::HandleKey(unsigned char key, int state, int x, int y) {

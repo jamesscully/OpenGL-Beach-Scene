@@ -110,16 +110,16 @@
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/DayNight/Sun.h">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
-		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Island/Island.cpp">
-			<Option target="G53GRA.Framework"/>
-		</Unit>
-		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Island/Island.h">
-			<Option target="G53GRA.Framework"/>
-		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.cpp">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/PalmTree/PalmTree.cpp">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/PalmTree/PalmTree.h">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.cpp">
@@ -155,28 +155,10 @@
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Ocean/Ocean.h">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
-		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/OctFace.cpp">
-			<Option target="G53GRA.Framework"/>
-		</Unit>
-		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/OctFace.h">
-			<Option target="G53GRA.Framework"/>
-		</Unit>
-		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/Octahedron.cpp">
-			<Option target="G53GRA.Framework"/>
-		</Unit>
-		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Oct/Octahedron.h">
-			<Option target="G53GRA.Framework"/>
-		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.cpp">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h">
-			<Option target="G53GRA.Framework"/>
-		</Unit>
-		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.cpp">
-			<Option target="G53GRA.Framework"/>
-		</Unit>
-		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/PalmTree/PalmTree.h">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Skybox/Skybox.cpp">

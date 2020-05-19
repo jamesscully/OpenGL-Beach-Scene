@@ -177,33 +177,6 @@ Code/DayNight/Sun.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Sun.cpp.s
 .PHONY : Code/DayNight/Sun.cpp.s
 
-Code/Island/Island.o: Code/Island/Island.cpp.o
-
-.PHONY : Code/Island/Island.o
-
-# target to build an object file
-Code/Island/Island.cpp.o:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.o
-.PHONY : Code/Island/Island.cpp.o
-
-Code/Island/Island.i: Code/Island/Island.cpp.i
-
-.PHONY : Code/Island/Island.i
-
-# target to preprocess a source file
-Code/Island/Island.cpp.i:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.i
-.PHONY : Code/Island/Island.cpp.i
-
-Code/Island/Island.s: Code/Island/Island.cpp.s
-
-.PHONY : Code/Island/Island.s
-
-# target to generate assembly for a file
-Code/Island/Island.cpp.s:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Island/Island.cpp.s
-.PHONY : Code/Island/Island.cpp.s
-
 Code/Light.o: Code/Light.cpp.o
 
 .PHONY : Code/Light.o
@@ -230,6 +203,33 @@ Code/Light.s: Code/Light.cpp.s
 Code/Light.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.s
 .PHONY : Code/Light.cpp.s
+
+Code/ModelGroups/PalmTree/PalmTree.o: Code/ModelGroups/PalmTree/PalmTree.cpp.o
+
+.PHONY : Code/ModelGroups/PalmTree/PalmTree.o
+
+# target to build an object file
+Code/ModelGroups/PalmTree/PalmTree.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/PalmTree.cpp.o
+.PHONY : Code/ModelGroups/PalmTree/PalmTree.cpp.o
+
+Code/ModelGroups/PalmTree/PalmTree.i: Code/ModelGroups/PalmTree/PalmTree.cpp.i
+
+.PHONY : Code/ModelGroups/PalmTree/PalmTree.i
+
+# target to preprocess a source file
+Code/ModelGroups/PalmTree/PalmTree.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/PalmTree.cpp.i
+.PHONY : Code/ModelGroups/PalmTree/PalmTree.cpp.i
+
+Code/ModelGroups/PalmTree/PalmTree.s: Code/ModelGroups/PalmTree/PalmTree.cpp.s
+
+.PHONY : Code/ModelGroups/PalmTree/PalmTree.s
+
+# target to generate assembly for a file
+Code/ModelGroups/PalmTree/PalmTree.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/PalmTree.cpp.s
+.PHONY : Code/ModelGroups/PalmTree/PalmTree.cpp.s
 
 Code/MyScene.o: Code/MyScene.cpp.o
 
@@ -366,60 +366,6 @@ Code/Ocean/Ocean.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.s
 .PHONY : Code/Ocean/Ocean.cpp.s
 
-Code/Oct/OctFace.o: Code/Oct/OctFace.cpp.o
-
-.PHONY : Code/Oct/OctFace.o
-
-# target to build an object file
-Code/Oct/OctFace.cpp.o:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.o
-.PHONY : Code/Oct/OctFace.cpp.o
-
-Code/Oct/OctFace.i: Code/Oct/OctFace.cpp.i
-
-.PHONY : Code/Oct/OctFace.i
-
-# target to preprocess a source file
-Code/Oct/OctFace.cpp.i:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.i
-.PHONY : Code/Oct/OctFace.cpp.i
-
-Code/Oct/OctFace.s: Code/Oct/OctFace.cpp.s
-
-.PHONY : Code/Oct/OctFace.s
-
-# target to generate assembly for a file
-Code/Oct/OctFace.cpp.s:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/OctFace.cpp.s
-.PHONY : Code/Oct/OctFace.cpp.s
-
-Code/Oct/Octahedron.o: Code/Oct/Octahedron.cpp.o
-
-.PHONY : Code/Oct/Octahedron.o
-
-# target to build an object file
-Code/Oct/Octahedron.cpp.o:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.o
-.PHONY : Code/Oct/Octahedron.cpp.o
-
-Code/Oct/Octahedron.i: Code/Oct/Octahedron.cpp.i
-
-.PHONY : Code/Oct/Octahedron.i
-
-# target to preprocess a source file
-Code/Oct/Octahedron.cpp.i:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.i
-.PHONY : Code/Oct/Octahedron.cpp.i
-
-Code/Oct/Octahedron.s: Code/Oct/Octahedron.cpp.s
-
-.PHONY : Code/Oct/Octahedron.s
-
-# target to generate assembly for a file
-Code/Oct/Octahedron.cpp.s:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Oct/Octahedron.cpp.s
-.PHONY : Code/Oct/Octahedron.cpp.s
-
 Code/OnscreenText.o: Code/OnscreenText.cpp.o
 
 .PHONY : Code/OnscreenText.o
@@ -446,33 +392,6 @@ Code/OnscreenText.s: Code/OnscreenText.cpp.s
 Code/OnscreenText.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.s
 .PHONY : Code/OnscreenText.cpp.s
-
-Code/PalmTree/PalmTree.o: Code/PalmTree/PalmTree.cpp.o
-
-.PHONY : Code/PalmTree/PalmTree.o
-
-# target to build an object file
-Code/PalmTree/PalmTree.cpp.o:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.o
-.PHONY : Code/PalmTree/PalmTree.cpp.o
-
-Code/PalmTree/PalmTree.i: Code/PalmTree/PalmTree.cpp.i
-
-.PHONY : Code/PalmTree/PalmTree.i
-
-# target to preprocess a source file
-Code/PalmTree/PalmTree.cpp.i:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.i
-.PHONY : Code/PalmTree/PalmTree.cpp.i
-
-Code/PalmTree/PalmTree.s: Code/PalmTree/PalmTree.cpp.s
-
-.PHONY : Code/PalmTree/PalmTree.s
-
-# target to generate assembly for a file
-Code/PalmTree/PalmTree.cpp.s:
-	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/PalmTree/PalmTree.cpp.s
-.PHONY : Code/PalmTree/PalmTree.cpp.s
 
 Code/Skybox/Skybox.o: Code/Skybox/Skybox.cpp.o
 
@@ -651,12 +570,12 @@ help:
 	@echo "... Code/DayNight/Sun.o"
 	@echo "... Code/DayNight/Sun.i"
 	@echo "... Code/DayNight/Sun.s"
-	@echo "... Code/Island/Island.o"
-	@echo "... Code/Island/Island.i"
-	@echo "... Code/Island/Island.s"
 	@echo "... Code/Light.o"
 	@echo "... Code/Light.i"
 	@echo "... Code/Light.s"
+	@echo "... Code/ModelGroups/PalmTree/PalmTree.o"
+	@echo "... Code/ModelGroups/PalmTree/PalmTree.i"
+	@echo "... Code/ModelGroups/PalmTree/PalmTree.s"
 	@echo "... Code/MyScene.o"
 	@echo "... Code/MyScene.i"
 	@echo "... Code/MyScene.s"
@@ -672,18 +591,9 @@ help:
 	@echo "... Code/Ocean/Ocean.o"
 	@echo "... Code/Ocean/Ocean.i"
 	@echo "... Code/Ocean/Ocean.s"
-	@echo "... Code/Oct/OctFace.o"
-	@echo "... Code/Oct/OctFace.i"
-	@echo "... Code/Oct/OctFace.s"
-	@echo "... Code/Oct/Octahedron.o"
-	@echo "... Code/Oct/Octahedron.i"
-	@echo "... Code/Oct/Octahedron.s"
 	@echo "... Code/OnscreenText.o"
 	@echo "... Code/OnscreenText.i"
 	@echo "... Code/OnscreenText.s"
-	@echo "... Code/PalmTree/PalmTree.o"
-	@echo "... Code/PalmTree/PalmTree.i"
-	@echo "... Code/PalmTree/PalmTree.s"
 	@echo "... Code/Skybox/Skybox.o"
 	@echo "... Code/Skybox/Skybox.i"
 	@echo "... Code/Skybox/Skybox.s"

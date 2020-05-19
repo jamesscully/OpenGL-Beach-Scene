@@ -1,11 +1,9 @@
-#include <Island/Island.h>
 #include <Skybox/Skybox.h>
 #include <Ocean/Ocean.h>
-#include <Oct/Octahedron.h>
 #include <OBJLoader/Model.h>
-#include <PalmTree/PalmTree.h>
 #include <DayNight/Sun.h>
 #include <DayNight/Moon.h>
+#include <ModelGroups/PalmTree/PalmTree.h>
 #include "MyScene.h"
 #include "OnscreenText.h"
 #include "Light.h"
@@ -28,12 +26,12 @@ Sun * sun; Moon * moon;
 Skybox* skybox;
 Ocean* ocean;
 Model * island;
-PalmTree* ptree;
+PalmTree* palmTree;
 
 Model* dock_base, *dock_planks;
 void MyScene::Initialise() {
 
-    island = new Model("island", "", false);
+    island = new Model("island", "island_texture", false);
     island->position(0, 60, 0);
 //    island->setLighting(true);
     AddObjectToScene(island);
@@ -48,7 +46,7 @@ void MyScene::Initialise() {
 
     ocean = new Ocean();
     ocean->size(10000);
-    AddObjectToScene(ocean);
+//    AddObjectToScene(ocean);
 
     // any likely changes to background will be a 'shade' rather than specific colour
     float colorScale = 0.0f;
@@ -59,6 +57,7 @@ void MyScene::Initialise() {
     skybox->position(0, -10, 0);
     AddObjectToScene(skybox);
 
+    // changes speed of both sun/moon
     float cyclespeed = 0.2;
 
     sun = new Sun(GL_LIGHT1);
@@ -71,12 +70,14 @@ void MyScene::Initialise() {
     moon->position(0, 0, 0);
     moon->radius = 600;
     moon->speed = cyclespeed;
+    // we want the moon to be opposite of the sun
     moon->inverted = true;
     AddObjectToScene(moon);
 
-    ptree = new PalmTree();
-    ptree->position(0, 50, 0);
-    AddObjectToScene(ptree);
+    palmTree = new PalmTree();
+    palmTree->position(0, 50, 0);
+    AddObjectToScene(palmTree);
+
 }
 
 void MyScene::Projection() {
