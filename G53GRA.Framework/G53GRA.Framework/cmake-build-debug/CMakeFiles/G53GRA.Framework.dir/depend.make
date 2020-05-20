@@ -44,6 +44,43 @@ CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o: ../Code/Light.cpp
 CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o: ../Code/Light.h
 CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o: ../Code/OnscreenText.h
 
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../../freeglut/include/GL/freeglut_std.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../../freeglut/include/GL/glut.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Code/Light.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Code/OBJLoader/Face.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Code/OBJLoader/Material.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Code/OBJLoader/Model.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Code/OBJLoader/Utils.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Code/OnscreenText.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Framework/Engine/Engine.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Framework/Engine/Scene.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Framework/Interface/Animation.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Framework/Interface/DisplayableObject.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Framework/Interface/Input.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Framework/Utility/Camera.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Framework/Utility/Texture.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Code/ModelGroups/Docks/DockBase.cpp
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Code/ModelGroups/Docks/DockBase.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Code/ModelGroups/Docks/OminousMonkey.h
+
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../../freeglut/include/GL/freeglut_std.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../../freeglut/include/GL/glut.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Code/Light.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Code/OBJLoader/Face.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Code/OBJLoader/Material.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Code/OBJLoader/Model.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Code/OBJLoader/Utils.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Code/OnscreenText.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Framework/Engine/Engine.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Framework/Engine/Scene.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Framework/Interface/Animation.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Framework/Interface/DisplayableObject.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Framework/Interface/Input.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Framework/Utility/Camera.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Framework/Utility/Texture.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Code/ModelGroups/Docks/OminousMonkey.cpp
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Code/ModelGroups/Docks/OminousMonkey.h
+
 CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/PalmTree.cpp.o: ../../freeglut/include/GL/freeglut_std.h
 CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/PalmTree.cpp.o: ../../freeglut/include/GL/glut.h
 CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/PalmTree.cpp.o: ../Code/OBJLoader/Face.h
@@ -64,6 +101,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../../freeglut/include/GL/fr
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../../freeglut/include/GL/glut.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/DayNight/Moon.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/DayNight/Sun.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/ModelGroups/Docks/DockBase.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/ModelGroups/PalmTree/PalmTree.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/OBJLoader/Face.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/OBJLoader/Material.h
@@ -76,7 +114,6 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/Anima
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/DisplayableObject.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/Input.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Utility/Camera.h
-CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Light.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/MyScene.cpp
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/MyScene.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/OnscreenText.h
@@ -128,6 +165,10 @@ CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o: ../Code/OnscreenText.h
 
 CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../../freeglut/include/GL/freeglut_std.h
 CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../../freeglut/include/GL/glut.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Code/OBJLoader/Face.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Code/OBJLoader/Material.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Code/OBJLoader/Model.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Code/OBJLoader/Utils.h
 CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Engine/Engine.h
 CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Engine/Scene.h
 CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Interface/Animation.h

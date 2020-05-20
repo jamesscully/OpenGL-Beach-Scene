@@ -15,6 +15,8 @@ Skybox::Skybox() {
 void Skybox::Display() {
     sbox->position(pos[0],pos[1],pos[2]);
     sbox->size(scale[0],scale[1],scale[2]);
+
+    // we don't want the skybox to be shaded
     sbox->setLighting(false);
 
     sbox->Display();
@@ -25,7 +27,7 @@ void Skybox::Update(const double &deltaTime) {
 
     float y_offset = -1;
 
-    // if we've hit max, loop around
+    // if we've hit max, loop around texture image
     if(deltaY + y_offset >= 1)
         deltaY = 0;
 

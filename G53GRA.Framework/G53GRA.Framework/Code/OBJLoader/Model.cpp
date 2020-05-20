@@ -159,12 +159,12 @@ void Model::Display() {
             p[1] = pos[1] + off_pos[1];
             p[2] = pos[2] + off_pos[2];
         }
-        // if we are parented, use the parent position and our offset
+        // if we are parented, add the parent pos and our pos
         else {
             float* parentPos = parent->position();
-            p[0] = parentPos[0] + off_pos[0];
-            p[1] = parentPos[1] + off_pos[1];
-            p[2] = parentPos[2] + off_pos[2];
+            p[0] = parentPos[0] + pos[0];
+            p[1] = parentPos[1] + pos[1];
+            p[2] = parentPos[2] + pos[2];
         }
 
         f.draw(p, rotation, scale, uv_offset, lighting, this->material);

@@ -10,6 +10,7 @@
 class DisplayableObject
 {
 public:
+
 	/**
 	 * Default constructor
 	 * <p> Initialises position, size and orientation to origin in World Space.
@@ -29,7 +30,7 @@ public:
 
     virtual /** set World Space position */
 	void position(float x, float y, float z){
-		pos[0] = x;
+	    pos[0] = x;
 		pos[1] = y;
 		pos[2] = z;
 	}
@@ -70,4 +71,5 @@ protected:
 	float scale[3];
 	/** float[] containing angles of orientation in World Space for x, y, and z axes */
 	float rotation[3];
+
 };

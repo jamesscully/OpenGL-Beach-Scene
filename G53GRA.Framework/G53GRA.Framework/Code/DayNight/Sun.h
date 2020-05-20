@@ -21,6 +21,8 @@ public:
     float speed = 1;
     bool inverted = false;
 
+    bool hidden = false;
+
 private:
 
     int light_id;

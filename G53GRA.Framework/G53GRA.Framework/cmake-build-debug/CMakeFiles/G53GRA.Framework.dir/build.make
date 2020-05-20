@@ -278,6 +278,32 @@ CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Projectile.cpp -o CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.s
 
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o: ../Code/ModelGroups/Docks/OminousMonkey.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/OminousMonkey.cpp
+
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/OminousMonkey.cpp > CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.i
+
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/OminousMonkey.cpp -o CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.s
+
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: CMakeFiles/G53GRA.Framework.dir/flags.make
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o: ../Code/ModelGroups/Docks/DockBase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o -c /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/DockBase.cpp
+
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/DockBase.cpp > CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.i
+
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/DockBase.cpp -o CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.s
+
 # Object files for target G53GRA.Framework
 G53GRA_Framework_OBJECTS = \
 "CMakeFiles/G53GRA.Framework.dir/Code/main.cpp.o" \
@@ -296,7 +322,9 @@ G53GRA_Framework_OBJECTS = \
 "CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/PalmTree.cpp.o" \
 "CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Sun.cpp.o" \
 "CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Moon.cpp.o" \
-"CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o"
+"CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o" \
+"CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o" \
+"CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o"
 
 # External object files for target G53GRA.Framework
 G53GRA_Framework_EXTERNAL_OBJECTS =
@@ -318,12 +346,14 @@ G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/Palm
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Sun.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Moon.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o
+G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o
+G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/build.make
 G53GRA.Framework: /usr/lib/libglut.so
 G53GRA.Framework: /usr/lib/libXmu.so
 G53GRA.Framework: /usr/lib/libXi.so
 G53GRA.Framework: CMakeFiles/G53GRA.Framework.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Linking CXX executable G53GRA.Framework"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable G53GRA.Framework"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/G53GRA.Framework.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

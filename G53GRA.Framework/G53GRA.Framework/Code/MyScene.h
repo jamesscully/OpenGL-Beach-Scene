@@ -16,16 +16,16 @@ private:
 	void Initialise();
 	void Projection();
 
-
-
     void drawDebugText();
-	void drawGridLines();
-	void drawAxisLines();
+
 
 protected:
     void HandleMouse(int button, int state, int x, int y) override;
+    void HandleMouseMove(int x, int y) override;
+
 
 private:
-
     virtual void HandleKey(unsigned char key, int state, int x, int y);
+    void drawGridLines();
+    void drawAxisLines();
 };

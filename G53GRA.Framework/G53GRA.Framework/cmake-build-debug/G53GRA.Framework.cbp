@@ -116,6 +116,18 @@
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/DockBase.cpp">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/DockBase.h">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/OminousMonkey.cpp">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/OminousMonkey.h">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/PalmTree/PalmTree.cpp">
 			<Option target="G53GRA.Framework"/>
 		</Unit>

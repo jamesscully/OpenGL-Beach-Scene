@@ -9,6 +9,7 @@
 #include <Utility/Camera.h>
 #include <Interface/DisplayableObject.h>
 #include <Interface/Animation.h>
+#include <OBJLoader/Model.h>
 
 class Projectile : public DisplayableObject, public Animation {
 
@@ -17,10 +18,25 @@ public:
     ~Projectile() = default;
 
     float speed = 10;
-    float timeToLive = 5;
+    float timeToLive = 2;
+
+
+    void setModel(Model* m);
+
+
+
+    // used to destroy this object after timeToLive
+    unsigned  long id;
 
 private:
     Camera* camera;
+
+    float timeElapsed = 0;
+
+    bool hidden = false;
+
+    Model* model;
+
 
     // set in constructor; defines where we started, and what direction
     float start_pos[3] = {0, 0, 0};

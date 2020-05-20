@@ -17,7 +17,6 @@ public:
     ~Moon() = default;
     void Display() override;
     void Update(const double &deltaTime) override;
-    void HandleKey(unsigned char key, int state, int x, int y);
 
     float radius = 100;
 
@@ -25,26 +24,21 @@ public:
 
     bool inverted = false;
 
+    bool hidden = false;
+
 
 private:
-
     int light_id;
 
     Model* model;
 
-    float ambient [4] = {1.0f, 1.0f, 1.0f, 1.0f};
-    float diffuse [4] = {1.0f, 1.0f, 1.0f, 1.0f};
-    float specular[4] = {1.0f, 1.0f, 1.0f, 1.0f};
+    float ambient [4] = {0.7f, 1.0f, 0.7f, 1.0f};
+    float diffuse [4] = {0.7f, 1.0f, 0.7f, 1.0f};
+    float specular[4] = {0.7f, 1.0f, 0.7f, 1.0f};
 
     float conAtten = 0.005f;
-    float linAtten = 0.3f;
-    float quaAtten = 0.000005f;
-
-
-    float* origin[3] = {0, 0, 0};
-
-    OnscreenText * txtCon, * txtLin, * txtQua;
-
+    float linAtten = 0.1f;
+    float quaAtten = 0.0005f;
 };
 
 

@@ -17,7 +17,7 @@ PalmTree::~PalmTree() {
 
 }
 
-// generates the tree's objects, so position(..) works normally
+// generates the tree's objects, so position(..) can update properly
 void PalmTree::generateTree() {
     float logcount = 8;
     float log_offset = 18;
@@ -52,13 +52,13 @@ void PalmTree::generateTree() {
 
     for(int i = 0; i < leaf_count; i++) {
         Model* temp;
-        temp = new Model("palm_leaf", "palm_leaf", false);
+        temp = new Model("palm_leaf_new", "palm_leaf", false);
 
         // we want the leaves to be positioned with the top of the tree; parent them
         temp->parent = parentLog;
 
         // how much we want them to be set off the tree
-        temp->setOffsetPos(0, 15 + smallY, 0);
+        temp->position(0, 15 + smallY, 0);
         temp->size(20);
 
         rotY += rotOff;
@@ -74,8 +74,10 @@ void PalmTree::position(float x, float y, float z) {
     // remove our existing objects
     logs.clear(); leaves.clear();
 
+    // set the new position for base of tree
     pos[0] = x; pos[1] = y; pos[2] = z;
 
+    // generate it!
     generateTree();
 }
 
@@ -112,15 +114,13 @@ void PalmTree::Update(const double &deltaTime) {
 
 
     for(auto leaf : leaves) {
+        // current rotation of the leaf
+        float *rot = leaf->orientation();
 
-        // leaves will want to update only around the X coordinate; makes them move up and down
-
-        float r = static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
-
+        // offset on x axis to make it wave up/down
         float change = sin(elapsed * speed) * delta;
-        float * rot = leaf->orientation();
 
-         leaf->orientation(change, rot[1], rot[2]);
+        leaf->orientation(change, rot[1], rot[2]);
     }
 }
 

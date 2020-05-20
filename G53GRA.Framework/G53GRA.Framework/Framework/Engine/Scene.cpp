@@ -57,8 +57,10 @@ void Scene::Draw()
 	// Setup viewing properties
 	camera.SetupCamera();
 	// Display all objects in the Scene
-	for (DisplayableObject* obj : objects)
-		obj->Display();
+
+	for (DisplayableObject* obj : objects) {
+        obj->Display();
+    }
 
 	// Zealous reset of MODELVIEW matrix
 	glMatrixMode(GL_MODELVIEW);

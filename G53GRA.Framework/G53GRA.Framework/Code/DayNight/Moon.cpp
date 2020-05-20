@@ -9,12 +9,6 @@
 Moon::Moon(int light_id) {
     this->light_id = light_id;
 
-    int yRoot = 50;
-
-    txtLin = new OnscreenText(20, yRoot + 25, "Linear Atten: ", &linAtten);
-    txtCon = new OnscreenText(20, yRoot + 50, "Constant Atten: ", &conAtten);
-    txtQua = new OnscreenText(20, yRoot + 75, "Quadratic Atten: ", &quaAtten);
-
     model = new Model("moon", "", false);
 
     model->size(15);
@@ -25,6 +19,12 @@ Moon::Moon(int light_id) {
 }
 
 void Moon::Display() {
+
+    if(hidden) {
+        glDisable(light_id);
+        return;
+    }
+
     glEnable(GL_LIGHTING);
 
     // set our relavent emission parameters
@@ -54,23 +54,18 @@ void Moon::Display() {
     glBegin(GL_QUADS);
     {
         glColor3f(255, 0, 0);
-        glVertex3f(pos[0] - 50, pos[1] - 50, pos[2]);
-        glVertex3f(pos[0] - 50, pos[1] + 50, pos[2]);
-        glVertex3f(pos[0] + 50, pos[1] + 50, pos[2]);
-        glVertex3f(pos[0] + 50, pos[1] - 50, pos[2]);
+        glVertex3f(pos[0] - 50, pos[1], pos[2] + 50);
+        glVertex3f(pos[0] - 50, pos[1], pos[2] - 50);
+        glVertex3f(pos[0] + 50, pos[1], pos[2] - 50);
+        glVertex3f(pos[0] + 50, pos[1], pos[2] + 50);
     }
     glEnd();
-
-
-
-    txtLin->render();
-    txtQua->render();
-    txtCon->render();
 }
 
 #include <cmath>
 void Moon::Update(const double &deltaTime) {
 
+    // can set to offset start position
     static float elapsed = -2.5;
 
     elapsed += deltaTime;
@@ -78,6 +73,7 @@ void Moon::Update(const double &deltaTime) {
     float x_movement = 0 + radius * sin(elapsed * speed);
     float y_movement = 0 + radius * cos(elapsed * speed);
 
+    // used to make sun/moon opposite
     if(inverted) {
         x_movement = -x_movement;
         y_movement = -y_movement;
@@ -88,34 +84,18 @@ void Moon::Update(const double &deltaTime) {
 
     float new_rot[3] = {0, 0, 0};
 
+    // get the angle of the moon from (0,0,0)
     float radians = atan2(pos[1], pos[0]);
     float degrees = radians * (180 / M_PI);
-
 //    printf("ATAN2 of (%f,%f) is: %f radians or %f degrees\n", pos[1], pos[0], radians, degrees);
 
 
+    // rotate model to face (0,0,0)
     orientation(0, 0, degrees);
+
+    // if we're below Y = 0, don't render
+    hidden = pos[1] < 0;
 }
 
-void Moon::HandleKey(unsigned char key, int state, int x, int y) {
-    switch (key) {
-        case 'j': linAtten -= 0.05; break;
-        case 'k': linAtten += 0.05; break;
-
-        case 'n': conAtten -= 0.05; break;
-        case 'm': conAtten += 0.05; break;
-
-        case 'h': quaAtten -= 0.05; break;
-        case 'l': quaAtten += 0.05; break;
-
-        case 'x':
-            conAtten = 0.005f; linAtten = 0.005f; quaAtten = 0.005f;
-            break;
-    }
-
-    if (linAtten < 0) linAtten = 0.0005;
-    if (conAtten < 0) conAtten = 0.0005;
-    if (quaAtten < 0) quaAtten = 0.0005;
-}
 
 

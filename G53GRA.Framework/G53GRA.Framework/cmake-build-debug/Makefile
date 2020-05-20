@@ -204,6 +204,60 @@ Code/Light.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.s
 .PHONY : Code/Light.cpp.s
 
+Code/ModelGroups/Docks/DockBase.o: Code/ModelGroups/Docks/DockBase.cpp.o
+
+.PHONY : Code/ModelGroups/Docks/DockBase.o
+
+# target to build an object file
+Code/ModelGroups/Docks/DockBase.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o
+.PHONY : Code/ModelGroups/Docks/DockBase.cpp.o
+
+Code/ModelGroups/Docks/DockBase.i: Code/ModelGroups/Docks/DockBase.cpp.i
+
+.PHONY : Code/ModelGroups/Docks/DockBase.i
+
+# target to preprocess a source file
+Code/ModelGroups/Docks/DockBase.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.i
+.PHONY : Code/ModelGroups/Docks/DockBase.cpp.i
+
+Code/ModelGroups/Docks/DockBase.s: Code/ModelGroups/Docks/DockBase.cpp.s
+
+.PHONY : Code/ModelGroups/Docks/DockBase.s
+
+# target to generate assembly for a file
+Code/ModelGroups/Docks/DockBase.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.s
+.PHONY : Code/ModelGroups/Docks/DockBase.cpp.s
+
+Code/ModelGroups/Docks/OminousMonkey.o: Code/ModelGroups/Docks/OminousMonkey.cpp.o
+
+.PHONY : Code/ModelGroups/Docks/OminousMonkey.o
+
+# target to build an object file
+Code/ModelGroups/Docks/OminousMonkey.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o
+.PHONY : Code/ModelGroups/Docks/OminousMonkey.cpp.o
+
+Code/ModelGroups/Docks/OminousMonkey.i: Code/ModelGroups/Docks/OminousMonkey.cpp.i
+
+.PHONY : Code/ModelGroups/Docks/OminousMonkey.i
+
+# target to preprocess a source file
+Code/ModelGroups/Docks/OminousMonkey.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.i
+.PHONY : Code/ModelGroups/Docks/OminousMonkey.cpp.i
+
+Code/ModelGroups/Docks/OminousMonkey.s: Code/ModelGroups/Docks/OminousMonkey.cpp.s
+
+.PHONY : Code/ModelGroups/Docks/OminousMonkey.s
+
+# target to generate assembly for a file
+Code/ModelGroups/Docks/OminousMonkey.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.s
+.PHONY : Code/ModelGroups/Docks/OminousMonkey.cpp.s
+
 Code/ModelGroups/PalmTree/PalmTree.o: Code/ModelGroups/PalmTree/PalmTree.cpp.o
 
 .PHONY : Code/ModelGroups/PalmTree/PalmTree.o
@@ -600,6 +654,12 @@ help:
 	@echo "... Code/Light.o"
 	@echo "... Code/Light.i"
 	@echo "... Code/Light.s"
+	@echo "... Code/ModelGroups/Docks/DockBase.o"
+	@echo "... Code/ModelGroups/Docks/DockBase.i"
+	@echo "... Code/ModelGroups/Docks/DockBase.s"
+	@echo "... Code/ModelGroups/Docks/OminousMonkey.o"
+	@echo "... Code/ModelGroups/Docks/OminousMonkey.i"
+	@echo "... Code/ModelGroups/Docks/OminousMonkey.s"
 	@echo "... Code/ModelGroups/PalmTree/PalmTree.o"
 	@echo "... Code/ModelGroups/PalmTree/PalmTree.i"
 	@echo "... Code/ModelGroups/PalmTree/PalmTree.s"

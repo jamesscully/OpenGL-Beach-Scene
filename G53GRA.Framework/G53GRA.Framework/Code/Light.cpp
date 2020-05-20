@@ -23,7 +23,22 @@ Light::Light(int light_id) : DisplayableObject() {
 
 void Light::Display() {
 
+    glEnable(GL_LIGHTING);
 
+    // set our relavent emission parameters
+    glLightfv(light_id, GL_AMBIENT, ambient);
+    glLightfv(light_id, GL_DIFFUSE, diffuse);
+    glLightfv(light_id, GL_SPECULAR, specular);
+    glLightfv(light_id, GL_POSITION, pos);
+
+    // light falloff parameters
+    glLightf(light_id, GL_CONSTANT_ATTENUATION, conAtten);
+    glLightf(light_id, GL_LINEAR_ATTENUATION, linAtten);
+    glLightf(light_id, GL_QUADRATIC_ATTENUATION, quaAtten);
+
+    glFlush();
+
+    glEnable(light_id);
 
     // render UI text
     txtLin->render();
@@ -43,7 +58,6 @@ void Light::setColor(float r, float g, float b) {
 }
 
 void Light::HandleKey(unsigned char key, int state, int x, int y) {
-
     switch (key) {
         case 'j': linAtten -= 0.005; break;
         case 'k': linAtten += 0.005; break;

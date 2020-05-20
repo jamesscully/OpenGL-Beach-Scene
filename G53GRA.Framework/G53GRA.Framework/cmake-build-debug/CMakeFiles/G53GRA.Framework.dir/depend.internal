@@ -44,6 +44,43 @@ CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o
+ ../../freeglut/include/GL/freeglut_std.h
+ ../../freeglut/include/GL/glut.h
+ ../Code/Light.h
+ ../Code/OBJLoader/Face.h
+ ../Code/OBJLoader/Material.h
+ ../Code/OBJLoader/Model.h
+ ../Code/OBJLoader/Utils.h
+ ../Code/OnscreenText.h
+ ../Framework/Engine/Engine.h
+ ../Framework/Engine/Scene.h
+ ../Framework/Interface/Animation.h
+ ../Framework/Interface/DisplayableObject.h
+ ../Framework/Interface/Input.h
+ ../Framework/Utility/Camera.h
+ ../Framework/Utility/Texture.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/DockBase.cpp
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/DockBase.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/OminousMonkey.h
+CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o
+ ../../freeglut/include/GL/freeglut_std.h
+ ../../freeglut/include/GL/glut.h
+ ../Code/Light.h
+ ../Code/OBJLoader/Face.h
+ ../Code/OBJLoader/Material.h
+ ../Code/OBJLoader/Model.h
+ ../Code/OBJLoader/Utils.h
+ ../Code/OnscreenText.h
+ ../Framework/Engine/Engine.h
+ ../Framework/Engine/Scene.h
+ ../Framework/Interface/Animation.h
+ ../Framework/Interface/DisplayableObject.h
+ ../Framework/Interface/Input.h
+ ../Framework/Utility/Camera.h
+ ../Framework/Utility/Texture.h
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/OminousMonkey.cpp
+ /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/ModelGroups/Docks/OminousMonkey.h
 CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/PalmTree.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
@@ -65,6 +102,7 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o
  ../../freeglut/include/GL/glut.h
  ../Code/DayNight/Moon.h
  ../Code/DayNight/Sun.h
+ ../Code/ModelGroups/Docks/DockBase.h
  ../Code/ModelGroups/PalmTree/PalmTree.h
  ../Code/OBJLoader/Face.h
  ../Code/OBJLoader/Material.h
@@ -77,7 +115,6 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o
  ../Framework/Interface/DisplayableObject.h
  ../Framework/Interface/Input.h
  ../Framework/Utility/Camera.h
- /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Light.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.cpp
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/MyScene.h
  /home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h
@@ -129,6 +166,10 @@ CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o
 CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o
  ../../freeglut/include/GL/freeglut_std.h
  ../../freeglut/include/GL/glut.h
+ ../Code/OBJLoader/Face.h
+ ../Code/OBJLoader/Material.h
+ ../Code/OBJLoader/Model.h
+ ../Code/OBJLoader/Utils.h
  ../Framework/Engine/Engine.h
  ../Framework/Engine/Scene.h
  ../Framework/Interface/Animation.h

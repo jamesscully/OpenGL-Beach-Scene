@@ -15,6 +15,11 @@ Sun::Sun(int light_id) {
 }
 
 void Sun::Display() {
+
+    if(hidden) {
+        glDisable(light_id);
+        return;
+    }
     glEnable(GL_LIGHTING);
 
     // set our relavent emission parameters
@@ -70,6 +75,9 @@ void Sun::Update(const double &deltaTime) {
     }
 
     this->position(x_movement, y_movement, 0);
+
+    // if we're below Y = 0, don't render
+    hidden = pos[1] < 0;
 }
 
 void Sun::HandleKey(unsigned char key, int state, int x, int y) {

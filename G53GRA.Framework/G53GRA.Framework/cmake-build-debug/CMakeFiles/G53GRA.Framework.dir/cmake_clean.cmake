@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Moon.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/DayNight/Sun.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/Light.cpp.o"
+  "CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/DockBase.cpp.o"
+  "CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/Docks/OminousMonkey.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/ModelGroups/PalmTree/PalmTree.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Face.cpp.o"
