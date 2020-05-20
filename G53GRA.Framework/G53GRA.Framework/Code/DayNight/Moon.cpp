@@ -50,6 +50,18 @@ void Moon::Display() {
     model->orientation(rotation[0], rotation[1], rotation[2]);
     model->Display();
 
+    glEnable(GL_COLOR_MATERIAL);
+    glBegin(GL_QUADS);
+    {
+        glColor3f(255, 0, 0);
+        glVertex3f(pos[0] - 50, pos[1] - 50, pos[2]);
+        glVertex3f(pos[0] - 50, pos[1] + 50, pos[2]);
+        glVertex3f(pos[0] + 50, pos[1] + 50, pos[2]);
+        glVertex3f(pos[0] + 50, pos[1] - 50, pos[2]);
+    }
+    glEnd();
+
+
 
     txtLin->render();
     txtQua->render();
@@ -79,7 +91,7 @@ void Moon::Update(const double &deltaTime) {
     float radians = atan2(pos[1], pos[0]);
     float degrees = radians * (180 / M_PI);
 
-    printf("ATAN2 of (%f,%f) is: %f radians or %f degrees\n", pos[1], pos[0], radians, degrees);
+//    printf("ATAN2 of (%f,%f) is: %f radians or %f degrees\n", pos[1], pos[0], radians, degrees);
 
 
     orientation(0, 0, degrees);

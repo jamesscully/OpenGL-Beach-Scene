@@ -393,6 +393,33 @@ Code/OnscreenText.cpp.s:
 	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.s
 .PHONY : Code/OnscreenText.cpp.s
 
+Code/Projectile.o: Code/Projectile.cpp.o
+
+.PHONY : Code/Projectile.o
+
+# target to build an object file
+Code/Projectile.cpp.o:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o
+.PHONY : Code/Projectile.cpp.o
+
+Code/Projectile.i: Code/Projectile.cpp.i
+
+.PHONY : Code/Projectile.i
+
+# target to preprocess a source file
+Code/Projectile.cpp.i:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.i
+.PHONY : Code/Projectile.cpp.i
+
+Code/Projectile.s: Code/Projectile.cpp.s
+
+.PHONY : Code/Projectile.s
+
+# target to generate assembly for a file
+Code/Projectile.cpp.s:
+	$(MAKE) -f CMakeFiles/G53GRA.Framework.dir/build.make CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.s
+.PHONY : Code/Projectile.cpp.s
+
 Code/Skybox/Skybox.o: Code/Skybox/Skybox.cpp.o
 
 .PHONY : Code/Skybox/Skybox.o
@@ -594,6 +621,9 @@ help:
 	@echo "... Code/OnscreenText.o"
 	@echo "... Code/OnscreenText.i"
 	@echo "... Code/OnscreenText.s"
+	@echo "... Code/Projectile.o"
+	@echo "... Code/Projectile.i"
+	@echo "... Code/Projectile.s"
 	@echo "... Code/Skybox/Skybox.o"
 	@echo "... Code/Skybox/Skybox.i"
 	@echo "... Code/Skybox/Skybox.s"

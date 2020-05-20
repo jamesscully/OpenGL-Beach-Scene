@@ -22,6 +22,10 @@ private:
 	void drawGridLines();
 	void drawAxisLines();
 
+protected:
+    void HandleMouse(int button, int state, int x, int y) override;
+
+private:
 
     virtual void HandleKey(unsigned char key, int state, int x, int y);
 };

@@ -161,6 +161,12 @@
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/OnscreenText.h">
 			<Option target="G53GRA.Framework"/>
 		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Projectile.cpp">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
+		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Projectile.h">
+			<Option target="G53GRA.Framework"/>
+		</Unit>
 		<Unit filename="/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Code/Skybox/Skybox.cpp">
 			<Option target="G53GRA.Framework"/>
 		</Unit>

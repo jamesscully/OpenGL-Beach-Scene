@@ -7,6 +7,7 @@
 #include "MyScene.h"
 #include "OnscreenText.h"
 #include "Light.h"
+#include "Projectile.h"
 
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:4996)
@@ -68,8 +69,8 @@ void MyScene::Initialise() {
 
     moon = new Moon(GL_LIGHT2);
     moon->position(0, 0, 0);
-    moon->radius = 600;
-    moon->speed = cyclespeed;
+    moon->radius = 200;
+    moon->speed = 3;
     // we want the moon to be opposite of the sun
     moon->inverted = true;
     AddObjectToScene(moon);
@@ -151,4 +152,16 @@ void MyScene::drawAxisLines() {
     // glutSolidSphere(1, 25, 25);
     glTranslated(0, 0, 0);
     glPopMatrix();
+}
+
+Projectile* projectile;
+void MyScene::HandleMouse(int button, int state, int x, int y) {
+
+    if(button == GLUT_RIGHT_BUTTON) {
+        projectile = new Projectile(&camera);
+        projectile->Display();
+        AddObjectToScene(projectile);
+    }
+
+    Scene::HandleMouse(button, state, x, y);
 }

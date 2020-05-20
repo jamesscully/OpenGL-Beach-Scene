@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/G53GRA.Framework.dir/Code/OBJLoader/Model.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/Ocean/Ocean.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o"
+  "CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Code/main.cpp.o"
   "CMakeFiles/G53GRA.Framework.dir/Framework/Engine/Engine.cpp.o"

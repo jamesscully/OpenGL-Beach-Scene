@@ -74,13 +74,15 @@ CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Skybox/Skybox.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Engine/Scene.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/Animation.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/DisplayableObject.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/Input.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Utility/Camera.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Light.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/MyScene.cpp
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/MyScene.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/OnscreenText.h
+CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Code/Projectile.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Engine/Engine.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Engine/Scene.h
-CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Interface/Input.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Utility/Camera.h
 CMakeFiles/G53GRA.Framework.dir/Code/MyScene.cpp.o: ../Framework/Utility/Texture.h
 
@@ -123,6 +125,19 @@ CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o: ../../freeglut/include/
 CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o: ../../freeglut/include/GL/glut.h
 CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o: ../Code/OnscreenText.cpp
 CMakeFiles/G53GRA.Framework.dir/Code/OnscreenText.cpp.o: ../Code/OnscreenText.h
+
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../../freeglut/include/GL/freeglut_std.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../../freeglut/include/GL/glut.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Engine/Engine.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Engine/Scene.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Interface/Animation.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Interface/DisplayableObject.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Interface/Input.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Utility/Camera.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Utility/Texture.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Framework/Utility/VectorMath.h
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Code/Projectile.cpp
+CMakeFiles/G53GRA.Framework.dir/Code/Projectile.cpp.o: ../Code/Projectile.h
 
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../../freeglut/include/GL/freeglut_std.h
 CMakeFiles/G53GRA.Framework.dir/Code/Skybox/Skybox.cpp.o: ../../freeglut/include/GL/glut.h
