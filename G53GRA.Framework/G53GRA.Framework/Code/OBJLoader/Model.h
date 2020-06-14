@@ -56,10 +56,10 @@ private:
 
     std::string model_name = "default";
 
-    std::string model_dir = "/mnt/data/home/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Models/";
+    std::string model_dir = "Models/";
     std::string model_suffix = ".obj";
 
-    std::string uv_dir = "/mnt/data/home/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/Models/UV/";
+    std::string uv_dir = "Models/UV/";
     std::string uv_suffix = ".bmp";
     void extractVertex(std::string line);
     void extractUV(std::string line);

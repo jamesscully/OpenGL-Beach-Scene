@@ -40,7 +40,7 @@ Model::Model(const char *obj_name, const char *uv_name, bool absolute_paths = fa
             texture = Scene::GetTexture(uv_name);
     }
     else {
-        printf("Loading Model with paths: \n\tObj: %s\n\tTex: %s\n", (model_dir + obj_name).c_str(), (model_dir + uv_name).c_str());
+        printf("Loading Model with paths: \n\tObj: %s\n\tTex: %s\n", (model_dir + obj_name + model_suffix).c_str(), (model_dir + uv_name).c_str());
 
         file.open(model_dir + obj_name + model_suffix);
 
