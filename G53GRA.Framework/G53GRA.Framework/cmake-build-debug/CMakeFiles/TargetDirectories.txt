@@ -1,3 +1,0 @@
-/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles/G53GRA.Framework.dir
-/home/yames/coursework/y3/gra/final/g53gra_framework/G53GRA.Framework/G53GRA.Framework/cmake-build-debug/CMakeFiles/edit_cache.dir
