@@ -34,6 +34,7 @@ void Projectile::Update(const double &deltaTime) {
     // add pseudo-gravity to object; slowly make Y dir go down per frame
     start_dir[1] -= deltaTime * 0.5;
 
+
     position(new_position[0], new_position[1], new_position[2]);
 }
 

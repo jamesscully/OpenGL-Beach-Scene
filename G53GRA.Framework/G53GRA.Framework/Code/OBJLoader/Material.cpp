@@ -7,6 +7,28 @@
 
 using std::string;
 
+#pragma warning(disable:4996)
+
+
+// Example MTL file:
+/*
+# Blender MTL File : 'island.blend'
+# Material Count : 1
+
+newmtl Wood
+Ns 0.000000 - Shininess
+Ka 0.147000 0.132000 0.068000 - Ambient color
+Kd 0.147000 0.132000 0.068000 - Diffuse color
+Ks 0.147000 0.132000 0.068000 - Specular color
+Ke 0.000000 0.000000 0.000000 - Emission color
+Ni 1.450000 - ??
+d 1.000000 - Transparency (can also be Tr)
+illum 2 - Used in external programs for combining illumination models
+*/
+
+
+
+
 Material::Material() {
 
 }
@@ -22,7 +44,7 @@ Material::Material(std::string path) {
     while(!file.eof()) {
         string first;
         getline(file, line);
-        // we want the first word,i.e. v to see what we're parsing
+        // we want the first word to see what we're parsing
         first = line.substr(0, line.find(" "));
 
         // then, we don't need the type
@@ -53,7 +75,10 @@ Material::Material(std::string path) {
 void Material::extractAmbient(std::string line) {
     float a, b, c;
     sscanf(line.c_str(), "%f %f %f", &a, &b, &c);
-    ambient[0] = a, ambient[1] = b, ambient[2] = c;
+    // ambient[0] = a, ambient[1] = b, ambient[2] = c;
+
+    // weird glitches occuring with Blender exports - they seem to all default to 1,1,1
+    ambient[0] = 0, ambient[1] = 0, ambient[2] = 0;
     printf("\t\tExtracted Ambient: %f %f %f\n", a, b, c);
 }
 
@@ -89,10 +114,13 @@ void Material::extractShininess(std::string line) {
     float s = 0;
     sscanf(line.c_str(), "%f", &s);
 
+    // clamp values greater than 255
     if(s > 255)
         s = 255;
 
+    // max value for opengl is 128 - divide by 2 
     shiny[0] = s / 2;
+    shiny[0] = 0;
     printf("\t\tExtracted Shininess Org: %f Rev: %f\n", s, shiny[0]);
 }
 

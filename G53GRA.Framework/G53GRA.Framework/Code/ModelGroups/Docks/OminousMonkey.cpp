@@ -3,6 +3,7 @@
 //
 
 #include "OminousMonkey.h"
+#include <cmath>
 
 OminousMonkey::OminousMonkey() {
     model = new Model("monkey", "monkey", false);
@@ -13,42 +14,39 @@ OminousMonkey::OminousMonkey() {
 
 
 void OminousMonkey::Update(const double &deltaTime) {
-
+    static double elapsed = 0;
+    elapsed += deltaTime;
+    light->linAtten = light->linAtten + sin(elapsed) * 0.005;
 }
 
 void OminousMonkey::Display() {
 
+    if(hidden) {
+        glDisable(GL_LIGHT7);
+        return;
+    } else
+        glEnable(GL_LIGHT7);
+
+
+    this->position(pos[0], pos[1], pos[2]);
+
     model->position(pos[0], pos[1], pos[2]);
     model->orientation(rotation[0], rotation[1], rotation[2]);
     model->size(scale[0], scale[1], scale[2]);
-
     model->Display();
 
+    light->linAtten = 0.018;
+    light->conAtten = 0.005;
+    light->quaAtten = 0.009;
 
-    light->position(pos[0], pos[1], pos[2]);
-
+    light->position(pos[0], pos[1] + 50, pos[2]);
     light->Display();
 }
 
 void OminousMonkey::HandleKey(unsigned char key, int state, int x, int y) {
 
-    switch (key) {
-        case 'j': light->linAtten -= 0.005; break;
-        case 'k': light->linAtten += 0.005; break;
-
-        case 'n': light->conAtten -= 0.005; break;
-        case 'm': light->conAtten += 0.005; break;
-
-        case 'h': light->quaAtten -= 0.0005; break;
-        case 'l': light->quaAtten += 0.0005; break;
-
-        case 'x':
-            light->conAtten = 0.005f; light->linAtten = 0.005f; light->quaAtten = 0.005f;
-            break;
+    // hide this if F is pressed, it can cause performance issues
+    if((key == 'f' || key == 'F') && state) {
+        hidden = !hidden;
     }
-
-    if (light->linAtten < 0) light->linAtten = 0.0005;
-    if (light->conAtten < 0) light->conAtten = 0.0005;
-    if (light->quaAtten < 0) light->quaAtten = 0.0005;
 }
-

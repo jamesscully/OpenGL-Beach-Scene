@@ -2,7 +2,7 @@
 // Created by yames on 4/4/20.
 //
 
-#include <GL/gl.h>
+#include <GL/glut.h>
 #include <OBJLoader/Model.h>
 #include "Skybox.h"
 
@@ -25,6 +25,7 @@ void Skybox::Display() {
 void Skybox::Update(const double &deltaTime) {
     static float deltaY = 0;
 
+    // allows start point back/forward
     float y_offset = -1;
 
     // if we've hit max, loop around texture image

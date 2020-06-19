@@ -64,6 +64,8 @@ public:
 		return pos;
 	}
 
+	bool hidden = false;
+
 protected:
 	/** float[] containing World Space position coordinates */
 	float pos[3];

@@ -21,8 +21,6 @@ public:
     float speed = 1;
     bool inverted = false;
 
-    bool hidden = false;
-
 private:
 
     int light_id;
@@ -34,15 +32,6 @@ private:
     float conAtten = 0.005f;
     float linAtten = 0.3f;
     float quaAtten = 0.000005f;
-
-
-
-    float* origin[3] = {0, 0, 0};
-
-
-
-    OnscreenText * txtCon, * txtLin, * txtQua;
-
 };
 
 

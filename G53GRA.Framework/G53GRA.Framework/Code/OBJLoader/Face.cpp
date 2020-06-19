@@ -2,7 +2,7 @@
 // Created by yames on 4/8/20.
 //
 
-#include <GL/gl.h>
+#include <GL/glut.h>
 #include "Face.h"
 #include "Material.h"
 
@@ -21,20 +21,23 @@ void Face::draw(float *pos, float *rot, float *scale, float *uv_offsets, bool li
     glPushMatrix();
 
     glEnable(GL_TEXTURE_2D);
+
+    // repeat textures if necessary, good for skydome
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glBindTexture(GL_TEXTURE_2D, *texture);
 
     // we'll only want these properties on if we're using lighting - else we'll disable
     if(mat != nullptr && lighting) {
-//        glEnable(GL_LIGHTING);
-//        glShadeModel(GL_SMOOTH);
+        glEnable(GL_LIGHTING);
+        glShadeModel(GL_SMOOTH);
         glEnable(GL_COLOR_MATERIAL);
 
-
-        glMaterialfv(GL_FRONT_AND_BACK, GL_AMBIENT, mat->ambient);
-        glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, mat->specular);
-        glMaterialfv(GL_FRONT_AND_BACK, GL_DIFFUSE, mat->diffuse);
-        glMaterialfv(GL_FRONT_AND_BACK, GL_SHININESS, mat->shiny);
-        glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, mat->emission);
+        glMaterialfv(GL_FRONT, GL_AMBIENT, mat->ambient);
+        glMaterialfv(GL_FRONT, GL_SPECULAR, mat->specular);
+        glMaterialfv(GL_FRONT, GL_DIFFUSE, mat->diffuse);
+        glMaterialfv(GL_FRONT, GL_SHININESS, mat->shiny);
+        glMaterialfv(GL_FRONT, GL_EMISSION, mat->emission);
     } else {
         glDisable(GL_LIGHTING);
 

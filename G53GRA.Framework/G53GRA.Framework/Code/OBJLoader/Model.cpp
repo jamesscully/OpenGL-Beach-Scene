@@ -2,6 +2,33 @@
 // Created by yames on 4/5/20.
 //
 
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
+#pragma warning(disable:4996)
+
+// Example .obj file (truncated)
+/*
+# Blender v2.82 (sub 7) OBJ File: 'moonthing.blend'
+# www.blender.org
+o Circle - Metadata; Blender writes whatever the name of the object is
+v 0.073151 0.998844 0.628936 - Vertex point (X, Y, Z)
+v 0.073151 0.922724 0.519221
+...
+vt 0.000000 0.000000 - UV coordinate (X,Y)
+vt 0.000000 0.000000
+...
+vn -0.7244 -0.5209 0.4516 - Vertex Normal (X, Y, Z)
+vn -0.8243 -0.3401 0.4527
+...
+f 31/1/1 3/2/1 2/3/1 - Face, each segment is v1/vt1/vn1 or vertex/uv/normal.
+f 32/4/2 4/5/2 3/2/2 - These are indices, so the above data must be stored into arrays
+*/
+
+
+
+
 #include <cstring>
 #include <fstream>
 #include <strstream>
@@ -10,28 +37,26 @@
 #include "Model.h"
 #include "Face.h"
 #include "VectorMath.h"
+#include <GL/glut.h>
+
 
 using std::string;
 using std::cout;
 using std::cin;
 using std::endl;
 
+#if MSVC
+#include <direct.h>
+#endif
+
+
 Model::Model(const char *obj_name, const char *uv_name, bool absolute_paths = false, Model* parent) {
 
     std::ifstream file;
 
-    off_pos = new float[3];
-    off_pos[0] = 0; off_pos[1] = 0; off_pos[2] = 0;
-
-
-    off_rot = new float[3];
-    off_rot[0] = 0; off_rot[1] = 0; off_rot[2] = 0;
-
-    uv_offset = new float [2];
-    uv_offset[0] = 0; uv_offset[1] = 0;
-
     string test = uv_name;
 
+    // if absolute paths are set, we trust the user and try load that file
     if(absolute_paths) {
         printf("Loading Model with paths: \n\t%s\n\t%s\n", obj_name, uv_name);
         file.open(obj_name);
@@ -39,8 +64,9 @@ Model::Model(const char *obj_name, const char *uv_name, bool absolute_paths = fa
         if(uv_name != "")
             texture = Scene::GetTexture(uv_name);
     }
+    // else fetch from model/uv dir specified in header
     else {
-        printf("Loading Model with paths: \n\tObj: %s\n\tTex: %s\n", (model_dir + obj_name + model_suffix).c_str(), (model_dir + uv_name).c_str());
+        printf("Loading Model with paths: \n\tObj: %s\n\tTex: %s\n", (model_dir + obj_name).c_str(), (model_dir + uv_name).c_str());
 
         file.open(model_dir + obj_name + model_suffix);
 
@@ -50,8 +76,11 @@ Model::Model(const char *obj_name, const char *uv_name, bool absolute_paths = fa
         model_name = obj_name;
     }
 
-    if(!file.good())
-        printf("Error: error loading model file\n");
+    // don't load this object if we can't find the model
+    if (!file.good()) {
+        printf("Error: Couldn't load model file\n");
+        return;
+    }
     else {
         printf("\tSuccessfuly loaded the model file\n");
     }
@@ -61,16 +90,19 @@ Model::Model(const char *obj_name, const char *uv_name, bool absolute_paths = fa
     string line;
 
     printf("\tExtracting data\n");
+
     while(!file.eof()) {
+
+        // stored the first word (v, vt, vn, f, o .. etc)
         string first;
         getline(file, line);
-        // we want the first word,i.e. v to see what we're parsing
+
+
+        // we want the first word, i.e. v to see what we're parsing
         first = line.substr(0, line.find(" "));
 
         // then, we don't need the type
         line = line.substr(first.length(), line.length());
-
-        // printf("first : %s out of line: %s\n", first.c_str(), line.c_str());
 
         if(first == "v")
             extractVertex(line);
@@ -183,10 +215,13 @@ void Model::setOffsetUV(float x, float y) {
     uv_offset[0] = (uv_offset[0] >= 1) ? 0 : x; uv_offset[1] = (uv_offset[1] >= 1) ? 0 : y;
 }
 
+
+// 'buffer', so we can add current pos + offset
+float ret[3] = {0, 0, 0};
 float *Model::position() {
-    // copy the array from pos
-    float* ret = new float[3];
-    ret[0] = pos[0]; ret[1] = pos[1]; ret[2] = pos[2];
+    ret[0] = pos[0]; 
+    ret[1] = pos[1]; 
+    ret[2] = pos[2];
 
     // add the arrays to get our actual place in the world
     add(ret, off_pos, 1.0f);
@@ -194,7 +229,7 @@ float *Model::position() {
     return ret;
 }
 
-// prevents error being thrown; since we have a similar position declaration here.
+// prevents error being thrown; since we have overloaded the other pos func here.
 void Model::position(float x, float y, float z) {
     DisplayableObject::position(x, y, z);
 }

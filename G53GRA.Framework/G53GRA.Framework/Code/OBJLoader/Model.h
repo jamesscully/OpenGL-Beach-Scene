@@ -25,14 +25,13 @@ public:
     void Display() override;
 
     // xyz offsets
-    float* off_pos;
-    float* off_rot;
-    float  off_angle;
-    float* off_scl;
+    float off_pos[3] = {0, 0, 0};
+    float off_rot[3] = { 0, 0, 0 };
+   
+
+    float uv_offset[2] = {};
 
     // we want it to be shiny
-
-    float* uv_offset;
 
 
     Material* material = new Material();
@@ -61,6 +60,8 @@ private:
 
     std::string uv_dir = "Models/UV/";
     std::string uv_suffix = ".bmp";
+
+
     void extractVertex(std::string line);
     void extractUV(std::string line);
     void extractNormal(std::string line);

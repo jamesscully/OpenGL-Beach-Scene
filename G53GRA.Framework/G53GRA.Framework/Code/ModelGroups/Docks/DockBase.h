@@ -19,6 +19,8 @@ public:
 
 
     int plank_count = 10;
+
+    void HandleKey(unsigned char key, int state, int x, int y);
 };
 
 

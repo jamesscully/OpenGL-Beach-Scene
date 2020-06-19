@@ -9,6 +9,8 @@
 #include "OnscreenText.h"
 #include "Projectile.h"
 
+
+// Not sure if this is the best way to handle MSVC errors (problems with sscanf) - I didn't run into this on linux/gcc
 #define _CRT_SECURE_NO_WARNINGS
 #pragma warning(disable:4996)
 
@@ -30,8 +32,13 @@ Model * island;
 PalmTree* palmTree;
 DockBase* dock;
 
+OnscreenText* controls;
+OnscreenText* help;
 
 void MyScene::Initialise() {
+
+    controls = new OnscreenText(50, 50, "WASD - Move | Space/Q - Up and Down | Right click - Throw Coconut");
+    help = new OnscreenText(50, 100, "F toggles the monkey - improves FPS | ESC will capture mouse cursor");
 
     island = new Model("island", "island_texture", false); {
         island->position(0, 60, 0);
@@ -40,7 +47,7 @@ void MyScene::Initialise() {
 
     ocean = new Ocean();
     ocean->size(10000);
-//    AddObjectToScene(ocean);
+    AddObjectToScene(ocean);
 
     // any likely changes to background will be a 'shade' rather than specific colour
     float colorScale = 0.0f;
@@ -54,8 +61,6 @@ void MyScene::Initialise() {
 
     // changes speed of both sun/moon
     float cyclespeed = 0.2;
-
-    glDisable(GL_LIGHTING);
 
     sun = new Sun(GL_LIGHT1); {
         sun->position(0, 0, 0);
@@ -82,22 +87,24 @@ void MyScene::Initialise() {
         AddObjectToScene(dock);
     }
 
-
-
-
 }
 
 void MyScene::Projection() {
     glDisable(GL_LIGHT0);
 
-    GLdouble aspect = static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight);
-    gluPerspective(60.0, aspect, 1.0, 10000.0);
 
-    // drawDebugText();
+    GLdouble aspect = static_cast<GLdouble>(windowWidth) / static_cast<GLdouble>(windowHeight);
+
+    // 90 fov for more perspective, far clipping plane so skydome isn't clipped (within reason)
+    gluPerspective(90.0, aspect, 1.0, 2000.0);
+
     // drawAxisLines();
 
     glColorMaterial(GL_FRONT, GL_SPECULAR);
     glColorMaterial(GL_FRONT, GL_DIFFUSE);
+
+    drawDebugText();
+
 }
 
 Model* projectileModel;
@@ -107,7 +114,7 @@ void MyScene::HandleMouse(int button, int state, int x, int y) {
     if(button == GLUT_RIGHT_BUTTON && state == 1) {
 
         // if we haven't constructed the model, do so
-        // this will prevent us constantly creating new Models (thus potentially leaking more memory)
+        // this will prevent us constantly creating new Models (thus leaking memory)
         if(projectileModel == nullptr)
             projectileModel = new Model("coconut", "coconut", false);
 
@@ -125,14 +132,27 @@ bool CURSOR_LOCKED = true;
 
 void MyScene::HandleMouseMove(int x, int y) {
     // if the cursor is locked, then we act as if we're dragging usually
-    if(CURSOR_LOCKED)
+    if (CURSOR_LOCKED) {
         Scene::HandleMouseDrag(x, y);
+    }
+        
+}
+
+
+void MyScene::drawDebugText()
+{
+    controls->render();
+    help->render();
 }
 
 void MyScene::HandleKey(unsigned char key, int state, int x, int y) {
-    sun->HandleKey(key, state, x, y);
 
-    // if ESC is hit, lock cursor
+    // toggles the high-poly monkey, which can cause FPS issues
+    if(key == 'F' || key == 'f') {
+        dock->HandleKey(key, state, x, y);
+    }
+
+    // if ESC is hit, lock cursor (this make take more than one press)
     if(key == 27 && state == 1) {
         printf("Cursor Locked: %d", CURSOR_LOCKED);
 

@@ -15,8 +15,9 @@ void Ocean::Display() {
     // must implement waves!
 
     float size = scale[0];
-
     glEnable(GL_LIGHTING);
+
+    glPushMatrix();
 
     glEnable(GL_COLOR_MATERIAL);
     glBegin(GL_QUADS);
@@ -27,6 +28,7 @@ void Ocean::Display() {
         glVertex3d(-size, 0, -size);
     glEnd();
 
+    glPopMatrix();
     glDisable(GL_LIGHTING);
 
 }

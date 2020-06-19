@@ -7,19 +7,42 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Code\DayNight\Moon.cpp" />
+    <ClCompile Include="Code\DayNight\Sun.cpp" />
+    <ClCompile Include="Code\Light.cpp" />
     <ClCompile Include="Code\main.cpp" />
+    <ClCompile Include="Code\ModelGroups\Docks\DockBase.cpp" />
+    <ClCompile Include="Code\ModelGroups\Docks\OminousMonkey.cpp" />
+    <ClCompile Include="Code\ModelGroups\PalmTree\PalmTree.cpp" />
     <ClCompile Include="Code\MyScene.cpp" />
-    <ClCompile Include="Code\Shape\Octahedron.cpp" />
-    <ClCompile Include="Code\Shape\OctFace.cpp" />
+    <ClCompile Include="Code\OBJLoader\Face.cpp" />
+    <ClCompile Include="Code\OBJLoader\Material.cpp" />
+    <ClCompile Include="Code\OBJLoader\Model.cpp" />
+    <ClCompile Include="Code\Ocean\Ocean.cpp" />
+    <ClCompile Include="Code\OnscreenText.cpp" />
+    <ClCompile Include="Code\Projectile.cpp" />
+    <ClCompile Include="Code\Skybox\Skybox.cpp" />
     <ClCompile Include="Framework\Engine\Engine.cpp" />
     <ClCompile Include="Framework\Engine\Scene.cpp" />
     <ClCompile Include="Framework\Utility\Camera.cpp" />
     <ClCompile Include="Framework\Utility\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Code\DayNight\Moon.h" />
+    <ClInclude Include="Code\DayNight\Sun.h" />
+    <ClInclude Include="Code\Light.h" />
+    <ClInclude Include="Code\ModelGroups\Docks\DockBase.h" />
+    <ClInclude Include="Code\ModelGroups\Docks\OminousMonkey.h" />
+    <ClInclude Include="Code\ModelGroups\PalmTree\PalmTree.h" />
     <ClInclude Include="Code\MyScene.h" />
-    <ClInclude Include="Code\Shape\Octahedron.h" />
-    <ClInclude Include="Code\Shape\OctFace.h" />
+    <ClInclude Include="Code\OBJLoader\Face.h" />
+    <ClInclude Include="Code\OBJLoader\Material.h" />
+    <ClInclude Include="Code\OBJLoader\Model.h" />
+    <ClInclude Include="Code\OBJLoader\Utils.h" />
+    <ClInclude Include="Code\Ocean\Ocean.h" />
+    <ClInclude Include="Code\OnscreenText.h" />
+    <ClInclude Include="Code\Projectile.h" />
+    <ClInclude Include="Code\Skybox\Skybox.h" />
     <ClInclude Include="Framework\Engine\Engine.h" />
     <ClInclude Include="Framework\Engine\Scene.h" />
     <ClInclude Include="Framework\Interface\Animation.h" />
@@ -32,13 +55,13 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{CE3A8304-475E-425E-BA11-FDAA6293C905}</ProjectGuid>
     <RootNamespace>G53GRAFramework</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />

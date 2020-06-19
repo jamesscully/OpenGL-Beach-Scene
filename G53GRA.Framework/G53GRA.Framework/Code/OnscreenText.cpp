@@ -24,23 +24,24 @@ OnscreenText::~OnscreenText() = default;
 void OnscreenText::render()
 {
     glDisable(GL_LIGHTING);
-    glMatrixMode( GL_PROJECTION );
+    glMatrixMode(GL_PROJECTION);
+
+
+    glPushMatrix(); 
+    glLoadIdentity();
+    gluOrtho2D(0, 1366, 0, 786);
+
+    glMatrixMode(GL_MODELVIEW);
+    glPushMatrix();
+    glLoadIdentity();
     glColor3f(255, 0, 0);
-
-    glPushMatrix();
-    glLoadIdentity();
-    gluOrtho2D( 0, 1366, 0, 786 );
-
-    glMatrixMode( GL_MODELVIEW );
-    glPushMatrix();
-    glLoadIdentity();
     glRasterPos2i(x, y);  // move in 10 pixels from the left and bottom edges
 
     // we'll want to display str in the case we don't have a value
     string out = str;
 
     // if we have a value, append it.
-    if(has_value)
+    if (has_value)
         out = out + " " + std::to_string(*value);
 
     int len = out.length();
@@ -50,10 +51,10 @@ void OnscreenText::render()
 
     glPopMatrix();
 
-    glMatrixMode( GL_PROJECTION );
+    glMatrixMode(GL_PROJECTION);
     glPopMatrix();
-    glMatrixMode( GL_MODELVIEW );
-    glEnable(GL_LIGHTING);
+    glFlush();
+    
 }
 
 

@@ -17,6 +17,9 @@ private:
 	void Projection();
 
     void drawDebugText();
+	virtual void HandleKey(unsigned char key, int state, int x, int y);
+	void drawGridLines();
+	void drawAxisLines();
 
 
 protected:
@@ -24,8 +27,4 @@ protected:
     void HandleMouseMove(int x, int y) override;
 
 
-private:
-    virtual void HandleKey(unsigned char key, int state, int x, int y);
-    void drawGridLines();
-    void drawAxisLines();
 };

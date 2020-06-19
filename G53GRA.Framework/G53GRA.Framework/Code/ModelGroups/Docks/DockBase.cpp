@@ -43,19 +43,11 @@ DockBase::DockBase() {
         dock_box->size(7.5);
     }
 
-//    monkey = new Model("monkey", "monkey", false); {
-//        // we want the monkey to sit ontop of the box; parent it
-//        monkey->parent = dock_box;
-//        monkey->position(0, 30, 0);
-//        monkey->orientation(0, 250, 40);
-//        monkey->size(12.5);
-//    }
-
-    monkey = new OminousMonkey();
-    monkey->model->parent = dock_box;
-    monkey->position(0, 30, 0);
-    monkey->orientation(0, 250, 40);
-    monkey->size(12.5);
+    monkey = new OminousMonkey(); {
+        monkey->position(30, 80, -275);
+        monkey->orientation(0, 250, 40);
+        monkey->size(12.5);
+    }
 }
 
 void DockBase::Display() {
@@ -70,4 +62,8 @@ void DockBase::Display() {
 
 void DockBase::Update(const double &deltaTime) {
 
+}
+
+void DockBase::HandleKey(unsigned char key, int state, int x, int y) {
+    monkey->HandleKey(key, state, x, y);
 }

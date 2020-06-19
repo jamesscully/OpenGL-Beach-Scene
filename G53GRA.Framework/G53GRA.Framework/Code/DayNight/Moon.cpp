@@ -14,12 +14,11 @@ Moon::Moon(int light_id) {
     model->size(15);
     model->setLighting(false);
 
-    printf("Start Pos [%f,%f]\n", pos[0], pos[1]);
-
 }
 
 void Moon::Display() {
 
+    // hides our moon if we dont need to be seen (Y < 0)
     if(hidden) {
         glDisable(light_id);
         return;
@@ -35,8 +34,8 @@ void Moon::Display() {
 
     float spot_dir[] = {0.0, -1.0, 0.0};
     glLightfv(light_id, GL_SPOT_DIRECTION, spot_dir);
-    glLightf(light_id, GL_SPOT_CUTOFF, 90.0);
-    glLightf(light_id, GL_SPOT_EXPONENT, 10);
+    glLightf(light_id, GL_SPOT_CUTOFF, 60.0);
+    glLightf(light_id, GL_SPOT_EXPONENT, 15);
 
     // light falloff parameters
     glLightf(light_id, GL_CONSTANT_ATTENUATION, conAtten);
@@ -50,23 +49,13 @@ void Moon::Display() {
     model->orientation(rotation[0], rotation[1], rotation[2]);
     model->Display();
 
-    glEnable(GL_COLOR_MATERIAL);
-    glBegin(GL_QUADS);
-    {
-        glColor3f(255, 0, 0);
-        glVertex3f(pos[0] - 50, pos[1], pos[2] + 50);
-        glVertex3f(pos[0] - 50, pos[1], pos[2] - 50);
-        glVertex3f(pos[0] + 50, pos[1], pos[2] - 50);
-        glVertex3f(pos[0] + 50, pos[1], pos[2] + 50);
-    }
-    glEnd();
 }
 
 #include <cmath>
 void Moon::Update(const double &deltaTime) {
 
     // can set to offset start position
-    static float elapsed = -2.5;
+    static float elapsed = -5;
 
     elapsed += deltaTime;
 

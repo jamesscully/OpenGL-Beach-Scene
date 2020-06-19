@@ -10,7 +10,7 @@
 #include <OBJLoader/Model.h>
 #include <Light.h>
 
-class OminousMonkey : public Animation, public DisplayableObject {
+class OminousMonkey : public Animation, public DisplayableObject, public Input {
 public:
     OminousMonkey();
     ~OminousMonkey() = default;
@@ -18,13 +18,14 @@ public:
     void Display() override;
 
     void Update(const double &deltaTime) override;
+    void HandleKey(unsigned char key, int state, int x, int y) override;
+
 
     Model* model;
 
 private:
     Light* light;
 
-    void HandleKey(unsigned char key, int state, int x, int y);
 };
 
 

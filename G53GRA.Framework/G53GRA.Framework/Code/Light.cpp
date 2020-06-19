@@ -12,13 +12,6 @@ Light::Light(int light_id) : DisplayableObject() {
     // GL_LIGHTx macro is just an integer
     this->light_id = light_id;
 
-    int yRoot = 50;
-
-    // allocate our UI text, with refs to relavent data
-    txtLin = new OnscreenText(20, yRoot + 25, "Linear Atten: ", &linAtten);
-    txtCon = new OnscreenText(20, yRoot + 50, "Constant Atten: ", &conAtten);
-    txtQua = new OnscreenText(20, yRoot + 75, "Quadratic Atten: ", &quaAtten);
-
 }
 
 void Light::Display() {
@@ -36,14 +29,22 @@ void Light::Display() {
     glLightf(light_id, GL_LINEAR_ATTENUATION, linAtten);
     glLightf(light_id, GL_QUADRATIC_ATTENUATION, quaAtten);
 
+    // draw sphere to illustrate where spot of light is in screenshots
+   
+    //glPushMatrix();
+    //{
+    //    glColor3f(0.9, 0.5, 0.1);
+    //    glTranslatef(pos[0], pos[1], pos[2]);
+    //    glutSolidSphere(10, 16, 16 );
+    //}
+    //glPopMatrix();
+   
+
+
     glFlush();
 
     glEnable(light_id);
 
-    // render UI text
-    txtLin->render();
-    txtQua->render();
-    txtCon->render();
 }
 
 void Light::setColor(float r, float g, float b) {
@@ -58,6 +59,7 @@ void Light::setColor(float r, float g, float b) {
 }
 
 void Light::HandleKey(unsigned char key, int state, int x, int y) {
+
     switch (key) {
         case 'j': linAtten -= 0.005; break;
         case 'k': linAtten += 0.005; break;
