@@ -26,9 +26,6 @@ f 31/1/1 3/2/1 2/3/1 - Face, each segment is v1/vt1/vn1 or vertex/uv/normal.
 f 32/4/2 4/5/2 3/2/2 - These are indices, so the above data must be stored into arrays
 */
 
-
-
-
 #include <cstring>
 #include <fstream>
 #include <strstream>
@@ -45,7 +42,7 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-#if MSVC
+#ifdef _MSC_VER
 #include <direct.h>
 #endif
 
